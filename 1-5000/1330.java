@@ -13,16 +13,11 @@ public class Main {
 		
 		br.close();
 		
-		String str = "";
-		
-		if(a > b) {
+		if(a > b) 
 			System.out.print(">");
-		}
-		else if(a < b) {
+		else if(a < b)
 			System.out.print("<");
-		}
-		else {
+		else 
 			System.out.println("==");
-		}
 	}
 }
