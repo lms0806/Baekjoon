@@ -3,4 +3,4 @@
 =
 ● 사용언어: java
 -
-[![Solved.ac Profile](http://mazassumnida.wtf/api/generate_badge?boj=lms0806)](https://solved.ac/lms0806)
+![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
