@@ -10,20 +10,24 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		int a, b;
 		
-		int m = 2, min = 1;
+		int min = 1, num = 0;
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			a = Integer.parseInt(st.nextToken());
 			b = Integer.parseInt(st.nextToken());
-			while(m<=a && m<=b) {
-				if(a%m==0 && b%m==0) {
-					min = m;
+			if(a > b) {
+				num = b;
+			}
+			else {
+				num = a;
+			}
+			for(int j = 1; j <= num; j++) {
+				if(a%j==0 && b%j==0) {
+					min = j;
 				}
-				m++;
 			}
 			System.out.println(a*b/min);
 			min = 1;
-			m = 2;
 		}
 	}
 }
