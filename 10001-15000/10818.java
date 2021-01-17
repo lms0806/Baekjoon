@@ -1,19 +1,22 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int a = scan.nextInt();
-		int[] num = new int[a];
+		int size = Integer.parseInt(br.readLine());
 		
-		for(int i = 0; i < a; i++) {
-			num[i] = scan.nextInt();
+		int min = 1000000, max = -1000000;
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		for(int i = 0; i < size; i++) {
+			int number = Integer.parseInt(st.nextToken());
+			min = Math.min(min, number);
+			max = Math.max(max, number);
 		}
 		
-		Arrays.sort(num);
-		
-		System.out.println(num[0] + " " + num[num.length-1]);
+		System.out.println(min + " " + max);
 	}
 }
