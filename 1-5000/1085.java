@@ -8,12 +8,18 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int x = Integer.parseInt(st.nextToken());
-		int y = Integer.parseInt(st.nextToken());
-		int w = Integer.parseInt(st.nextToken());
-		int h = Integer.parseInt(st.nextToken());
+		int x, y, w, h;
+		int num, num1, answer = 0;
 		
-		int answer = (int)Math.min(Math.min(w-x, x), Math.min(h-y, y));
+		x = Integer.parseInt(st.nextToken());
+		y = Integer.parseInt(st.nextToken());
+		w = Integer.parseInt(st.nextToken());
+		h = Integer.parseInt(st.nextToken());
+		
+		num = Math.min(w-x, x);
+		num1 = Math.min(h-y, y);
+		
+		answer = (int)Math.min(num, num1);
 		
 		System.out.println(answer);
 	}
