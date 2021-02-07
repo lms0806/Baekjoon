@@ -1,9 +1,11 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws NumberFormatException,IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		int[] num = new int[7];
 		int[] num1 = new int[7];
@@ -11,7 +13,7 @@ public class Main {
 		int sum = 0;
 		int count = 0;
 		for(int i = 0; i < num.length; i++) {
-			num[i] = scan.nextInt();
+			num[i] = Integer.parseInt(br.readLine());
 			if(num[i]%2 != 0) {
 				num1[i] = num[i];
 				sum += num[i];
@@ -19,8 +21,9 @@ public class Main {
 			}
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		if(count == 0) {
-			System.out.println("-1");
+			sb.append("-1").append("\n");
 		}
 		else {
 			Arrays.sort(num1);
@@ -28,10 +31,11 @@ public class Main {
 			System.out.println(sum);
 			for(int i = 0; i < num1.length; i++) {
 				if(num1[i] != 0) {
-					System.out.println(num1[i]);
+					sb.append(num1[i]).append("\n");
 					break;
 				}
 			}
 		}
+		System.out.print(sb);
 	}
 }
