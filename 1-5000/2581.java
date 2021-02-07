@@ -26,12 +26,13 @@ public class Main {
 			count = 0;
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		if(answer == 0) {
-			System.out.println(-1);
+			sb.append(-1).append("\n");
 		}
 		else {
-			System.out.println(answer);
-			System.out.println(min);
+			sb.append(answer).append("\n").append(min).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
