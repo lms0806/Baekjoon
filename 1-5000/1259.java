@@ -1,29 +1,33 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		String str = "";
+		StringBuilder sb = new StringBuilder();
 		while(!str.equals("0")) {
-			str = scan.next();
+			str = br.readLine();
+			
 			if(str.equals("0")) {
 				break;
 			}
-			String[] strs = str.split("");
 			
 			int count = 0;
-			for(int i = 0; i < strs.length; i++) {
-				if(strs[i].equals(strs[strs.length-i-1])){
+			for(int i = 0; i < str.length(); i++) {
+				if(str.charAt(i) == str.charAt(str.length()-i-1)) {
 					count++;
 				}
 			}
-			if(count == strs.length) {
-				System.out.println("yes");
+			if(count == str.length()) {
+				sb.append("yes").append("\n");
 			}
 			else {
-				System.out.println("no");
+				sb.append("no").append("\n");
 			}
 		}
+		System.out.print(sb);
 	}
 }
