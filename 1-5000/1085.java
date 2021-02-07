@@ -9,7 +9,7 @@ public class Main {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
 		int x, y, w, h;
-		int num, num1, answer = 0;
+		int num, num1;
 		
 		x = Integer.parseInt(st.nextToken());
 		y = Integer.parseInt(st.nextToken());
@@ -19,8 +19,6 @@ public class Main {
 		num = Math.min(w-x, x);
 		num1 = Math.min(h-y, y);
 		
-		answer = (int)Math.min(num, num1);
-		
-		System.out.println(answer);
+		System.out.println((int)Math.min(num, num1));
 	}
 }
