@@ -9,6 +9,7 @@ public class Main {
 		
 		int size;
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < 3; i++) {
 			BigInteger sum = new BigInteger("0");
 			size = Integer.parseInt(br.readLine());
@@ -17,14 +18,15 @@ public class Main {
 				sum = sum.add(a);
 			}
 			if(sum.compareTo(BigInteger.ZERO) == 0) {
-				System.out.println("0");
+				sb.append("0").append("\n");
 			}
 			else if(sum.compareTo(BigInteger.ZERO) == -1) {
-				System.out.println("-");
+				sb.append("-").append("\n");
 			}
 			else {
-				System.out.println("+");
+				sb.append("+").append("\n");
 			}
 		}
+		System.out.print(sb);
 	}
 }
