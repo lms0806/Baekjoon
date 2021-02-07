@@ -1,21 +1,26 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws NumberFormatException,IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int size1 = scan.nextInt();
+		int size1 = Integer.parseInt(br.readLine());
 		int[] num1 = new int[size1];
 		
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < size1; i++) {
-			num1[i] = scan.nextInt();
+			num1[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		int size2 = scan.nextInt();
+		int size2 = Integer.parseInt(br.readLine());
 		int[] num2 = new int[size2];
 		
+		st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < size2; i++) {
-			num2[i] = scan.nextInt();
+			num2[i] = Integer.parseInt(st.nextToken());
 		}
 		
 		int[] answer = new int[size2];
@@ -28,8 +33,10 @@ public class Main {
 			}
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size2; i++) {
-			System.out.println(answer[i]);
+			sb.append(answer[i]).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
