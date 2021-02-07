@@ -1,23 +1,26 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws NumberFormatException,IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int n = scan.nextInt();
+		int size = Integer.parseInt(br.readLine());
 		
-		
-		for(int i = 1; i <= n; i++) {
-			for(int j = n-i; j < n; j++) {
-				System.out.print("*");
+		StringBuilder sb = new StringBuilder();
+		for(int i = 1; i <= size; i++) {
+			for(int j = size-i; j < size; j++) {
+				sb.append("*");
 			}
-			System.out.println();
+			sb.append("\n");
 		}
-		for(int i = n-1; i > 0; i--) {
-			for(int j = n-i; j < n; j++) {
-				System.out.print("*");
+		for(int i = size-1; i > 0; i--) {
+			for(int j = size-i; j < size; j++) {
+				sb.append("*");
 			}
-			System.out.println();
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
