@@ -20,7 +20,7 @@ public class Main {
 			istrue = sosu(n);
 			
 			if(istrue == true) {
-				sb.append(n + "\n");
+				sb.append(n).append("\n";
 			}
 			n++;
 		}
