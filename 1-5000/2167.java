@@ -22,6 +22,7 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		int startn, startm, endn, endm;
+        StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			String[] str = br.readLine().split(" ");
 			startn = Integer.parseInt(str[0]);
@@ -35,7 +36,8 @@ public class Main {
 					sum += num[j][k];
 				}
 			}
-			System.out.println(sum);
+			sb.append(sum).append("\n");
 		}
+        System.out.print(sb);
 	}
 }
