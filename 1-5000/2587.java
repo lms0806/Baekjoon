@@ -25,7 +25,9 @@ public class Main {
 		else {
 			number = num[num.length/2];
 		}
-		System.out.println(sum);
-		System.out.println(number);
+		
+        	StringBuilder sb = new StringBuilder();
+		sb.append(sum).append("\n").append(number).append("\n");
+        	System.out.print(sb);
 	}
 }
