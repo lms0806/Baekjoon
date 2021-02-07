@@ -13,13 +13,14 @@ public class Main {
 		b = Integer.parseInt(st.nextToken());
 		c = Integer.parseInt(st.nextToken());
 		
+        StringBuilder sb = new StringBuilder();
 		if(b >= c) {
-			System.out.println(-1);
+			sb.append(-1);
 		}
 		else {
 			int count = a/(c-b) + 1;
-			System.out.println(count);
+			sb.append(count);
 		}
-		br.close();
+        System.out.print(sb);
 	}
 }
