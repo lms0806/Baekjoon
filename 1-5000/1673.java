@@ -8,6 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		String line = "";
+		StringBuilder sb = new StringBuilder();
 		while((line = br.readLine()) != null) {
 			StringTokenizer st = new StringTokenizer(line);
 			
@@ -20,7 +21,8 @@ public class Main {
 				answer += n/k;
 				n = n/k + n%k;
 			}
-			System.out.println(answer);
+			sb.append(answer).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
