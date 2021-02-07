@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -13,7 +12,7 @@ public class Main {
 		int size = Integer.parseInt(st.nextToken());
 		int pro = Integer.parseInt(st.nextToken());
 		
-		Map<String, String> map = new HashMap<>();
+		HashMap<String, String> map = new HashMap<>();
 		for(int i = 0; i < size; i++) {
 			String read = br.readLine();
 			map.put(read, Integer.toString(i+1));
