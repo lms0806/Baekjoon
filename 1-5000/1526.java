@@ -1,36 +1,28 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 
 public class Main {
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws NumberFormatException,IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String arr = br.readLine();
+		int num = Integer.parseInt(br.readLine());
 		
 		String str = "";
-		for(int i = Integer.parseInt(arr); i >= 0; i--) {
+		for(int i = num; i >= 0; i--) {
 			str = Integer.toString(i);
-			String[] strs = str.split("");
 			
 			int count = 0;
-			for(int j = 0; j < strs.length; j++) {
-				if(strs[j].equals("4") || strs[j].equals("7")) {
+			for(int j = 0; j < str.length(); j++) {
+				char ch = str.charAt(j);
+				if(ch == '4' || ch == '7') {
 					count++;
 				}
 			}
-			if(count == strs.length) {
+			if(count == str.length()) {
 				break;
 			}
 		}
-		
-		bw.write(str + "\n");
-		
-		bw.flush();
-		br.close();
-		bw.close();
+		System.out.println(str);
 	}
 }
