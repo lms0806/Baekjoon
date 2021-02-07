@@ -1,14 +1,16 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws NumberFormatException,IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int n = scan.nextInt();
+		int n = Integer.parseInt(br.readLine());
 		
 		int sum = 0;
 		for(int i = 0; i < n; i++) {
-			sum += scan.nextInt();
+			sum += Integer.parseInt(br.readLine());
 		}
 		
 		System.out.println(sum-n+1);
