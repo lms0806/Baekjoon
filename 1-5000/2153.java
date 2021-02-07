@@ -19,12 +19,14 @@ public class Main {
 			}
 		}
 		
+        StringBuilder sb = new StringBuilder();
 		if(sosu(answer) || answer == 1) {
-			System.out.println("It is a prime word.");
+			sb.append("It is a prime word.").append("\n");
 		}
 		else {
-			System.out.println("It is not a prime word.");
+			sb.append("It is not a prime word.").append("\n");
 		}
+        System.out.print(sb);
 	}
 	
 	public static boolean sosu(int n) {
