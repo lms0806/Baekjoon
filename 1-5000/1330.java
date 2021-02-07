@@ -11,13 +11,16 @@ public class Main {
 		int a = Integer.parseInt(st.nextToken());
 		int b = Integer.parseInt(st.nextToken());
 		
-		br.close();
-		
-		if(a > b) 
-			System.out.print(">");
-		else if(a < b)
-			System.out.print("<");
-		else 
-			System.out.println("==");
+		StringBuilder sb = new StringBuilder();
+		if(a > b) {
+			sb.append(">");
+		}
+		else if(a < b) {
+			sb.append("<");
+		}
+		else {
+			sb.append("==");
+		}
+		System.out.print(sb);
 	}
 }
