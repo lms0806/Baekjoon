@@ -1,30 +1,35 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws NumberFormatException,IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int sum = 0;
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < 3; i++) {
+			int sum = 0;
+			StringTokenizer st = new StringTokenizer(br.readLine());
 			for(int j = 0; j < 4; j++) {
-				sum += scan.nextInt();
+				sum += Integer.parseInt(st.nextToken());
 			}
 			if(sum == 1) {
-				System.out.println("C");
+				sb.append("C").append("\n");
 			}
 			else if(sum == 2) {
-				System.out.println("B");
+				sb.append("B").append("\n");
 			}
 			else if(sum == 3) {
-				System.out.println("A");
+				sb.append("A").append("\n");
 			}
 			else if(sum == 4) {
-				System.out.println("E");
+				sb.append("E").append("\n");
 			}
 			else {
-				System.out.println("D");
+				sb.append("D").append("\n");
 			}
-			sum = 0;
 		}
+		System.out.print(sb);
 	}
 }
