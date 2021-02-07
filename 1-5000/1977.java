@@ -1,13 +1,10 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 
 public class Main {
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws NumberFormatException,IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		int m = Integer.parseInt(br.readLine());
 		int n = Integer.parseInt(br.readLine());
@@ -26,16 +23,15 @@ public class Main {
 			}
 			number++;
 		}
+		
+		StringBuilder sb = new StringBuilder();
 		if(num == 0) {
-			bw.write("-1");
+			sb.append("-1");
 		}
 		else {
-			bw.write(sum + "\n");
-			bw.write(num + "\n");
+			sb.append(sum).append("\n");
+			sb.append(num).append("\n");
 		}
-		bw.flush();
-
-		br.close();
-		bw.close();
+		System.out.print(sb);
 	}
 }
