@@ -11,17 +11,19 @@ public class Main {
 		
 		int temp = (n / 100) * 100;
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 1; i <= 99; i++) {
 			if(temp % f == 0) {
 				if((temp%100) < 10) {
-					System.out.print("0" + temp%100);
+					sb.append("0" + temp%100);
 				}
 				else {
-					System.out.println(temp%100);
+					sb.append(temp%100).append("\n");
 				}
 				break;
 			}
 			temp++;
 		}
+		System.out.print(sb);
 	}
 }
