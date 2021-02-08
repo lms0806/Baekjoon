@@ -1,15 +1,20 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		int a = 1, b = 1, c = 1;
 		
+		StringBuilder sb = new StringBuilder();
 		while(true) {
-			a = scan.nextInt();
-			b = scan.nextInt();
-			c = scan.nextInt();
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			a = Integer.parseInt(st.nextToken());
+			b = Integer.parseInt(st.nextToken());
+			c = Integer.parseInt(st.nextToken());
 			
 			if(a == 0 && b == 0 && c == 0) {
 				break;
@@ -30,11 +35,12 @@ public class Main {
 			}
 			
 			if(c*c == (a*a) + (b*b)) {
-				System.out.println("right");
+				sb.append("right").append("\n");
 			}
 			else {
-				System.out.println("wrong");
+				sb.append("wrong").append("\n");
 			}
 		}
+		System.out.print(sb);
 	}
 }
