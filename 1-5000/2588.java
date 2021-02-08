@@ -5,15 +5,18 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws NumberFormatException,IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		int a, b;
 		
-		int a = Integer.parseInt(br.readLine());
-		int b = Integer.parseInt(br.readLine());
+		a = Integer.parseInt(br.readLine());
+		b = Integer.parseInt(br.readLine());
 		
-		System.out.println(a*(b%10));
-		System.out.println(a*((b%100)/10));
-		System.out.println(a*(b/100));
-		System.out.println(a*b);
+		StringBuilder sb = new StringBuilder();
 		
-		br.close();
+		sb.append(a*(b%10)).append("\n");
+		sb.append(a*((b%100)/10)).append("\n");
+		sb.append(a*(b/100)).append("\n");
+		sb.append(a*b).append("\n");
+		
+		System.out.print(sb);
 	}
 }
