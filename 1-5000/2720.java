@@ -9,6 +9,7 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		int a;
 		int quarter = 0, dime = 0, nickel = 0, penny = 0;
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			a = Integer.parseInt(br.readLine());
 			quarter = a/25;
@@ -18,7 +19,8 @@ public class Main {
 			nickel = a/5;
 			a%=5;
 			penny = a;
-			System.out.println(quarter + " " + dime + " " + nickel + " " + penny);
+			sb.append(quarter).append(" ").append(dime).append(" ").append(nickel).append(" ").append(penny).append("\n");
 		}
+		System.out.println(sb);
 	}
 }
