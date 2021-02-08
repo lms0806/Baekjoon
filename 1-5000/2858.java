@@ -12,12 +12,13 @@ public class Main {
 		int w = Integer.parseInt(st.nextToken());
 		
 		int temp = (l-4)/2;
-		for(int i = 0; i <= temp; i++){
-            if((temp-i) * i == w){
-                System.out.print(temp-i+2 + " ");
-                System.out.println(i+2);
-                break;
-            }
-        }
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < temp+1; i++){
+            		if((temp-i) * i == w){
+                		sb.append(temp-i+2).append(" ").append(i+2).append("\n");
+                		break;
+            		}
+        	}
+		System.out.print(sb);
 	}
 }
