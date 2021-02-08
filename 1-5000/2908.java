@@ -1,33 +1,34 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		String str1 = scan.next();
-		String str2 = scan.next();
+		String str1 = st.nextToken();
+		String str2 = st.nextToken();
 		
-		String[] strs1 = str1.split("");
-		String[] strs2 = str2.split("");
+		String strs1 = "";
+		String strs2 = "";
 		
-		String strss1 = "";
-		String strss2 = "";
-		
-		for(int i = strs1.length-1; i > -1; i--) {
-			strss1 += strs1[i];
-		}
-		for(int i = strs2.length-1; i > -1; i--) {
-			strss2 += strs2[i];
+		for(int i = str1.length()-1; i >= 0; i--) {
+			strs1 += str1.charAt(i);
+			strs2 += str2.charAt(i);
 		}
 		
-		int num1 = Integer.parseInt(strss1);
-		int num2 = Integer.parseInt(strss2);
+		int num1 = Integer.parseInt(strs1);
+		int num2 = Integer.parseInt(strs2);
 		
+		StringBuilder sb = new StringBuilder();
 		if(num1 > num2) {
-			System.out.println(num1);
+			sb.append(num1);
 		}
 		else {
-			System.out.println(num2);
+			sb.append(num2);
 		}
+		System.out.print(sb);
 	}
 }
