@@ -26,7 +26,7 @@ public class Main {
 			}
 			a/=2;
 			
-			sb.append(i).append(". ").append(str).append(" ").append(a);
+			sb.append(i).append(". ").append(str).append(" ").append(a).append("\n");
 			i++;
 		}
 		System.out.print(sb);
