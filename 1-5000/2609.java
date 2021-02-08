@@ -13,8 +13,12 @@ public class Main {
 
 		int min = gcd(a,b);
 		int max = a * b / min;
-		System.out.println(min);
-		System.out.println(max);
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(min).append("\n").append(max);
+		
+		System.out.print(sb);
 	}
 	
 	public static int gcd(int a, int b) {
