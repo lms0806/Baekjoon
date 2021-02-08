@@ -9,6 +9,7 @@ public class Main {
 		int a, i = 1;
 		String str = "";
 		
+		StringBuilder sb = new StringBuilder();
 		while(true) {
 			a = Integer.parseInt(br.readLine());
 			
@@ -18,16 +19,16 @@ public class Main {
 			
 			if(a % 2 == 0) {
 				str = "even";
-				a/=2;
 			}
 			else {
 				str = "odd";
 				a--;
-				a/=2;
 			}
+			a/=2;
 			
-			System.out.println(i + ". " + str + " " + a);
+			sb.append(i).append(". ").append(str).append(" ").append(a);
 			i++;
 		}
+		System.out.print(sb);
 	}
 }
