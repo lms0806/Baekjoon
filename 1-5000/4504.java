@@ -1,24 +1,29 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int num = scan.nextInt();
+		int num = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		while(true) {
-			int a = scan.nextInt();
+			int a = Integer.parseInt(br.readLine());
 			
 			if(a == 0) {
 				break;
 			}
 			
 			if(a%num == 0) {
-				System.out.println(a + " is a multiple of " + num + ".");
+				sb.append(a).append(" is a multiple of ").append(num).append(".");
 			}
 			else {
-				System.out.println(a + " is NOT a multiple of " + num + ".");
+				sb.append(a).append(" is NOT a multiple of ").append(num).append(".");
 			}
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
