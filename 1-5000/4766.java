@@ -6,18 +6,20 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		double a, num = 0.0;
+		double a, num;
+		
 		num = Double.parseDouble(br.readLine());
+		
+		StringBuilder sb = new StringBuilder();
 		while(true) {
 			a = Double.parseDouble(br.readLine());
-			
 			if(a == 999) {
 				break;
 			}
 			
-			System.out.println(String.format("%.2f", a-num));
-			
+			sb.append(String.format("%.2f", a-num)).append("\n");
 			num = a;
 		}
+		System.out.print(sb);
 	}
 }
