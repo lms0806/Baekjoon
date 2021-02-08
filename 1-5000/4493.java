@@ -9,6 +9,7 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			int num = Integer.parseInt(br.readLine());
 			
@@ -33,14 +34,16 @@ public class Main {
 			}
 			
 			if(a > b) {
-				System.out.println("Player 1");
+				sb.append("Player 1");
 			}
 			else if(a == b) {
-				System.out.println("TIE");
+				sb.append("TIE");
 			}
 			else {
-				System.out.println("Player 2");
+				sb.append("Player 2");
 			}
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
