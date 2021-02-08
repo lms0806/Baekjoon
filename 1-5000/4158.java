@@ -16,7 +16,6 @@ public class Main {
 			int m = Integer.parseInt(st.nextToken());
 			
 			if(n == 0 && m == 0) {
-				System.out.println(sb);
 				break;
 			}
 			
@@ -37,5 +36,6 @@ public class Main {
 			}
 			sb.append(answer).append(" ");
 		}
+		System.out.println(sb);
 	}
 }
