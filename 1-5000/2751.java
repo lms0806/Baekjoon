@@ -21,6 +21,6 @@ public class Main {
 			}
 		}
 		
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
