@@ -6,11 +6,11 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String[] str = br.readLine().split("");
+		String str = br.readLine();
 		
 		int answer = 1;
-		for(int i = 0; i < str.length; i++) {
-			if(str[i].equals("A")) {
+		for(int i = 0; i < str.length(); i++) {
+			if(str.charAt(i) == 'A') {
 				if(answer == 1) {
 					answer = 2;
 				}
@@ -18,7 +18,7 @@ public class Main {
 					answer = 1;
 				}
 			}
-			else if(str[i].equals("B")) {
+			else if(str.charAt(i) == 'B') {
 				if(answer == 2) {
 					answer = 3;
 				}
@@ -26,7 +26,7 @@ public class Main {
 					answer = 2;
 				}
 			}
-			else if(str[i].equals("C")) {
+			else if(str.charAt(i) == 'C') {
 				if(answer == 1) {
 					answer = 3;
 				}
