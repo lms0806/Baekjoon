@@ -19,6 +19,6 @@ public class Main {
 			answer++;
 		}
 		
-		System.out.println(answer);
+		System.out.print(answer);
 	}
 }
