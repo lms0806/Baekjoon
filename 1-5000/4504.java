@@ -15,14 +15,14 @@ public class Main {
 			if(a == 0) {
 				break;
 			}
-			
+			sb.append(a);
 			if(a%num == 0) {
-				sb.append(a).append(" is a multiple of ").append(num).append(".");
+				sb.append(" is a multiple of ");
 			}
 			else {
-				sb.append(a).append(" is NOT a multiple of ").append(num).append(".");
+				sb.append(" is NOT a multiple of ");
 			}
-			sb.append("\n");
+			sb.append(num).append(".").append("\n");
 		}
 		System.out.print(sb);
 	}
