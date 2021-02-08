@@ -8,14 +8,16 @@ public class Main {
 		
 		int a = 1;
 		
-		while(a != 0) {
+		StringBuilder sb = new StringBuilder();
+		while(true) {
 			int answer = 0, count = 0;
 			a = Integer.parseInt(br.readLine());
 			if(a == 0) {
 				break;
 			}
 			for(int i = a+1; i <= 2*a; i++) {
-				for(int j = 2; j < (int)Math.sqrt(i)+1; j++) {
+				int max = (int)Math.sqrt(i)+1;
+				for(int j = 2; j < max; j++) {
 					if(i % j == 0) {
 						count++;
 						break;
@@ -26,7 +28,8 @@ public class Main {
 				}
 				count = 0;
 			}
-			System.out.println(answer);
+			sb.append(answer).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
