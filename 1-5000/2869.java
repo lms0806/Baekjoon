@@ -17,6 +17,6 @@ public class Main {
 			day++;
 		}
 		
-		System.out.println(day);
+		System.out.print(day);
 	}
 }
