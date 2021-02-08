@@ -29,6 +29,6 @@ public class Main {
 			gcd = gcd.substring(gcd.length() - 9, gcd.length());
 		}
 				
-		System.out.println(gcd);
+		System.out.print(gcd);
 	}
 }
