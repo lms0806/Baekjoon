@@ -17,6 +17,6 @@ public class Main {
 		else {
 			a = a.multiply(b);
 		}
-		System.out.println(a);
+		System.out.print(a);
 	}
 }
