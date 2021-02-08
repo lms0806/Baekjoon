@@ -22,7 +22,7 @@ public class Main {
 					b++;
 				}
 			}
-			sb.append(str + " is ");
+			sb.append(str).append(" is ");
 			if(g == b) {
 				sb.append("NEUTRAL");
 			}
@@ -31,6 +31,6 @@ public class Main {
 			}
 			sb.append("\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
