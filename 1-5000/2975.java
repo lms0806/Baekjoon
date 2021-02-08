@@ -10,6 +10,7 @@ public class Main {
 		int a, b;
 		String str = "";
 		
+		StringBuilder sb = new StringBuilder();
 		while(true) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			a = Integer.parseInt(st.nextToken());
@@ -22,15 +23,16 @@ public class Main {
 			
 			if(str.equals("W")) {
 				if(a-b < -200) {
-					System.out.println("Not allowed");
+					sb.append("Not allowed").append("\n");
 				}
 				else {
-					System.out.println(a-b);
+					sb.append(a-b).append("\n");
 				}
 			}
 			else {
-				System.out.println(a+b);
+				sb.append(a+b).append("\n");
 			}
 		}
+		System.out.print(sb);
 	}
 }
