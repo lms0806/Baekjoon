@@ -24,6 +24,6 @@ public class Main {
 			}
 		}
 		b %= 7;
-		System.out.println(day[b]);
+		System.out.print(day[b]);
 	}
 }
