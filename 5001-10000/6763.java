@@ -9,19 +9,21 @@ public class Main {
 		int a = Integer.parseInt(br.readLine());
 		int b = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		if(b > a) {
 			if(b-a <= 20) {
-				System.out.println("You are speeding and your fine is $100.");
+				sb.append("You are speeding and your fine is $100.");
 			}
 			else if(b-a >= 21 && b-a <= 30) {
-				System.out.println("You are speeding and your fine is $270.");
+				sb.append("You are speeding and your fine is $270.");
 			}
 			else if(b-a >= 31) {
-				System.out.println("You are speeding and your fine is $500.");
+				sb.append("You are speeding and your fine is $500.");
 			}
 		}
 		else {
-			System.out.println("Congratulations, you are within the speed limit!");
+			sb.append("Congratulations, you are within the speed limit!");
 		}
+		System.out.print(sb);
 	}
 }
