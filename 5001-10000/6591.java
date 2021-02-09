@@ -9,6 +9,7 @@ public class Main {
 		
 		int n, k;
 		
+		StringBuilder sb = new StringBuilder();
 		while(true) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			n = Integer.parseInt(st.nextToken());
@@ -28,7 +29,8 @@ public class Main {
 				answer /= i;
 			}
 			
-			System.out.println(answer);	
+			sb.append(answer).append("\n");	
 		}
+		System.out.print(sb);
 	}
 }
