@@ -1,25 +1,32 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int num = scan.nextInt();
+		int num = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < num; i++) {
-			long a = scan.nextLong();
-			long b = scan.nextLong();
-			long c = scan.nextLong();
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			long a = Long.parseLong(st.nextToken());
+			long b = Long.parseLong(st.nextToken());
+			long c = Long.parseLong(st.nextToken());
 			
 			if(a < b-c) {
-				System.out.println("advertise");
+				sb.append("advertise");
 			}
 			else if(a > b-c) {
-				System.out.println("do not advertise");
+				sb.append("do not advertise");
 			}
 			else{
-				System.out.println("does not matter");
+				sb.append("does not matter");
 			}
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
