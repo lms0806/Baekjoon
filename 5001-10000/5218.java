@@ -9,12 +9,11 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			String x = st.nextToken();
 			String y = st.nextToken();
-			
-			StringBuilder sb = new StringBuilder();
 			
 			sb.append("Distances: ");
 			for(int j = 0; j < x.length(); j++) {
@@ -28,7 +27,8 @@ public class Main {
 					sb.append(cy-cx).append(" ");
 				}
 			}
-			System.out.print(sb);
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
