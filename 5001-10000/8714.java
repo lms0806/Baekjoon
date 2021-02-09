@@ -15,11 +15,13 @@ public class Main {
 			sum += Integer.parseInt(st.nextToken());
 		}
 		
+        	StringBuilder sb = new StringBuilder();
 		if(size-sum > sum) {
-			System.out.println(sum);
+			sb.append(sum);
 		}
 		else {
-			System.out.println(size-sum);
+			sb.append(size-sum);
 		}
+        	System.out.print(sb);
 	}
 }
