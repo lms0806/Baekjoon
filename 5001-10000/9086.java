@@ -10,9 +10,9 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
-			String[] str = br.readLine().split("");
-			sb.append(str[0]).append(str[str.length-1]).append("\n");
+			String str = br.readLine();
+			sb.append(str.charAt(0)).append(str.charAt(str.length()-1)).append("\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
