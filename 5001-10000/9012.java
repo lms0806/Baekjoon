@@ -8,6 +8,7 @@ public class Main {
 		
 		int num = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < num; i++) {
 			String str = br.readLine();
 			
@@ -31,7 +32,8 @@ public class Main {
 			if(count != 0) {
 				answer = "NO";
 			}
-			System.out.println(answer);
+			sb.append(answer).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
