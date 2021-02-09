@@ -22,13 +22,13 @@ public class Main {
 				int cy = y.charAt(j) - 'A';
 				
 				if(cx > cy) {
-					sb.append(cy+26-cx + " ");
+					sb.append(cy+26-cx).append(" ");
 				}
 				else {
-					sb.append(cy-cx + " ");
+					sb.append(cy-cx).append(" ");
 				}
 			}
-			System.out.println(sb);
+			System.out.print(sb);
 		}
 	}
 }
