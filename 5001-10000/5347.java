@@ -11,6 +11,7 @@ public class Main {
 
 		long a, b, gcd = 0, answer = 0;
 		StringTokenizer st;
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			a = Long.parseLong(st.nextToken());
@@ -18,8 +19,9 @@ public class Main {
 			gcd = gcd(a,b);
 			answer = a * b / gcd;
 			
-			System.out.println(answer);
+			sb.append(answer).append("\n");
 		}
+		System.out.print(sb);
 	}
 	
 	public static long gcd(long a, long b) {
