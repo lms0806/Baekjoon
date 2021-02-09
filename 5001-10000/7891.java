@@ -11,12 +11,14 @@ public class Main {
 		
 		long a, b;
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			a = Long.parseLong(st.nextToken());
 			b = Long.parseLong(st.nextToken());
 			
-			System.out.println(a+b);
+			sb.append(a+b).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
