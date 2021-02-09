@@ -1,14 +1,16 @@
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("     /~\\");
-		System.out.println("    ( oo|");
-		System.out.println("    _\\=/_");
-		System.out.println("   /  _  \\");
-		System.out.println("  //|/.\\|\\\\");
-		System.out.println(" ||  \\ /  ||");
-		System.out.println("============");
-		System.out.println("|          |");
-		System.out.println("|          |");
-		System.out.println("|          |");
+		StringBuilder sb = new StringBuilder();
+		sb.append("     /~\\").append("\n");
+		sb.append("    ( oo|").append("\n");
+		sb.append("    _\\=/_").append("\n");
+		sb.append("   /  _  \\").append("\n");
+		sb.append("  //|/.\\|\\\\").append("\n");
+		sb.append(" ||  \\ /  ||").append("\n");
+		sb.append("============").append("\n");
+		sb.append("|          |").append("\n");
+		sb.append("|          |").append("\n");
+		sb.append("|          |");
+		System.out.print(sb);
 	}
 }
