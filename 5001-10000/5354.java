@@ -8,6 +8,7 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			int a= Integer.parseInt(br.readLine());
 			
@@ -21,11 +22,12 @@ public class Main {
 					else {
 						answer[j][k] = "J";
 					}
-					System.out.print(answer[j][k]);
+					sb.append(answer[j][k]);
 				}
-				System.out.println();
+				sb.append("\n");
 			}
-			System.out.println();
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
