@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
+		StringBuilder sb = new StringBuilder();
 		while(true) {
 			int a = Integer.parseInt(br.readLine());
 			
@@ -15,10 +16,11 @@ public class Main {
 			
 			for(int i = 0; i < a; i++) {
 				for(int j = a-i-1; j < a; j++) {
-					System.out.print("*");
+					sb.append("*");
 				}
-				System.out.println();
+				sb.append("\n");
 			}
 		}
+		System.out.print(sb);
 	}
 }
