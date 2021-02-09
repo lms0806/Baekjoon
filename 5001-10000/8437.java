@@ -15,7 +15,5 @@ public class Main {
 		BigInteger answer2 = a.subtract(b).divide(div);
 		
 		System.out.println(answer1 + "\n" + answer2);
-
-		br.close();
 	}
 }
