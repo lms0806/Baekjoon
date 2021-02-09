@@ -12,14 +12,15 @@ public class Main {
 		for(int i = 0; i < size; i++) {
 			String str = br.readLine();
 			if(str.equals("P=NP")) {
-				sb.append("skipped").append("\n");
+				sb.append("skipped");
 			}
 			else {
 				String[] strs = str.split("\\+");
 				int answer = Integer.parseInt(strs[0]) + Integer.parseInt(strs[1]);
-				sb.append(answer).append("\n");
+				sb.append(answer);
 			}
+            		sb.append("\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
