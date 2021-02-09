@@ -1,19 +1,26 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+	
+		int size = Integer.parseInt(br.readLine());
 		
-		int size = scan.nextInt();
-		for(int i = 0; i < size; i++) {
-			int num = scan.nextInt();
+		StringBuilder sb = new StringBuilder();
+		while(size-->0) {
+			int num = Integer.parseInt(br.readLine());
 			
 			int sum = 0;
-			for(int j = 0; j < num; j++) {
-				sum += scan.nextInt();
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			while(num-->0) {
+				sum += Integer.parseInt(st.nextToken());
 			}
 			
-			System.out.println(sum);
+			sb.append(sum).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
