@@ -1,23 +1,19 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		int[] num = new int[3];
-		int[] num1 = new int[2];
-		
-		for(int i = 0; i < num.length; i++) {
-			num[i] = scan.nextInt();
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+
+		int min1 = 2000, min2 = 2000;
+		for(int i = 0; i < 3; i++) {
+			min1 = Math.min(min1, Integer.parseInt(br.readLine()));
 		}
-		for(int i = 0; i < num1.length; i++) {
-			num1[i] = scan.nextInt();
+		for(int i = 0; i < 2; i++) {
+			min2 = Math.min(min2, Integer.parseInt(br.readLine()));
 		}
 		
-		Arrays.sort(num);
-		Arrays.sort(num1);
-		
-		System.out.println(num[0]+num1[0]-50);
+		System.out.println(min1 + min2 - 50);
 	}
 }
