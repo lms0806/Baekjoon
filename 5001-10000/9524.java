@@ -8,10 +8,6 @@ public class Main {
 		
 		int n = Integer.parseInt(br.readLine());
 		
-		br.close();
-	
-		String[] strs = "1723".split("");
-		
-		System.out.println(strs[n-1]);
+		System.out.print("1723".charAt(n-1));
 	}
 }
