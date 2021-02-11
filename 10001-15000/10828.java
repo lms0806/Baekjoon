@@ -9,12 +9,12 @@ public class Main {
 		
 		Stack<Integer> stack = new Stack<>();
 		
-		int size = Integer.parseInt(br.readLine())+1;
+		int size = Integer.parseInt(br.readLine());
 		int charat;
 		String str;
 		
 		StringBuilder sb = new StringBuilder();
-		while(0<--size) {
+		while(size-->0) {
 			str = br.readLine();
 			charat = str.charAt(0);
 			if(charat == 't') {
