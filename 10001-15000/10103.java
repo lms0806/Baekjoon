@@ -1,15 +1,19 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int num = scan.nextInt();
+		int num = Integer.parseInt(br.readLine());
 		int sum = 100, sum1 = 100;
 		
-		for(int i = 0; i < num; i++) {
-			int a = scan.nextInt();
-			int b = scan.nextInt();
+		while(num-->0) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
 			
 			if(a > b) {
 				sum1 -= a;
@@ -19,7 +23,6 @@ public class Main {
 			}
 		}
 		
-		System.out.println(sum);
-		System.out.println(sum1);
+		System.out.print(sum + "\n" + sum1);
 	}
 }
