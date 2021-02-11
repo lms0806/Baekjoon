@@ -9,6 +9,7 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		int num = 0;
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			num = Integer.parseInt(br.readLine());
 			
@@ -17,7 +18,8 @@ public class Main {
 				result += j;
 			}
 			
-			System.out.println(result);
+			sb.append(result).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
