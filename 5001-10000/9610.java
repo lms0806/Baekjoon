@@ -1,15 +1,19 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int size = scan.nextInt();
+		int size = Integer.parseInt(br.readLine());
 		int[] num = new int[5];
 		
 		for(int i = 0; i < size; i++) {
-			long a = scan.nextLong();
-			long b = scan.nextLong();
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			long a = Long.parseLong(st.nextToken());
+			long b = Long.parseLong(st.nextToken());
 			
 			if(a == 0 || b == 0) {
 				num[4]++;
@@ -32,9 +36,11 @@ public class Main {
 			}
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < num.length-1; i++) {
-			System.out.println("Q" + (i+1) + ": " + num[i]);
+			sb.append("Q").append(i+1).append(": ").append(num[i]).append("\n");
 		}
-		System.out.println("AXIS: " + num[4]);
+		sb.append("AXIS: ").append(num[4]);
+		System.out.print(sb);
 	}
 }
