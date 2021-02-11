@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -12,6 +11,7 @@ public class Main {
 		
 		int h, w, n, answer = 0;
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			h = Integer.parseInt(st.nextToken());
@@ -24,7 +24,8 @@ public class Main {
 			else {
 				answer = (n%h)*100 + (n/h+1);
 			}
-			System.out.println(answer);
+			sb.append(answer).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
