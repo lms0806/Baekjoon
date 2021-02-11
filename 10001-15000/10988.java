@@ -12,8 +12,9 @@ public class Main {
 		for(int i = 0; i < str.length(); i++) {
 			if(str.charAt(i) != str.charAt(str.length() - i - 1)) {
 				istrue = false;
+                break;
 			}
 		}
-		System.out.println(istrue ? 1 : 0);
+		System.out.print(istrue ? 1 : 0);
 	}
 }
