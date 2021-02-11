@@ -10,15 +10,16 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		for(int i = 0; i < size; i++) {
+        	StringBuilder sb = new StringBuilder();
+		while(size-->0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			n = Integer.parseInt(st.nextToken());
 			m = Integer.parseInt(st.nextToken());
 			
 			u = m*2-n;
 			t = m-u;
-			System.out.println(u + " " + t);
+			sb.append(u).append(" ").append(t).append("\n");
 		}
-		br.close();
+        	System.out.print(sb);
 	}
 }
