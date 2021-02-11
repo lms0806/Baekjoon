@@ -11,14 +11,14 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
+		while(size-->0) {
 			int num = 0;
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			n = Integer.parseInt(st.nextToken());
 			k = Integer.parseInt(st.nextToken());
 			
 			st = new StringTokenizer(br.readLine());
-			for(int j = 0; j < n; j++) {
+			while(n-->0) {
 				num += Integer.parseInt(st.nextToken())/k;
 			}
 			sb.append(num).append("\n");
