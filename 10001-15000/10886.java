@@ -1,15 +1,16 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int n = scan.nextInt();
-		int a = 0;
-		int b = 0;
+		int n = Integer.parseInt(br.readLine());
+		int a = 0, b = 0;
 		
 		for(int i = 0; i < n; i++) {
-			int num = scan.nextInt();
+			int num = Integer.parseInt(br.readLine());
 			if(num == 1) {
 				a++;
 			}
@@ -17,11 +18,14 @@ public class Main {
 				b++;
 			}
 		}
+		
+		StringBuilder sb = new StringBuilder();
 		if(a > b) {
-			System.out.println("Junhee is cute!");
+			sb.append("Junhee is cute!");
 		}
 		else {
-			System.out.println("Junhee is not cute!");
+			sb.append("Junhee is not cute!");
 		}
+		System.out.print(sb);
 	}
 }
