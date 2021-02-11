@@ -19,8 +19,10 @@ public class Main {
 			}
 		}
 		
+        	StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < num.length; i++) {
-			System.out.print(num[i]-1 + " ");
+			sb.append(num[i]-1).append(" ");
 		}
+        	System.out.print(sb);
 	}
 }
