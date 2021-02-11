@@ -1,14 +1,16 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int a = scan.nextInt();
-		int b = scan.nextInt();
-		int c = scan.nextInt();
-		int d = scan.nextInt();
-		int p = scan.nextInt();
+		int a = Integer.parseInt(br.readLine());
+		int b = Integer.parseInt(br.readLine());
+		int c = Integer.parseInt(br.readLine());
+		int d = Integer.parseInt(br.readLine());
+		int p = Integer.parseInt(br.readLine());
 		
 		int num1 = a*p;
 		int num2 = b;
@@ -18,11 +20,13 @@ public class Main {
 			num2 += d*p;
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		if(num1 > num2) {
-			System.out.println(num2);
+			sb.append(num2);
 		}
 		else {
-			System.out.println(num1);
+			sb.append(num1);
 		}
+		System.out.print(sb);
 	}
 }
