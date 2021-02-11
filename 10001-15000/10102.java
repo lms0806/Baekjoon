@@ -10,7 +10,7 @@ public class Main {
 		String str = br.readLine();
 		
 		int a = 0, b = 0;
-		for(int i = 0; i < str.length(); i++) {
+		for(int i = 0; i < num; i++) {
 			if(str.charAt(i) == 'A') {
 				a++;
 			}
@@ -19,14 +19,16 @@ public class Main {
 			}
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		if(a > b) {
-			System.out.print("A");
+			sb.append("A");
 		}
 		else if(a == b) {
-			System.out.println("Tie");
+			sb.append("Tie");
 		}
 		else {
-			System.out.println("B");
+			sb.append("B");
 		}
+		System.out.print(sb);
 	}
 }
