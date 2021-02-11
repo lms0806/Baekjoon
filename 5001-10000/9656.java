@@ -8,12 +8,13 @@ public class Main{
 		
 		int a = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		if(a % 2 == 0) {
-			System.out.println("SK");
+			sb.append("SK");
 		}
 		else {
-			System.out.println("CY");
+			sb.append("CY");
 		}
-		br.close();
+		System.out.print(sb);
 	}
 }
