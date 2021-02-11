@@ -1,16 +1,22 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws NumberFormatException,IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		StringTokenizer st = new StringTokenizer(br.readLine().trim());
+
+		int a = Integer.parseInt(st.nextToken());
+		int b = Integer.parseInt(st.nextToken());
 		
-		int a = scan.nextInt();
-		int b = scan.nextInt();
-		
-		System.out.println(a+b);
-		System.out.println(a-b);
-		System.out.println(a*b);
-		System.out.println(a/b);
-		System.out.println(a%b);
+        	StringBuilder sb = new StringBuilder();
+		sb.append(a+b).append("\n");
+		sb.append(a-b).append("\n");
+		sb.append(a*b).append("\n");
+		sb.append(a/b).append("\n");
+		sb.append(a%b);
+		System.out.print(sb);
 	}
 }
