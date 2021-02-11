@@ -1,26 +1,30 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int a = scan.nextInt();
-		int b = scan.nextInt();
-		int c = scan.nextInt();
+		int a = Integer.parseInt(br.readLine());
+		int b = Integer.parseInt(br.readLine());
+		int c = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		if(a + b + c == 180) {
 			if(a == b && b == c) {
-				System.out.println("Equilateral");
+				sb.append("Equilateral");
 			}
 			else if(a == b || b == c || a == c) {
-				System.out.println("Isosceles");
+				sb.append("Isosceles");
 			}
 			else {
-				System.out.println("Scalene");
+				sb.append("Scalene");
 			}
 		}
 		else {
-			System.out.println("Error");
+			sb.append("Error");
 		}
+		System.out.print(sb);
 	}
 }
