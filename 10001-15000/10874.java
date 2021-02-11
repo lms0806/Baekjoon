@@ -1,14 +1,11 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		int num = Integer.parseInt(br.readLine());
 		
@@ -18,6 +15,7 @@ public class Main {
 			result[i-1] = ((i-1)%5)+1;
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < num; i++) {
 			int count = 0;
 			StringTokenizer st = new StringTokenizer(br.readLine());
@@ -28,13 +26,9 @@ public class Main {
 				}
 			}
 			if(count == 10) {
-				bw.write((i+1) + "\n");
+				sb.append(i+1).append("\n");
 			}
 		}
-		
-		bw.flush();
-
-		br.close();
-		bw.close();
+		System.out.print(sb);
 	}
 }
