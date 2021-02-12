@@ -13,7 +13,7 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		int count = 1;
-		for(int i = 0; i < n; i++) {
+		while(n-->0) {
 			for(int j = 0; j < m ; j++) {
 				sb.append(count);
 				if(j != m-1) {
@@ -24,6 +24,6 @@ public class Main {
 			sb.append("\n");
 		}
 		
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
