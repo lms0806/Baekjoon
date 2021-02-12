@@ -13,7 +13,7 @@ public class Main {
 		int k = Integer.parseInt(st.nextToken());
 		
 		int a, b;
-		for(int i = 0; i < k ; i++) {
+		while(k-->0) {
 			st = new StringTokenizer(br.readLine());
 			a = Integer.parseInt(st.nextToken());
 			b = Integer.parseInt(st.nextToken());
@@ -24,6 +24,6 @@ public class Main {
 				x = b;
 			}
 		}
-		System.out.println(x);
+		System.out.print(x);
 	}
 }
