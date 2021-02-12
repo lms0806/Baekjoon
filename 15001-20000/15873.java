@@ -1,34 +1,33 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = scan.next();
-		String[] strs = str.split("");
+		String str = br.readLine();
 		
 		String a = "", b= "";
-		if(strs.length > 2) {
-			if(strs[strs.length-1].equals("0")) {
-				for(int i = 0; i < strs.length-2; i++) {
-					a += strs[i];
+		if(str.length() > 2) {
+			if(str.charAt(str.length()-1) == '0') {
+				for(int i = 0; i < str.length() - 2; i++) {
+					a += str.charAt(i);
 				}
-				b += strs[strs.length-2] + strs[strs.length-1];
+				b = b + str.charAt(str.length() - 2) + str.charAt(str.length() - 1);
 			}
 			else {
-				for(int i = 0; i < strs.length-1; i++) {
-					a += strs[i];
+				for(int i = 0; i < str.length()-1; i++) {
+					a += str.charAt(i);
 				}
-				b += strs[strs.length-1];
+				b += str.charAt(str.length() - 1);
 			}
 		}
 		else {
-			a += strs[0];
-			b += strs[1];
+			a += str.charAt(0);
+			b += str.charAt(1);
 		}
 		
-		int sum = Integer.parseInt(a) + Integer.parseInt(b);
-		
-		System.out.println(sum);
+		System.out.println(Integer.parseInt(a) + Integer.parseInt(b));
 	}
 }
