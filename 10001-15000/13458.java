@@ -25,17 +25,10 @@ public class Main {
 			answer++;
 			num[i] -= a;
 			if(num[i] > 0) {
-				if(num[i] % b == 0) {
-					answer += num[i]/b;
-				}
-				else {
-					answer += num[i]/b + 1;
-				}
+				answer += num[i]%b==0 ? num[i]/b : num[i]/b+1;
 			}
 		}
 		
 		System.out.println(answer);
-		
-		br.close();
 	}
 }
