@@ -1,16 +1,13 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		int a = scan.nextInt();
-		int b = scan.nextInt();
-		int c = scan.nextInt();
-		int d = scan.nextInt();
-		
-		int result = a*56 + b*24 + c*14 + d*6;
-		
-		System.out.println(result);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		System.out.println(Integer.parseInt(st.nextToken()) * 56 + Integer.parseInt(st.nextToken()) * 24 + Integer.parseInt(st.nextToken()) * 14 + Integer.parseInt(st.nextToken()) * 6);
 	}
 }
