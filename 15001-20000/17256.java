@@ -22,16 +22,13 @@ public class Main {
 		}
 		
 		for(int i = 0; i < 3; i++) {
-			if(i == 1) {
-				c[i] = b[i] / a[i];
-			}
-			else {
-				c[i] = b[i] - a[2-i];
-			}
+			c[i] = i == 1 ? b[i] / a[i] : b[i] - a[2 - i];
 		}
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < 3; i++) {
-			System.out.print(c[i] + " ");
+			sb.append(c[i]).append(" ");
 		}
+        	System.out.print(sb);
 	}
 }
