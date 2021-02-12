@@ -5,9 +5,7 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws NumberFormatException,IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		int n;
-		n = Integer.parseInt(br.readLine());
 		
-		System.out.println(n-1946);
+		System.out.println(Integer.parseInt(br.readLine())-1946);
 	}
 }
