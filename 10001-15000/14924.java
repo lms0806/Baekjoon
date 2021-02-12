@@ -12,8 +12,6 @@ public class Main {
 		int l = Integer.parseInt(st.nextToken());
 		int r = Integer.parseInt(st.nextToken());
 		
-		int answer = r / (x*2);
-		answer *= l;
-		System.out.println(answer);
+		System.out.print(r / (x*2) * l);
 	}
 }
