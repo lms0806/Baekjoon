@@ -7,13 +7,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		String str = br.readLine().replaceAll("[0-9]", "");
-		String strs = br.readLine();
 		
-		if(str.lastIndexOf(strs) != -1) {
-			System.out.println(1);
-		}
-		else {
-			System.out.println(0);
-		}
+        	System.out.print(str.lastIndexOf(br.readLine()) != -1 ? 1 : 0);
 	}
 }
