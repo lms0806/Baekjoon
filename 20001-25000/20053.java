@@ -9,18 +9,21 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		for(int i = 0; i < size; i++) {
-			int num = Integer.parseInt(br.readLine());
+		int num, number;
+		
+		StringBuilder sb = new StringBuilder();
+		while(size-->0) {
+			num = Integer.parseInt(br.readLine());
 			
 			int min = 1000000, max = -1000000;
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			for(int j = 0; j < num; j++) {
-				int number = Integer.parseInt(st.nextToken());
+			while(num-->0) {
+				number = Integer.parseInt(st.nextToken());
 				min = Math.min(min, number);
 				max = Math.max(max, number);
 			}
-			System.out.println(min + " " + max);
+			sb.append(min).append(" ").append(max).append("\n");
 		}
-		
+		System.out.print(sb);
 	}
 }
