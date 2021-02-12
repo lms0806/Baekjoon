@@ -10,6 +10,7 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		int a,b, result;
 		
+        	StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			a = Integer.parseInt(st.nextToken());
@@ -21,7 +22,8 @@ public class Main {
 				result++;
 			}
 			
-			System.out.println(result);
+			sb.append(result).append("\n");
 		}
+        	System.out.print(sb);
 	}
 }
