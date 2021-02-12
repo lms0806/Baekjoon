@@ -13,11 +13,6 @@ public class Main {
 		
 		int c = Integer.parseInt(br.readLine());
 		
-		if(a + b < (2 * c)) {
-			System.out.println(a + b);
-		}
-		else {
-			System.out.println(a + b - (c*2));
-		}
+		System.out.print(a + b < (2 * c) ? a + b : a + b - (c * 2));
 	}
 }
