@@ -8,6 +8,7 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			String[] str = br.readLine().split(" ");
 			long num = Long.parseLong(str[0]);
@@ -15,37 +16,19 @@ public class Main {
 			long result = Long.parseLong(str[4]);
 			
 			if(str[1].equals("+")) {
-				if(num + num1 == result) {
-					System.out.println("correct");
-				}
-				else {
-					System.out.println("wrong answer");
-				}
+				sb.append(num + num1 == result? "correct" : "wrong answer");
 			}
 			else if(str[1].equals("-")) {
-				if(num - num1 == result) {
-					System.out.println("correct");
-				}
-				else {
-					System.out.println("wrong answer");
-				}
+				sb.append(num - num1 == result? "correct" : "wrong answer");
 			}
 			else if(str[1].equals("*")) {
-				if(num * num1 == result) {
-					System.out.println("correct");
-				}
-				else {
-					System.out.println("wrong answer");
-				}
+				sb.append(num * num1 == result? "correct" : "wrong answer");
 			}
 			else if(str[1].equals("/")) {
-				if(num / num1 == result) {
-					System.out.println("correct");
-				}
-				else {
-					System.out.println("wrong answer");
-				}
+				sb.append(num / num1 == result? "correct" : "wrong answer");
 			}
+			sb.append("\n");
 		}
+		System.out.print(sb);
 	}
 }
