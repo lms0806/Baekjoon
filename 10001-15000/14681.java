@@ -1,27 +1,23 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int a = scan.nextInt();
-		int b = scan.nextInt();
+		int a, b;
 		
+		a = Integer.parseInt(br.readLine());
+		b = Integer.parseInt(br.readLine());
+		
+		StringBuilder sb = new StringBuilder();
 		if(a > 0) {
-			if(b > 0) {
-				System.out.print("1");
-			}
-			else {
-				System.out.print("4");
-			}
+			sb.append(b > 0 ? 1 : 4);
 		}
 		else {
-			if(b > 0) {
-				System.out.print("2");
-			}
-			else {
-				System.out.print("3");
-			}
+			sb.append(b > 0 ? 2 : 3);
 		}
+		System.out.print(sb);
 	}
 }
