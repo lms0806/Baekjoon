@@ -28,8 +28,8 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		
 		for(int i = 0; i < sum.length; i++) {
-			sb.append(sum[i] + " ");
+			sb.append(sum[i]).append(" ");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
