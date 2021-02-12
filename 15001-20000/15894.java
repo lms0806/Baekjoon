@@ -3,16 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) throws NumberFormatException,IOException{
+	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		long a, sum;
 		
-		a = Long.parseLong(br.readLine());
-		
-		sum = a * 4;
-		
-		System.out.println(sum);
-		
-		br.close();
+		System.out.print(Long.parseLong(br.readLine()) * 4);
 	}
 }
