@@ -13,10 +13,10 @@ public class Main {
 		int c = Integer.parseInt(st.nextToken());
 		
 		int answer = a^b;
-		for(int i = 1; i < c; i++) {
+		while(c-->1) {
 			answer = answer ^ b;
 		}
 		
-		System.out.println(answer);
+		System.out.print(answer);
 	}
 }
