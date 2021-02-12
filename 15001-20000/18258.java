@@ -10,12 +10,12 @@ public class Main {
 		
 		Queue<Integer> queue = new LinkedList<>();
 		
-		int size = Integer.parseInt(br.readLine())+1;
+		int size = Integer.parseInt(br.readLine());
 		int charat, num = 0;
 		String str;
 		
 		StringBuilder sb = new StringBuilder();
-		while(0<--size) {
+		while(size-->0) {
 			str = br.readLine();
 			charat = str.charAt(0);
 			if(charat == 'f') {
