@@ -18,7 +18,6 @@ public class Main {
 			sum += k*i + p * Math.pow(i, 2);
 		}
 
-		System.out.println(sum);
-		br.close();
+		System.out.print(sum);
 	}
 }
