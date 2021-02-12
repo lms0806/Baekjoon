@@ -9,14 +9,14 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		for(int i = 0; i < size; i++) {
+		StringBuilder sb = new StringBuilder();
+		while(size-->0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
 			
-			int num = a/b;
-			
-			System.out.println((int)Math.pow(num, 2));
+			sb.append((int)Math.pow(a/b, 2)).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
