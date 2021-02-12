@@ -1,20 +1,16 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		String str = scan.nextLine();
-		String[] s = str.split(" ");
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
 		
-		if(Integer.parseInt(s[1]) == 1 || Integer.parseInt(s[1]) == 2) {
-			System.out.println("NEWBIE!");
-		}
-		else if(Integer.parseInt(s[0]) >= Integer.parseInt(s[1]) && Integer.parseInt(s[1]) > 2) {
-			System.out.println("OLDBIE!");
-		}
-		else {
-			System.out.println("TLE!");
-		}
+		System.out.print(m < 3 ? "NEWBIE!" : n >= m ? "OLDBIE!" : "TLE!");
 	}
 }
