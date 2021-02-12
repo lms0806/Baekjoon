@@ -8,12 +8,6 @@ public class Main {
 		
 		int a = Integer.parseInt(br.readLine());
 		
-		
-		if(a%5 == 0){
-			System.out.println((a/5));
-		}
-		else {
-			System.out.println((a/5)+1);
-		}
+		System.out.print(a % 5 == 0 ? a / 5 : (a / 5) + 1);
 	}
 }
