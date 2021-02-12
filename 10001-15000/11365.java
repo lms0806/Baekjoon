@@ -1,23 +1,25 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = "";
-		
-		while(!str.equals("END")) {
-			str = scan.nextLine();
+		StringBuilder sb = new StringBuilder();
+		while(true) {
+			String str = br.readLine();
+			
 			if(str.equals("END")) {
 				break;
 			}
-			String[] strs = str.split("");
 			
 			String answer = "";
-			for(int i = strs.length-1; i >= 0; i--) {
-				answer += strs[i];
+			for(int i = str.length()-1; i >= 0; i--) {
+				answer += str.charAt(i);
 			}
-			System.out.println(answer);
+			sb.append(answer).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
