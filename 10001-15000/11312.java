@@ -10,14 +10,14 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		for(int i = 0; i < size; i++) {
+		StringBuilder sb = new StringBuilder();
+		while(size-->0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			BigInteger a = new BigInteger(st.nextToken());
 			BigInteger b = new BigInteger(st.nextToken());
-			
-			BigInteger num = a.divide(b);
 		
-			System.out.println(num.pow(2));
+			sb.append(a.divide(b).pow(2)).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
