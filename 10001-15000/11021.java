@@ -1,20 +1,21 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int a = scan.nextInt();
-		int[] num = new int[a];
+		int a = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < a; i++) {
-			int b = scan.nextInt();
-			int c = scan.nextInt();
-			num[i] = b+c;
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int num = Integer.parseInt(st.nextToken());
+			num += Integer.parseInt(st.nextToken());
+			sb.append("Case #").append(i+1).append(": ").append(num).append("\n");
 		}
-		
-		for(int i = 1; i <= a; i++) {
-			System.out.println("Case #" + i + ": " + num[i-1]);
-		}
+		System.out.print(sb);
 	}
 }
