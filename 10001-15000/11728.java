@@ -9,24 +9,20 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int sizea = Integer.parseInt(st.nextToken());
-		int sizeb = Integer.parseInt(st.nextToken());
+		int[] sum = new int[Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())];
 		
-		int[] sum = new int[sizea + sizeb];
-		
-		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < sizea; i++) {
-			sum[i] = Integer.parseInt(st.nextToken());
-		}
-		st = new StringTokenizer(br.readLine());
-		for(int i = sizea; i < sum.length; i++) {
-			sum[i] = Integer.parseInt(st.nextToken());
+		int count = 0;
+		for(int i = 0; i < 2; i++) {
+			st = new StringTokenizer(br.readLine());
+			while(st.hasMoreTokens()) {
+				sum[count] = Integer.parseInt(st.nextToken());
+				count++;
+			}
 		}
 		
 		Arrays.sort(sum);
 		
-		StringBuilder sb = new StringBuilder();
-		
+		StringBuilder sb = new StringBuilder();	
 		for(int i = 0; i < sum.length; i++) {
 			sb.append(sum[i]).append(" ");
 		}
