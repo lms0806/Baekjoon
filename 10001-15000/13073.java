@@ -7,16 +7,14 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		int size = Integer.parseInt(br.readLine());
-		int num, sum, even, odd;
+		int num;
 		
-		for(int i = 0; i < size; i++) {
+        	StringBuilder sb = new StringBuilder();
+		while(size-->0) {
 			num = Integer.parseInt(br.readLine());
 			
-			sum = num*(num+1)/2;
-			even = num*(num+1);
-			odd = num*num;
-			
-			System.out.println(sum + " " + odd + " " + even);
+			sb.append(num*(num+1)/2).append(" ").append(num*num).append(" ").append(num*(num+1)).append("\n");
 		}
+        	System.out.print(sb);
 	}
 }
