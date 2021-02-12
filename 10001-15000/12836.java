@@ -13,12 +13,13 @@ public class Main {
 		
 		long[] num = new long[n+1];
 		
+		int check, p, q;
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < m; i++) {
+		while(m-->0) {
 			st = new StringTokenizer(br.readLine());
-			int check = Integer.parseInt(st.nextToken());
-			int p = Integer.parseInt(st.nextToken());
-			int q = Integer.parseInt(st.nextToken());
+			check = Integer.parseInt(st.nextToken());
+			p = Integer.parseInt(st.nextToken());
+			q = Integer.parseInt(st.nextToken());
 			
 			if(check == 1) {
 				num[p] += q;
@@ -32,6 +33,6 @@ public class Main {
 			}
 		}
 		
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
