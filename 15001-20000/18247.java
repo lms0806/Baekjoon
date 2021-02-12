@@ -9,17 +9,14 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int n = Integer.parseInt(st.nextToken());
 			int m = Integer.parseInt(st.nextToken());
 			
-			if(n < 12 || m < 4) {
-				System.out.println("-1");
-			}
-			else {
-				System.out.println(11*m+4);
-			}
+			sb.append(n< 12 || m < 4 ? -1 : 11 * m + 4).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
