@@ -8,17 +8,17 @@ public class Main {
 		
 		int a = Integer.parseInt(br.readLine());
 		
-		br.close();
-		
 		int count = 2;
+		StringBuilder sb = new StringBuilder();
 		while(a >= count) {
 			if(a%count == 0) {
 				a/=count;
-				System.out.println(count);
+				sb.append(count).append("\n");
 			}
 			else {
 				count++;
 			}
 		}
+		System.out.print(sb);
 	}
 }
