@@ -1,27 +1,17 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+
 		int[] num = new int[2];
 		
 		for(int i = 0; i < 2; i++) {
-			int a = scan.nextInt();
-			int b = scan.nextInt();
-			int c = scan.nextInt();
-			
-			num[i] += a*3 + b*2 + c;
+			num[i] += Integer.parseInt(br.readLine()) * 3 + Integer.parseInt(br.readLine()) * 2 + Integer.parseInt(br.readLine());
 		}
 		
-		if(num[0] > num[1]) {
-			System.out.println("A");
-		}
-		else if(num[0] == num[1]) {
-			System.out.println("T");
-		}
-		else {
-			System.out.println("B");
-		}
+		System.out.print(num[0] > num[1] ? "A" : num[0] == num[1] ? "T" : "B");
 	}
 }
