@@ -12,20 +12,23 @@ public class Main {
 		int[] num = new int[3];
 		
 		int min = 100, sum = 0;
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < 3; i++) {
 			num[i] = Integer.parseInt(st.nextToken());
 			sum += num[i];
 			min = Math.min(min, num[i]);
 		}
 		if(sum >= 100) {
-			System.out.println("OK");
+			sb.append("OK");
 		}
 		else {
 			for(int i = 0; i < 3; i++) {
 				if(min == num[i]) {
-					System.out.println(str[i]);
+					sb.append(str[i]);
+					break;
 				}
 			}
 		}
+		System.out.print(sb);
 	}
 }
