@@ -1,26 +1,30 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int num = scan.nextInt();
+		int num = Integer.parseInt(br.readLine());
 		
-		String last = "";
+		char last = ' ';
 		int count = 0;
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < num; i++) {
-			String str = scan.next();
-			if(!last.equals("")) {
-				if(!last.equals(str.substring(0,1))){
-					System.out.println("0");
-					break;
-				}
+			String str = st.nextToken();
+			if(last != ' ' && last != str.charAt(0)) {
+				sb.append(0);
+				break;
 			}
-			last = str.substring(str.length()-1, str.length());
+			last = str.charAt(str.length()-1);
 			count++;
 		}
 		if(count == num) {
-			System.out.println("1");
+			sb.append(1);
 		}
+		System.out.print(sb);
 	}
 }
