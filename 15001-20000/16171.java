@@ -9,11 +9,6 @@ public class Main {
 		String str = br.readLine().replaceAll("[0-9]", "");
 		String strs = br.readLine();
 		
-		if(str.indexOf(strs) != -1) {
-			System.out.println(1);
-		}
-		else {
-			System.out.println(0);
-		}
+		System.out.print(str.indexOf(strs) != -1 ? 1 : 0);
 	}
 }
