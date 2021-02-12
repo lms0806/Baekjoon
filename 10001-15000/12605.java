@@ -8,13 +8,15 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			String[] strs = br.readLine().split(" ");
-			String str = "Case #" + (i+1) + ": ";
+			String str = "";
 			for(int j = strs.length - 1; j >= 0; j--) {
 				str += strs[j] + " ";
 			}
-			System.out.println(str);
+			sb.append("Case #").append(i+1).append(": ").append(str).append("\n");
 		}
+		System.out.print(sb);
 	}
 }
