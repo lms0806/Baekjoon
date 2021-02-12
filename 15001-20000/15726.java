@@ -17,8 +17,6 @@ public class Main {
 		double num = a * b / c;
 		double num1 = a / b * c;
 		
-		long answer = (long)Math.max(num, num1);
-		System.out.println(answer);
-		
+		System.out.print((long)Math.max(num, num1));
 	}
 }
