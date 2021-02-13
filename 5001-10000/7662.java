@@ -16,31 +16,18 @@ public class Main {
 			int num = Integer.parseInt(br.readLine());
 			while(num-->0) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
-				if(st.nextToken().equals("I")) {
-					int number = Integer.parseInt(st.nextToken());
-					map.put(number, !map.containsKey(number) ? 1 : 1 + map.get(number));
+				char ch = st.nextToken().charAt(0);
+				int n = Integer.parseInt(st.nextToken());
+				if(ch == 'I') {
+					map.put(n, !map.containsKey(n) ? 1 : 1 + map.get(n));
 				}
-				else {
-					if(map.isEmpty()) {
-						continue;
-					}
-					if(st.nextToken().equals("1")) {
-						int max = map.lastKey();
-						if(map.get(max) == 1) {
-							map.remove(max);
-						}
-						else {
-							map.put(max, map.get(max)-1);
-						}
+				else if(!map.isEmpty() && ch == 'D'){
+					int number = n == 1 ? map.lastKey() : map.firstKey(); 
+					if(map.get(number) == 1) {
+						map.remove(number);
 					}
 					else {
-						int min = map.firstKey();
-						if(map.get(min) == 1) {
-							map.remove(min);
-						}
-						else {
-							map.put(min, map.get(min)-1);
-						}
+						map.put(number, map.get(number)-1);
 					}
 				}
 			}
