@@ -9,6 +9,7 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
+		int a, b, c;
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
@@ -18,9 +19,9 @@ public class Main {
 				strs[j] = st.nextToken();
 			}
 			
-			int a = Integer.parseInt(strs[0]);
-			int b = Integer.parseInt(strs[2]);
-			int c = Integer.parseInt(strs[4]);
+			a = Integer.parseInt(strs[0]);
+			b = Integer.parseInt(strs[2]);
+			c = Integer.parseInt(strs[4]);
 			
 			sb.append("Case ").append(i+1).append(": ");
 			if(strs[1].equals("+")) {
