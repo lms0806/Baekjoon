@@ -13,7 +13,7 @@ public class Main {
 			boolean istrue = true;
 			String str = br.readLine().toLowerCase();
 			
-			for(int j = 0; j < str.length(); j++) {
+			for(int j = 0; j < str.length()/2; j++) {
 				if(str.charAt(j) != str.charAt(str.length() - j - 1)) {
 					istrue = false;
 					break;
