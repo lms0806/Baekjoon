@@ -8,3 +8,4 @@
 # JAVA(11) 첫솔
 https://www.acmicpc.net/problem/4378 (트ㅏㅊ;)
 https://www.acmicpc.net/problem/4072 (Words)
+https://www.acmicpc.net/problem/6965 (Censor)
