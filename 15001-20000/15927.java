@@ -15,12 +15,15 @@ public class Main {
 			if(str.charAt(0) == str.charAt(i)) {
 				n++;
 			}
+			else {
+				break;
+			}
 		}
 		if(n == str.length()-1) {
 			return -1;
 		}
 		
-		for(int i = 0; i < str.length(); i++) {
+		for(int i = 0; i < str.length()/2; i++) {
 			if(str.charAt(i) != str.charAt(str.length()-i-1)) {
 				return str.length();
 			}
