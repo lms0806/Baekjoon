@@ -6,17 +6,13 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int a = Integer.parseInt(br.readLine());
+		int n = Integer.parseInt(br.readLine());
 		
-		int count = 2;
 		StringBuilder sb = new StringBuilder();
-		while(a >= count) {
-			if(a%count == 0) {
-				a/=count;
-				sb.append(count).append("\n");
-			}
-			else {
-				count++;
+		for(int i = 2; i <= n; i++) {
+			while(n%i == 0) {
+				sb.append(i).append("\n");
+				n = n/i;
 			}
 		}
 		System.out.print(sb);
