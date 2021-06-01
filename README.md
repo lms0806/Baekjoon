@@ -6,10 +6,10 @@
 ![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=lms0806)
 
 # JAVA(11) 첫솔
-https://www.acmicpc.net/problem/4378 (트ㅏㅊ;)
-https://www.acmicpc.net/problem/4072 (Words)
-https://www.acmicpc.net/problem/6965 (Censor)
-https://www.acmicpc.net/problem/6993 (Shift Letters)
-https://www.acmicpc.net/problem/10203 (Count Vowels)
-https://www.acmicpc.net/problem/14175 (The Cow-Signal)
-https://www.acmicpc.net/problem/18412 (文字列の反転)
+ - https://www.acmicpc.net/problem/4378 (트ㅏㅊ;)
+ - https://www.acmicpc.net/problem/4072 (Words)
+ - https://www.acmicpc.net/problem/6965 (Censor)
+ - https://www.acmicpc.net/problem/6993 (Shift Letters)
+ - https://www.acmicpc.net/problem/10203 (Count Vowels)
+ - https://www.acmicpc.net/problem/14175 (The Cow-Signal)
+ - https://www.acmicpc.net/problem/18412 (文字列の反転)
