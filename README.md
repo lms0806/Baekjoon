@@ -14,3 +14,4 @@
  - https://www.acmicpc.net/problem/14175 (The Cow-Signal)
  - https://www.acmicpc.net/problem/18412 (文字列の反転)
  - https://www.acmicpc.net/problem/18127 (모형결정)
+ - https://www.acmicpc.net/problem/9842 (Prime)
