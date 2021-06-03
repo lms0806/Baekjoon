@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		
+		char[] ch = br.readLine().toCharArray();
+		
+		String answer = "YES";
+		for(int i = 0; i < ch.length; i++) {
+			if(i < ch.length - 1 && ch[i] == 'p' && ch[i+1] == 'i') {
+				i++;
+			}
+			else if(i < ch.length - 1 && ch[i] == 'k' && ch[i+1] == 'a') {
+				i++;
+			}
+			else if(i < ch.length - 2 && ch[i] == 'c' && ch[i+1] == 'h' && ch[i+2] == 'u') {
+				i+=2;
+			}
+			else {
+				answer = "NO";
+				break;
+			}
+		}
+		
+		System.out.print(answer);
+	}
+}
