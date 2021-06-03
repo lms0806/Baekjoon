@@ -8,35 +8,28 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken());
+		int b = Integer.parseInt(st.nextToken());
 		
-		boolean istrue = true;
+		boolean[] prime = new boolean[b+1];
+		
+		prime[0] = prime[1] = true;
+		
+		for(int i = 2; i * i <= b; i++) {
+			if(prime[i]) {
+				continue;
+			}
+			for(int j = i * i; j <= b; j += i) {
+				prime[j] = true;
+			}
+		}
 		
 		StringBuilder sb = new StringBuilder();
-		while(n <= m) {
-			istrue = true;
-			
-			istrue = sosu(n);
-			
-			if(istrue == true) {
-				sb.append(n).append("\n";
-			}
-			n++;
-		}
-		
-		System.out.println(sb);
-	}
-	
-	public static boolean sosu(int n) {
-		if(n == 1) {
-			return false;
-		}
-		for (int i = 2; i*i <= n; i++) {
-			if (n % i == 0) {
-				return false;
+		for(int i = a; i <= b; i++) {
+			if(!prime[i]) {
+				sb.append(i).append("\n");
 			}
 		}
-		return true;
+		System.out.print(sb);
 	}
 }
