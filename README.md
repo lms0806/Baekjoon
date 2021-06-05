@@ -16,3 +16,4 @@
  - https://www.acmicpc.net/problem/18127 (모형결정)
  - https://www.acmicpc.net/problem/9842 (Prime)
  - https://www.acmicpc.net/problem/2037 (문자메시지)
+ - https://www.acmicpc.net/problem/21918 (전구)
