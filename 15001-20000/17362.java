@@ -6,19 +6,8 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		long a = Long.parseLong(br.readLine());
+		long answer = Long.parseLong(br.readLine()) % 8;
 		
-		long answer = a%8;
-		if(answer == 0) {
-			answer = 2;
-		}
-		else if(answer == 6) {
-			answer = 4;
-		}
-		else if(answer == 7) {
-			answer = 3;
-		}
-		
-		System.out.println(answer);
+		System.out.print(answer == 0 ? 2 : answer == 6 ? 4 : answer == 7 ? 3 : answer);
 	}
 }
