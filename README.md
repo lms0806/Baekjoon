@@ -18,3 +18,4 @@
  - https://www.acmicpc.net/problem/2037 (문자메시지)
  - https://www.acmicpc.net/problem/21918 (전구)
  - https://www.acmicpc.net/problem/17598 (Animal King Election)
+ - https://www.acmicpc.net/problem/6970 (Sentences)
