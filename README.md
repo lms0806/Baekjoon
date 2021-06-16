@@ -20,3 +20,4 @@
  - https://www.acmicpc.net/problem/17598 (Animal King Election)
  - https://www.acmicpc.net/problem/6970 (Sentences)
  - https://www.acmicpc.net/problem/20766 (Complicated documents)
+ - https://www.acmicpc.net/problem/19802 (Ребус)
