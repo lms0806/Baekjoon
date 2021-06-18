@@ -22,3 +22,4 @@
  - https://www.acmicpc.net/problem/20766 (Complicated documents)
  - https://www.acmicpc.net/problem/19802 (Ребус)
  - https://www.acmicpc.net/problem/21144 (Missing Number)
+ - https://www.acmicpc.net/problem/7947 (Koncert)
