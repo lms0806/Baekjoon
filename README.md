@@ -24,3 +24,4 @@
  - https://www.acmicpc.net/problem/21144 (Missing Number)
  - https://www.acmicpc.net/problem/7947 (Koncert)
  - https://www.acmicpc.net/problem/8663 (Konik polny)
+ - https://www.acmicpc.net/problem/6751 (From 1987 to 2013)
