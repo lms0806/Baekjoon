@@ -26,3 +26,4 @@
  - https://www.acmicpc.net/problem/8663 (Konik polny)
  - https://www.acmicpc.net/problem/6751 (From 1987 to 2013)
  - https://www.acmicpc.net/problem/21945 (Palindromes)
+ - https://www.acmicpc.net/problem/13717 (포켓몬 GO)
