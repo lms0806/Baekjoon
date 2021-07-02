@@ -28,3 +28,4 @@
  - https://www.acmicpc.net/problem/21945 (Palindromes)
  - https://www.acmicpc.net/problem/13717 (포켓몬 GO)
  - https://www.acmicpc.net/problem/9575 (행운의 수)
+ - https://www.acmicpc.net/problem/9414 (프로그래밍 대회 전용 부지)
