@@ -17,7 +17,7 @@ public class Main {
 			
 			int c = 1;
 			for(int j = 0; j < b; j++) {
-				c = (c*a)%10;
+				c = (c * a) % 10;
 			}
 			
 			if(c == 0) {
@@ -27,6 +27,6 @@ public class Main {
 			sb.append(c).append("\n");
 		}
 		
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
