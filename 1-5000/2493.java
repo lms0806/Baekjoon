@@ -2,29 +2,30 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class Main{
 	public static void main(String[] args) throws NumberFormatException,IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		Stack<int[]> sta = new Stack<>();
+		Stack<int[]> stack = new Stack<>();
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		String[] str = br.readLine().split(" ");
+		StringTokenizer st = new StringTokenizer(br.readLine());
         	StringBuilder sb = new StringBuilder();
 		for(int i = 1; i <= size; i++) {
-			int num = Integer.parseInt(str[i-1]);
-			while(!sta.isEmpty()) {
-				if(sta.peek()[1] >= num) {
-					sb.append(sta.peek()[0]).append(" ");
+			int num = Integer.parseInt(st.nextToken());
+			while(!stack.isEmpty()) {
+				if(stack.peek()[1] >= num) {
+					sb.append(stack.peek()[0]).append(" ");
 					break;
 				}
-				sta.pop();
+				stack.pop();
 			}
-			if(sta.isEmpty()) {
+			if(stack.isEmpty()) {
 				sb.append("0 ");
 			}
-			sta.push(new int[] {i, num});
+			stack.push(new int[] {i, num});
 		}
         	System.out.print(sb);
 	}
