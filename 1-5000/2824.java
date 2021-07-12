@@ -12,23 +12,19 @@ public class Main {
 		
 		BigInteger n = BigInteger.ONE, m = BigInteger.ONE;
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < size; i++) {
+		while(size --> 0) {
 			n = n.multiply(new BigInteger(st.nextToken()));
 		}
 		
 		size = Integer.parseInt(br.readLine());
 		
 		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < size; i++) {
+		while(size --> 0) {
 			m = m.multiply(new BigInteger(st.nextToken()));
 		}
 		
 		String gcd = n.gcd(m).toString();
-		
-		if(gcd.length() > 9) {
-			gcd = gcd.substring(gcd.length() - 9, gcd.length());
-		}
 				
-		System.out.print(gcd);
+		System.out.print(gcd.length() > 9 ? gcd.substring(gcd.length() - 9, gcd.length()) : gcd);
 	}
 }
