@@ -6,19 +6,10 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
+		String str = "";
 		StringBuilder sb = new StringBuilder();
-		while(true) {
-			String str = br.readLine();
-			
-			if(str.equals("END")) {
-				break;
-			}
-			
-			String answer = "";
-			for(int i = str.length()-1; i >= 0; i--) {
-				answer += str.charAt(i);
-			}
-			sb.append(answer).append("\n");
+		while(!(str = br.readLine()).equals("END")) {
+			sb.append(new StringBuilder(str).reverse().toString()).append("\n");
 		}
 		System.out.print(sb);
 	}
