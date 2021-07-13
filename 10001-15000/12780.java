@@ -6,9 +6,8 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = br.readLine();
-		String s = br.readLine();
+		String str = br.readLine(), s = br.readLine();
 		
-		System.out.print((str.length()-str.replace(s,"").length())/s.length());
+		System.out.print((str.length() - str.replace(s,"").length()) / s.length());
 	}
 }
