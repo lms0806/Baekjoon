@@ -12,21 +12,17 @@ public class Main {
 		for(int i = 0; i < number; i++) {
 			String str = br.readLine();
 			int[] num = new int[str.length()];
-			int sum = 0;
-			int count = 1;
+			int sum = 0, count = 1;
 			
 			for(int j = 0; j < str.length(); j++) {
 				if(str.charAt(j) == 'O') {
 					num[j] += count;
-					count++;
 				}
-				else {
-					count = 1;
-				}
+				count = str.charAt(j) == 'O' ? count + 1 : 1; 
 			}
 			
-			for(int j = 0; j < num.length; j++) {
-				sum += num[j];
+			for(int n : num) {
+				sum += n;
 			}
 			sb.append(sum).append("\n");
 		}
