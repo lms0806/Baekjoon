@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		System.out.print(br.readLine().length() < br.readLine().length() ? "no" : "go");
+
+        	System.out.println(br.readLine().length() < br.readLine().length() ? "no" : "go");
 	}
 }
