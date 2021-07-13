@@ -6,23 +6,24 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String[] alpha = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
-		int[] num = new int[alpha.length];
+		String str = br.readLine();
 		
-		String[] str = br.readLine().split("");
-		for(int i = 0; i < str.length; i++) {
-			for(int j = 0; j < alpha.length; j++) {
-				if(str[i].equals(alpha[j]) && num[j] == 0) {
-					num[j] = i+1;
-					break;
-				}
+		int[] alpha = new int[26];
+		
+		for(int i = 0; i < 26; i++) {
+			alpha[i] = -1;
+		}
+		
+		for(int i = 0; i < str.length(); i++) {
+			if(alpha[str.charAt(i) - 'a'] == -1) {
+				alpha[str.charAt(i) - 'a'] = i;
 			}
 		}
 		
-        	StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < num.length; i++) {
-			sb.append(num[i]-1).append(" ");
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < alpha.length; i++) {
+			sb.append(alpha[i]).append(" ");
 		}
-        	System.out.print(sb);
+		System.out.print(sb);
 	}
 }
