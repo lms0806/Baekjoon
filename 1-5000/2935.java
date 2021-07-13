@@ -11,12 +11,6 @@ public class Main {
 		String str = br.readLine();
 		BigInteger b = new BigInteger(br.readLine());
 		
-		if(str.equals("+")) {
-			a = a.add(b);
-		}
-		else {
-			a = a.multiply(b);
-		}
-		System.out.print(a);
+		System.out.print(str.equals("+") ? a.add(b) : a.multiply(b));
 	}
 }
