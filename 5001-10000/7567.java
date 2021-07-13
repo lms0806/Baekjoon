@@ -9,12 +9,7 @@ public class Main {
 		
 		int answer = 10;
 		for(int i = 1; i < line.length(); i++) {
-			if(line.charAt(i-1) == line.charAt(i)) {
-				answer += 5;
-			}
-			else {
-				answer += 10;
-			}
+            		answer += line.charAt(i-1) == line.charAt(i) ? 5 : 10;
 		}
 		System.out.print(answer);
 	}
