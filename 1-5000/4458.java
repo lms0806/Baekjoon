@@ -11,7 +11,7 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			String s = br.readLine();
-			sb.append(s.substring(0,1).toUpperCase()).append(s.substring(1)).append("\n");
+			sb.append(Character.toString(s.charAt(0)).toUpperCase()).append(s.substring(1)).append("\n");
 		}
 		System.out.print(sb);
 	}
