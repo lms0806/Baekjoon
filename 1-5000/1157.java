@@ -6,26 +6,28 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String a = br.readLine().toUpperCase();
 		int[] arr = new int[26];
 		
-		for(int i = 0; i < a.length(); i++) {
-			arr[a.charAt(i) - 'A']++;
+		for(char ch : br.readLine().toCharArray()) {
+			if(ch < 91) {
+				arr[ch - 65]++;
+			}
+			else {
+				arr[ch - 97]++;
+			}
 		}
 		
-		int max = 0;
-		char answer = '?';
-		
+		int max = 0, ch = -2;
 		for(int i = 0; i < 26; i++) {
 			if(arr[i] > max) {
 				max = arr[i];
-				answer = (char)(i+65);
+				ch = i;
 			}
 			else if(arr[i] == max){
-				answer = '?';
+				ch = -2;
 			}
 		}
 		
-		System.out.println(answer);
+		System.out.print((char)(ch + 65));
 	}
 }
