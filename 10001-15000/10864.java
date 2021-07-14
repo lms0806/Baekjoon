@@ -14,9 +14,8 @@ public class Main {
 		
 		for(int i = 0; i < m; i++) {
 			st = new StringTokenizer(br.readLine());
-			for(int j = 0; j < 2; j++) {
-				num[Integer.parseInt(st.nextToken()) - 1]++;
-			}
+			num[Integer.parseInt(st.nextToken()) - 1]++;
+			num[Integer.parseInt(st.nextToken()) - 1]++;
 		}
 		
 		StringBuilder sb = new StringBuilder();
