@@ -16,17 +16,14 @@ public class Main {
 			num[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		int answer = 0;
-		for(int i = 0; i < size - 1; i++) {
-			int count = 0;
-			for(int j = i + 1; j < size; j++) {
-				if(num[i] > num[j]) {
-					count++;
-				}
-				else {
-					break;
-				}
+		int answer = 0, count = 0, check = num[0];
+		for(int i = 1; i < size; i++) {
+			if(check < num[i]) {
+				count = 0;
+				check = num[i];
+				continue;
 			}
+			count++;
 			answer = Math.max(answer, count);
 		}
 		System.out.print(answer);
