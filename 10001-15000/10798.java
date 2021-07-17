@@ -12,13 +12,8 @@ public class Main {
 			str[i] = br.readLine();
 		}
 		
-		int maxsize = 0;
-		for(int i = 0; i < 5; i++) {
-			maxsize = Math.max(maxsize, str[i].length());
-		}
-		
 		StringBuilder sb  = new StringBuilder();
-		for(int i = 0; i < maxsize; i++) {
+		for(int i = 0; i < 15; i++) {
 			for(int j = 0; j < 5; j++) {
 				if(str[j].length() > i) {
 					sb.append(str[j].charAt(i));
