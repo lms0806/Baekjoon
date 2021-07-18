@@ -7,20 +7,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		String str = br.readLine().trim();
-		int count = 0;
 		
-		if(str.equals("")) {
-			count = 0;
-		}
-		else {
-			for(int i = 0; i < str.length(); i++) {
-				if(str.charAt(i) == ' ') {
-					count++;
-				}
-			}
-			count++;
-		}
-		
-		System.out.println(count);
+		System.out.print(str.equals("") ? 0 : str.split(" ").length);
 	}
 }
