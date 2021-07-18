@@ -8,6 +8,6 @@ public class Main {
 		
 		int num = Integer.parseInt(br.readLine());
 		
-		System.out.print(br.readLine().substring(num-5));
+        	System.out.print(br.readLine().substring(num - 5));
 	}
 }
