@@ -31,3 +31,4 @@
  - https://www.acmicpc.net/problem/9414 (프로그래밍 대회 전용 부지)
  - https://www.acmicpc.net/problem/4631 (Symmetric Order)
  - https://www.acmicpc.net/problem/10864 (친구)
+ - https://www.acmicpc.net/problem/7120 (String)
