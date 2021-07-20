@@ -5,20 +5,19 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		String s = br.readLine();
-		
+
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < s.length(); i++) {
-			int num = s.charAt(i);
+		for(char ch : br.readLine().toCharArray()) {
+			int num = ch;
 			
 			int count = 0;
 			while(num != 0) {
-				count += num%10;
-				num/=10;
+				count += num % 10;
+				num /= 10;
 			}
-			for(int j = 0; j < count; j++) {
-				sb.append(s.charAt(i));
+			
+			while(count --> 0) {
+				sb.append(ch);
 			}
 			sb.append("\n");
 		}
