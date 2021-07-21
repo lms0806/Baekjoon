@@ -21,15 +21,17 @@ public class Main {
 			
 			Arrays.sort(strs);
 			
-			String answer = "YES";
-			for(int i = 1; i < num; i++) {
-				if(strs[i].startsWith(strs[i-1])) {
-					answer = "NO";
-					break;
-				}
-			}
-			sb.append(answer).append("\n");
+			sb.append(solve(strs)).append("\n");
 		}
 		System.out.print(sb);
+	}
+	
+	public static String solve(String[] strs) {
+		for(int i = 1; i < strs.length; i++) {
+			if(strs[i].startsWith(strs[i-1])) {
+				return "NO";
+			}
+		}
+		return "YES";
 	}
 }
