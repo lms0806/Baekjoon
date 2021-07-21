@@ -3,7 +3,7 @@
 =
 ● 사용언어: java
 -
-![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=lms0806)
+[![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=lms0806)](https://solved.ac/lms0806)
 
 # JAVA(11) 첫솔
  - https://www.acmicpc.net/problem/4378 (트ㅏㅊ;)
