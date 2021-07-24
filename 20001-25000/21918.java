@@ -8,8 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int size = Integer.parseInt(st.nextToken());
-		int num = Integer.parseInt(st.nextToken());
+		int size = Integer.parseInt(st.nextToken()), num = Integer.parseInt(st.nextToken());
 		
 		int[] bulb = new int[size+1];
 		
@@ -20,9 +19,7 @@ public class Main {
 		
 		while(num --> 0) {
 			st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
-			int c = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
 			
 			if(a == 1) {
 				bulb[b] = c;
