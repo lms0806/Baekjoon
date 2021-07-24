@@ -9,9 +9,7 @@ public class Main {
 		String str = br.readLine();
 		
 		int zero = 0, one = 0;
-		for(int i = 0; i < str.length(); i++) {
-			char ch = str.charAt(i);
-			
+		for(char ch : str.toCharArray()) {
 			if(ch == '0') {
 				zero++;
 			}
@@ -25,9 +23,7 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i < str.length(); i++){
-        	char ch = str.charAt(i);
-        	
+        for(char ch : str.toCharArray()){
             if(ch == '0' && zero != 0){
                 sb.append(0);
                 zero--;
