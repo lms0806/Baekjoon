@@ -8,20 +8,19 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int m = Integer.parseInt(st.nextToken());
-		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken()), n = Integer.parseInt(st.nextToken());
 		
 		int[] num = new int[n];
 		
 		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < m; i++) {
+		while(m --> 0) {
 			num[Integer.parseInt(st.nextToken())-1]++;
 		}
 		
 		int max = 0;
-		for(int i = 0; i < n; i++) {
-			max = Math.max(num[i], max);
+		for(int a : num) {
+			max = Math.max(a, max);
 		}
-		System.out.print(max);
+		System.out.println(max);
 	}
 }
