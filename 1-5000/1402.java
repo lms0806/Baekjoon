@@ -10,8 +10,6 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
-			br.readLine();
-			
 			sb.append("yes").append("\n");
 		}
 		System.out.print(sb);
