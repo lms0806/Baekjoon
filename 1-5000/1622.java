@@ -11,8 +11,7 @@ public class Main {
 		while((str = br.readLine()) != null) {
 			String str1 = br.readLine();
 			
-			int[] alpha = new int[26];
-			int[] alpha1 = new int[26];
+			int[] alpha = new int[26], alpha1 = new int[26];
 			
 			for(char ch : str.toCharArray()) {
 				alpha[ch - 'a']++;
