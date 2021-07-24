@@ -6,7 +6,6 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = Integer.toBinaryString(Integer.parseInt(br.readLine()));
-		System.out.println(str.length());
+		System.out.print(Integer.toBinaryString(Integer.parseInt(br.readLine())).length());
 	}
 }
