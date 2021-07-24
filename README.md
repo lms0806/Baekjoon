@@ -33,3 +33,4 @@
  - https://www.acmicpc.net/problem/10864 (친구)
  - https://www.acmicpc.net/problem/7120 (String)
  - https://www.acmicpc.net/problem/4562 (No Brainer)
+ - https://www.acmicpc.net/problem/21420 (Монетки)
