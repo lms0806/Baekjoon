@@ -10,16 +10,10 @@ public class Main {
 		
 		long ten = 10;
 		while(num > ten) {
-			if(num % ten < ten / 2) {
-				num -= num % ten;
-			}
-			else {
-				num -= num % ten;
-				num += ten;
-			}
+			num = num % ten < ten / 2 ? num - num % ten : num - num % ten + ten;
 			ten *= 10;
 		}
 		
-		System.out.println(num);
+		System.out.print(num);
 	}
 }
