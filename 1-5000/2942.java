@@ -8,17 +8,13 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int r = Integer.parseInt(st.nextToken());
-		int g = Integer.parseInt(st.nextToken());
+		int r = Integer.parseInt(st.nextToken()), g = Integer.parseInt(st.nextToken());
 		
 		int i = 1;
-		int rn,gn;
 		StringBuilder sb = new StringBuilder();
 		while(i <= r || i <= g) {
-			rn = r / i;
-			gn = g / i;
 			if(r%i == 0 && g%i == 0) {
-				sb.append(i).append(" ").append(rn).append(" ").append(gn).append("\n");
+				sb.append(i).append(" ").append(r/i).append(" ").append(g/i).append("\n");
 			}
 			i++;
 		}
