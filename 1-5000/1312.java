@@ -8,11 +8,9 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
-		int n = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken()),b = Integer.parseInt(st.nextToken()), n = Integer.parseInt(st.nextToken());
 		
-		int answer = a % b;
+		int answer = a%b;
 		
 		for(int i = 0; i < n - 1; i++) {
 			answer = answer * 10 % b;
