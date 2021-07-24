@@ -12,14 +12,12 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		while((s = br.readLine()) != null) {
-			String answer = "";
-			
 			if(s.equals("")) {
 				break;
 			}
 			
-			for(int i = 0; i < s.length(); i++) {
-				char ch = s.charAt(i);
+			String answer = "";
+			for(char ch : s.toCharArray()) {
 				if(ch == ' ') {
 					answer += " ";
 				}
