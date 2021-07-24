@@ -34,3 +34,6 @@
  - https://www.acmicpc.net/problem/7120 (String)
  - https://www.acmicpc.net/problem/4562 (No Brainer)
  - https://www.acmicpc.net/problem/21420 (Монетки)
+
+# 전체 첫솔
+ - https://www.acmicpc.net/problem/5489 (Numbers)
