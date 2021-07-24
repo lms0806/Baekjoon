@@ -14,7 +14,6 @@ public class Main {
 			answer += (size - Math.pow(10, len - 1) + 1) * len;
 			size = (long)Math.pow(10, len - 1) - 1;
 		}
-		answer += size;
-		System.out.print(answer % 1234567);
+		System.out.print((answer + size) % 1234567);
 	}
 }
