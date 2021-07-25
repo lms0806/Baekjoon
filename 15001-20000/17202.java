@@ -16,8 +16,7 @@ public class Main {
 		
 		for(int i = 15; i > 1; i--) {
 			for(int j = 0; j < i; j++) {
-				num[j] += num[j + 1];
-				num[j] %= 10;
+				num[j] = (num[j] + num[j + 1]) % 10;
 			}
 		}
 		
