@@ -11,7 +11,7 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			String str = br.readLine();
-			char ch = str.charAt(str.length()-1);
+			char ch = str.charAt(str.length() - 1);
 			if(ch == 'a' || ch == 'u' || ch == 'o') {
 				str += "s";
 			}
@@ -25,13 +25,13 @@ public class Main {
 				str += "as";
 			}
 			else if(ch == 'y') {
-				str = str.substring(0,str.length()-1) + "ios";
+				str = str.substring(0, str.length() - 1) + "ios";
 			}
 			else if(ch == 'n') {
-				str = str.substring(0,str.length()-1) + "anes";
+				str = str.substring(0, str.length() - 1) + "anes";
 			}
-			else if(str.substring(str.length()-2).equals("ne")) {
-				str = str.substring(0,str.length()-2) + "anes";
+			else if(str.substring(str.length() - 2).equals("ne")) {
+				str = str.substring(0, str.length()-2) + "anes";
 			}
 			else {
 				str += "us";
