@@ -18,8 +18,8 @@ public class Main {
 		
 		while(r --> 0) {
 			String str = br.readLine();
-			for(int j = 0; j < str.length(); j++) {
-				if(str.charAt(j) == 'P') {
+			for(char ch : str.toCharArray()) {
+				if(ch == 'P') {
 					answer--;
 				}
 			}
