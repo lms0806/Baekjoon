@@ -12,24 +12,13 @@ public class Main {
 		int[] num = new int[53];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < size; i++) {
+		while(size --> 0) {
 			num[Integer.parseInt(st.nextToken())]++;
 		}
 		
-		String str = br.readLine();
-		
 		int[] result = new int[53];
-		for(int i = 0; i < str.length(); i++) {
-			char ch = str.charAt(i);
-			if(ch == ' ') {
-				result[0]++;
-			}
-			else if(ch >= 'A' && ch <= 'Z') {
-				result[ch - 'A' + 1]++;
-			}
-			else {
-				result[ch - 'a' + 27]++;
-			}
+		for(char ch : br.readLine().toCharArray()) {
+			result[ch == ' ' ? 0 : ch >= 'A' && ch <= 'Z' ? ch - 'A' + 1 : ch - 'a' + 27]++;
 		}
 		
 		boolean b = true;
