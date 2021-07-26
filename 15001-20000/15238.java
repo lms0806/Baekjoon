@@ -10,8 +10,8 @@ public class Main {
 		String str = br.readLine();
 		
 		int[] alpha = new int[26];
-		for(int i = 0; i < str.length(); i++) {
-			alpha[str.charAt(i)-97]++;
+		for(char ch : str.toCharArray()) {
+			alpha[ch - 97]++;
 		}
 		
 		int answer = 0, num = 0;;
@@ -22,7 +22,6 @@ public class Main {
 			}
 		}
 		
-		System.out.println((char)(num+97) + " " + alpha[num]);
-		
+		System.out.print((char)(num+97) + " " + alpha[num]);
 	}
 }
