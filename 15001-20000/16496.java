@@ -20,7 +20,6 @@ public class Main {
 	}
 	
 	public static String solve(String[] str) {
-		
         Arrays.sort(str, new Comparator<String>() {
             public int compare(String a, String b){
                 return (b+a).compareTo(a+b);
@@ -32,8 +31,8 @@ public class Main {
         }
 	    
         String answer = "";
-        for(int i = 0; i < str.length; i++){
-            answer += str[i];
+        for(String s : str){
+            answer += s;
         }
         
         return answer;
