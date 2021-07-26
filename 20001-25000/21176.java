@@ -22,10 +22,10 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			
 			int min = 100000;
-			for(int i = 0; i < k; i++) {
+			for(int number : num) {
 				int n = Integer.parseInt(st.nextToken());
 				if(n != 0) {
-					min = Math.min(min, num[i] / n);
+					min = Math.min(min, number / n);
 				}
 			}
 			
