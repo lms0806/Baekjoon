@@ -23,11 +23,10 @@ public class Main {
 				num[i][1] = Integer.parseInt(st.nextToken());
 			}
 			
-			int answer = 0;
+			int answer = num[0][0] * num[0][1];
 			for(int i = n - 1; i >= 1; i--) {
 				answer += (num[i][1] - num[i - 1][1]) * num[i][0];
 			}
-			answer += num[0][0] * num[0][1];
 			
 			sb.append(answer).append(" miles").append("\n");
 		}
