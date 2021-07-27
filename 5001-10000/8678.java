@@ -13,9 +13,8 @@ public class Main {
 		while(size --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
 			
-			sb.append(b % a == 0 ? "TAK" : "NIE").append("\n");
+			sb.append(Integer.parseInt(st.nextToken()) % a == 0 ? "TAK" : "NIE").append("\n");
 		}
 		System.out.print(sb);
 	}
