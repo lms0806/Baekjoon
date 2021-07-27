@@ -11,9 +11,7 @@ public class Main {
 		
 		br.readLine();
 		
-		ArrayList<Integer> a = input(br.readLine());
-		ArrayList<Integer> b = input(br.readLine());
-		ArrayList<Integer> c = input(br.readLine());
+		ArrayList<Integer> a = input(br.readLine()), b = input(br.readLine()), c = input(br.readLine());
 		
 		Collections.sort(a);
 		Collections.sort(b);
@@ -25,13 +23,13 @@ public class Main {
 		int answer = 0;
 		while(a.size() != 0 && b.size() != 0 && c.size() != 0) {
 			int an = a.size() - 1, bn = b.size() - 1, cn = c.size() - 1;
+			
 			answer += (a.get(an) + b.get(bn) + c.get(cn)) * 0.9;
 			a.remove(an);
 			b.remove(bn);
 			c.remove(cn);
 		}
-		answer += sum(a) + sum(b) + sum(c);
-		sb.append(answer);
+		sb.append(answer + sum(a) + sum(b) + sum(c));
 		System.out.print(sb);
 	}
 	
@@ -49,8 +47,8 @@ public class Main {
 	public static int sum(ArrayList<Integer> arr) {
 		int num = 0;
 		
-		for(int i = 0; i < arr.size(); i++) {
-			num += arr.get(i);
+		for(int n : arr) {
+			num += n;
 		}
 		
 		return num;
