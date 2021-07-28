@@ -9,13 +9,14 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken()), size = Integer.parseInt(st.nextToken());
+		st.nextToken(); 
+		int size = Integer.parseInt(st.nextToken());
 		
 		ArrayList<Integer> arr = new ArrayList<>(), arr2 = new ArrayList<>();
 		
 		String[] str = br.readLine().split(",");
-		for(int i = 0; i < n; i++) {
-			arr.add(Integer.parseInt(str[i]));
+		for(String s : str) {
+			arr.add(Integer.parseInt(s));
 		}
 		
 		while(size --> 0) {
