@@ -13,7 +13,6 @@ public class Main {
 		br.readLine();
 		String str = br.readLine();
 		
-		
 		if(str.length()%2 == 0) {
 			return "NOT POSSIBLE";
 		}
