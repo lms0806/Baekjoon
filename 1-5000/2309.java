@@ -16,11 +16,6 @@ public class Main {
 		
 		Arrays.sort(num);
 		
-		solve(num, sum);
-	}
-	
-	public static void solve(int[] num, int sum) {
-		
 		StringBuilder sb  = new StringBuilder();
 		for(int i = 0; i < 8; i++) {
 			for(int j = i + 1; j < 9; j++) {
