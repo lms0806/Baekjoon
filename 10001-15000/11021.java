@@ -12,9 +12,7 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < a; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int num = Integer.parseInt(st.nextToken());
-			num += Integer.parseInt(st.nextToken());
-			sb.append("Case #").append(i+1).append(": ").append(num).append("\n");
+			sb.append("Case #").append(i + 1).append(": ").append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())).append("\n");
 		}
 		System.out.print(sb);
 	}
