@@ -14,10 +14,13 @@ public class Main {
 		while(size-->0) {
 			TreeMap<Integer, Integer> map = new TreeMap<>();
 			int num = Integer.parseInt(br.readLine());
+			
 			while(num-->0) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
+				
 				char ch = st.nextToken().charAt(0);
 				int n = Integer.parseInt(st.nextToken());
+				
 				if(ch == 'I') {
 					map.put(n, !map.containsKey(n) ? 1 : 1 + map.get(n));
 				}
