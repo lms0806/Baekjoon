@@ -23,8 +23,7 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		for(Object o : k) {
 			String key = (String) o;
-			double value = (double)(map.get(key)*100)/count;
-			sb.append(key).append(" ").append(String.format("%.4f", value)).append("\n");
+			sb.append(key).append(" ").append(String.format("%.4f", (double)(map.get(key)*100)/count)).append("\n");
 		}
 		System.out.print(sb);
 	}
