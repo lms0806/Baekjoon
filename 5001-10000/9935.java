@@ -7,8 +7,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		String str = br.readLine();
-		String s = br.readLine();
+		String str = br.readLine(), s = br.readLine();
 		
 		Stack<Character> stack = new Stack<>();
 		for(char ch : str.toCharArray()) {
@@ -29,9 +28,8 @@ public class Main {
 				}
 			}
 		}
-		
 		StringBuilder sb = new StringBuilder();
-		for(Character ch : stack) {
+		for(char ch : stack) {
 			sb.append(ch);
 		}
 		System.out.print(sb.length() == 0 ? "FRULA" : sb);
