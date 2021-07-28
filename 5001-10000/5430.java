@@ -19,23 +19,18 @@ public class Main {
 			st = new StringTokenizer(br.readLine(),"[],");
 			
 			Deque<Integer> arr = new ArrayDeque<>();
-			for(int j = 0; j < n; j++) {
+			while(n --> 0) {
 				arr.add(Integer.parseInt(st.nextToken()));	
 			}
 			
 			boolean b = true;
 			boolean ok = true;
-			for(int j = 0; j < str.length(); j++) {
-				if(str.charAt(j) == 'R') { 
+			for(char ch : str.toCharArray()) {
+				if(ch == 'R') { 
 					b = !b;
 				}
 				else {
-					if(b && arr.pollFirst() == null) {
-						sb.append("error").append("\n");
-						ok = false;
-						break;
-					}
-					else if(!b && arr.pollLast() == null) {
+					if((b && arr.pollFirst() == null) || (!b && arr.pollLast() == null)) {
 						sb.append("error").append("\n");
 						ok = false;
 						break;
