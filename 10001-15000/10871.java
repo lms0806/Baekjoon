@@ -8,8 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int a = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), a = Integer.parseInt(st.nextToken());
 		
 		int[] num = new int[n];
 		
@@ -19,9 +18,9 @@ public class Main {
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < num.length; i++) {
-			if(num[i] < a) {
-				sb.append(num[i]).append(" ");
+		for(int number : num) {
+			if(number < a) {
+				sb.append(number).append(" ");
 			}
 		}
 		System.out.print(sb);
