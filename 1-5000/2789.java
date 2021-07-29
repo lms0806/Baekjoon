@@ -6,21 +6,17 @@ import java.util.HashSet;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		String str = br.readLine();
-		
-		char[] ch = "CAMBRIDGE".toCharArray();
-		
+
 		HashSet<Character> set = new HashSet<>();
 		
-		for(int i = 0; i < ch.length; i++) {
-			set.add(ch[i]);
+		for(char c : "CAMBRIDGE".toCharArray()) {
+			set.add(c);
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < str.length(); i++) {
-			if(!set.contains(str.charAt(i))) {
-				sb.append(str.charAt(i));
+		for(char c : br.readLine().toCharArray()) {
+			if(!set.contains(c)) {
+				sb.append(c);
 			}
 		}
 		System.out.print(sb);
