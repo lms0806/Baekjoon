@@ -7,11 +7,11 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int[] apple = new int[2];
-		int[] orange = new int[2];
+		int[] apple = new int[2], orange = new int[2];
 		
 		for(int i = 0; i < 2; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
+			
 			apple[i] = Integer.parseInt(st.nextToken());
 			orange[i] = Integer.parseInt(st.nextToken());
 		}
