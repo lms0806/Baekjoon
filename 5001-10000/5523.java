@@ -10,10 +10,9 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		int wina = 0, winb = 0;
-		for(int i = 0; i < size; i++) {
+		while(size --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 			
 			if(a > b) {
 				wina++;
@@ -22,6 +21,6 @@ public class Main {
 				winb++;
 			}
 		}
-		System.out.println(wina + " " + winb);
+		System.out.print(wina + " " + winb);
 	}
 }
