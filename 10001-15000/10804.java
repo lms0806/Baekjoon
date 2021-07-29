@@ -7,8 +7,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int[] a = new int[20];
-		int[] b = new int[20];
+		int[] a = new int[20], b = new int[20];
 		
 		for(int i = 0; i < 20; i++) {
 			a[i] = i + 1;
@@ -30,8 +29,8 @@ public class Main {
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < a.length; i++) {
-			sb.append(a[i]).append(" ");
+		for(int n : a) {
+			sb.append(n).append(" ");
 		}
 		System.out.print(sb);
 	}
