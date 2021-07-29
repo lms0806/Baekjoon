@@ -9,24 +9,15 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
-			sb.append("Data Set ").append(i+1).append(":");
+		for(int i = 1; i <= size; i++) {
+			sb.append("Data Set ").append(i).append(":");
 			int count = Integer.parseInt(br.readLine());
-			String str = br.readLine();
 			
-			for(int j = 0; j < str.length(); j++) {
-				char ch = str.charAt(j);
-				
-				if(ch == 'c') {
-					count++;
-				}
-				else if(ch == 'b') {
-					count--;
-				}
+			for(char ch : br.readLine().toCharArray()) {
+				count += ch == 'c' ? 1 : -1;
 			}
 			sb.append("\n").append(count).append("\n\n");
 		}
-		
 		System.out.print(sb);
 	}
 }
