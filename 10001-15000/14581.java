@@ -10,16 +10,9 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < 9; i++) {
-			sb.append(":");
-			if(i == 4) {
-				sb.append(str);
-			}
-			else {
-				sb.append("fan");
-			}
-			sb.append(":");
+			sb.append(":").append(i == 4 ? str : "fan").append(":");
 			
-			if(i%3 == 2) {
+			if(i % 3 == 2) {
 				sb.append("\n");
 			}
 		}
