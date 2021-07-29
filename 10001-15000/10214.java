@@ -7,35 +7,20 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int num = Integer.parseInt(br.readLine());
-		int n = 0, n1 = 0;
+		int size = Integer.parseInt(br.readLine());
 		
-		int count = 0;
 		StringBuilder sb = new StringBuilder();
-		for(int k = 0; k < num; k++) {
-			for(int i = 0; i < 9; i++) {
+		while(size --> 0) {
+			int count = 9;
+			int a = 0, b = 0;
+			while(count --> 0) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
-				int a = Integer.parseInt(st.nextToken());
-				int b = Integer.parseInt(st.nextToken());
-				
-				if(count != num) {
-					if(a != 0 || b != 0) {
-						count++;
-						n+=a;
-						n1+=b;
-					}
-				}
+				a += Integer.parseInt(st.nextToken());
+				b += Integer.parseInt(st.nextToken());
 			}
-			if(n > n1) {
-				sb.append("Yonsei").append("\n");
-			}
-			else if(n == n1) {
-				sb.append("Korea").append("\n");
-			}
-			else {
-				sb.append("Draw").append("\n");
-			}
+			sb.append(a > b ? "Yonsei" : a == b ? "Draw" : "Korea").append("\n");
 		}
+		
 		System.out.print(sb);
 	}
 }
