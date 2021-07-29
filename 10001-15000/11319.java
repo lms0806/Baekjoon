@@ -12,16 +12,14 @@ public class Main {
 		while(size --> 0) {
 			String str = br.readLine().toLowerCase().replace(" ", "");
 			
-			int a = 0, b = 0;
-			for(int i = 0; i < str.length(); i++) {
-				char ch = str.charAt(i);
-				
+			int b = 0;
+			for(char ch : str.toCharArray()) {
 				if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
 					b++;
 				}
 			}
 			
-			sb.append(str.length()-b).append(" ").append(b).append("\n");
+			sb.append(str.length() - b).append(" ").append(b).append("\n");
 		}
 		System.out.print(sb);
 	}
