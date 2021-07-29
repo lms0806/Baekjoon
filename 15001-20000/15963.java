@@ -8,6 +8,6 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		System.out.println((Long.parseLong(st.nextToken()) == Long.parseLong(st.nextToken())) ? 1 : 0);
+		System.out.print(Long.parseLong(st.nextToken()) == Long.parseLong(st.nextToken()) ? 1 : 0);
 	}
 }
