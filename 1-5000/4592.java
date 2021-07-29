@@ -9,7 +9,6 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		while(true) {
-			int num = 0;
 			StringTokenizer st = new StringTokenizer(br.readLine()," ");
 			int size = Integer.parseInt(st.nextToken());
 			
@@ -17,7 +16,8 @@ public class Main {
 				break;
 			}
 			
-			for(int i = 0; i < size; i++) {
+			int num = 0;
+			while(size --> 0) {
 				int number = Integer.parseInt(st.nextToken());
 				if(num != number) {
 					sb.append(number).append(" ");
