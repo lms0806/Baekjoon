@@ -10,11 +10,11 @@ public class Main {
 		
 		String str = "";
 		StringBuilder sb = new StringBuilder();
-		while(size-->0){
+		while(size --> 0){
 			str = br.readLine();
+			
 			int g = 0, b = 0;
-			for(int j = 0; j < str.length(); j++) {
-				char ch = str.toLowerCase().charAt(j);
+			for(char ch : str.toLowerCase().toCharArray()) {
 				if(ch == 'g') {
 					g++;
 				}
