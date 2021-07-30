@@ -13,24 +13,18 @@ public class Main {
 			str[i] = br.readLine();
 		}
 		
-		String answer = "";
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < str[0].length(); i++) {
 			char ch = str[0].charAt(i);
-			int count = 0;
+			boolean istrue = true;
 			for(int j = 1; j < size; j++) {
 				if(str[j].charAt(i) != ch) {
-					count = 1;
+					istrue = false;
 					break;
 				}
 			}
-			if(count == 0) {
-				answer += ch;
-			}
-			else {
-				answer += "?";
-			}
+			sb.append(istrue ? ch : "?");
 		}
-		
-		System.out.println(answer);
+		System.out.print(sb);
 	}
 }
