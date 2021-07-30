@@ -11,9 +11,7 @@ public class Main {
 		while((str = br.readLine()) != null) {
 			int a = 0, b = 0, c = 0, d = 0;
 
-			for(int i = 0; i < str.length(); i++) {
-				char ch = str.charAt(i);
-				
+			for(char ch : str.toCharArray()) {
 				if(ch >= 97 && ch <= 122) {
 					a++;
 				}
@@ -23,7 +21,7 @@ public class Main {
 				else if(ch >= 48 && ch <= 57) {
 					c++;
 				}
-				else if(ch == ' ') {
+				else {
 					d++;
 				}
 			}
