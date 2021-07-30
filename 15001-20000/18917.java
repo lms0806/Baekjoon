@@ -15,14 +15,9 @@ public class Main {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			
 			int a = Integer.parseInt(st.nextToken());
-			if(a == 1) {
+			if(a == 1 || a == 2) {
 				int b = Integer.parseInt(st.nextToken());
-				sum += b;
-				num ^= b;
-			}
-			else if(a == 2) {
-				int b = Integer.parseInt(st.nextToken());
-				sum -= b;
+				sum += a == 1 ? b : -b;
 				num ^= b;
 			}
 			else {
