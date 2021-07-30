@@ -10,10 +10,9 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
+		while(size --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			String a = st.nextToken();
-			String b = st.nextToken();
+			String a = st.nextToken(), b = st.nextToken();
 			
 			sb.append(a).append(" & ").append(b).append(" are ");
 			
@@ -22,14 +21,14 @@ public class Main {
 			}
 			else {
 				int[] aa = new int[26];
-				for(int j = 0; j < a.length(); j++) {
-					aa[a.charAt(j) - 'a']++;
-					aa[b.charAt(j) - 'a']--;
+				for(int i = 0; i < a.length(); i++) {
+					aa[a.charAt(i) - 'a']++;
+					aa[b.charAt(i) - 'a']--;
 				}
 				
 				boolean istrue = true;
-				for(int j = 0; j < aa.length; j++) {
-					if(aa[j] != 0) {
+				for(int n : aa) {
+					if(n != 0) {
 						istrue = false;
 						break;
 					}
