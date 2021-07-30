@@ -11,26 +11,14 @@ public class Main {
 		Queue<Integer> queue = new LinkedList<>();
 		
 		int size = Integer.parseInt(br.readLine());
-		int charat, num = 0;
+		int ch, num = 0;
 		String str;
 		
 		StringBuilder sb = new StringBuilder();
-		while(size-->0) {
+		while(size --> 0) {
 			str = br.readLine();
-			charat = str.charAt(0);
-			if(charat == 'f') {
-				sb.append(queue.isEmpty() ? -1 : queue.peek()).append("\n");
-			}
-			else if(charat == 'b') {
-				sb.append(queue.isEmpty() ? -1 : num).append("\n");
-			}
-			else if(charat == 'e') {
-				sb.append(queue.isEmpty() ? 1 : 0).append("\n");
-			}
-			else if(charat == 's') {
-				sb.append(queue.size()).append("\n");
-			}
-			else if(charat == 'p') {
+			ch = str.charAt(0);
+			if(ch == 'p') {
 				if(str.charAt(1) == 'u') {
 					num = Integer.parseInt(str.substring(5));
 					queue.add(num);
@@ -38,6 +26,21 @@ public class Main {
 				else {
 					sb.append(queue.isEmpty() ? -1 : queue.poll()).append("\n");
 				}
+			}
+			else {
+				if(ch == 'f') {
+					sb.append(queue.isEmpty() ? -1 : queue.peek());
+				}
+				else if(ch == 'b') {
+					sb.append(queue.isEmpty() ? -1 : num);
+				}
+				else if(ch == 'e') {
+					sb.append(queue.isEmpty() ? 1 : 0);
+				}
+				else {
+					sb.append(queue.size());
+				}
+				sb.append("\n");
 			}
 		}
 		System.out.print(sb);
