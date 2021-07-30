@@ -9,12 +9,7 @@ public class Main {
 		int[] arr = new int[26];
 		
 		for(char ch : br.readLine().toCharArray()) {
-			if(ch < 91) {
-				arr[ch - 65]++;
-			}
-			else {
-				arr[ch - 97]++;
-			}
+			arr[ch < 91 ? ch - 65 : ch - 97]++;
 		}
 		
 		int max = 0, ch = -2;
