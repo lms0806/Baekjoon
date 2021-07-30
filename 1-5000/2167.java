@@ -8,8 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
 		int[][] num = new int[n][m];
 		
@@ -21,23 +20,24 @@ public class Main {
 		}
 		
 		int size = Integer.parseInt(br.readLine());
+		
 		int startn, startm, endn, endm;
-        StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
-			String[] str = br.readLine().split(" ");
-			startn = Integer.parseInt(str[0]);
-			startm = Integer.parseInt(str[1]);
-			endn = Integer.parseInt(str[2]);
-			endm = Integer.parseInt(str[3]);
+        	StringBuilder sb = new StringBuilder();
+		while(size --> 0) {
+			st = new StringTokenizer(br.readLine());
+			startn = Integer.parseInt(st.nextToken());
+			startm = Integer.parseInt(st.nextToken());
+			endn = Integer.parseInt(st.nextToken());
+			endm = Integer.parseInt(st.nextToken());
 			
 			int sum = 0;
-			for(int j = startn-1; j < endn; j++) {
-				for(int k = startm-1; k < endm; k++) {
-					sum += num[j][k];
+			for(int i = startn - 1; i < endn; i++) {
+				for(int j = startm - 1; j < endm; j++) {
+					sum += num[i][j];
 				}
 			}
 			sb.append(sum).append("\n");
 		}
-        System.out.print(sb);
+        	System.out.print(sb);
 	}
 }
