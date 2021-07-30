@@ -9,8 +9,7 @@ public class Main {
 		String str = br.readLine();
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < str.length(); i++) {
-			char ch = str.charAt(i);
+		for(char ch : str.toCharArray()) {
 			if(ch >= 'A' && ch <= 'Z') {
 				sb.append(ch - 13 < 'A' ? (char)(ch+13) : (char)(ch-13));
 			}
