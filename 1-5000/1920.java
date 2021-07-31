@@ -1,41 +1,27 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) throws NumberFormatException,IOException{
+	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int size1 = Integer.parseInt(br.readLine());
-		int[] num1 = new int[size1];
+		int size = Integer.parseInt(br.readLine());
+		HashSet<Integer> arr = new HashSet<>();
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < size1; i++) {
-			num1[i] = Integer.parseInt(st.nextToken());
+		while(size --> 0) {
+			arr.add(Integer.parseInt(st.nextToken()));
 		}
 		
-		int size2 = Integer.parseInt(br.readLine());
-		int[] num2 = new int[size2];
-		
-		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < size2; i++) {
-			num2[i] = Integer.parseInt(st.nextToken());
-		}
-		
-		int[] answer = new int[size2];
-		for(int i = 0; i < size2; i++) {
-			for(int j = 0; j < size1; j++) {
-				if(num2[i] == num1[j]) {
-					answer[i] = 1;
-					break;
-				}
-			}
-		}
+		size = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size2; i++) {
-			sb.append(answer[i]).append("\n");
+		st = new StringTokenizer(br.readLine());
+		while(size --> 0) {
+			sb.append(arr.contains(Integer.parseInt(st.nextToken())) ? 1 : 0).append("\n");
 		}
 		System.out.print(sb);
 	}
