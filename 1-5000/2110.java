@@ -29,6 +29,10 @@ public class Main {
 					count++;
 					last = arr[i];//차이 좁혀가기
 				}
+				
+				if(count >= num) {
+					break;
+				}
 			}
 			
 			if(count >= num) {
