@@ -11,7 +11,6 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		int[] num = new int[size];
-		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < size; i++) {
 			num[i] = Integer.parseInt(st.nextToken());
@@ -21,13 +20,13 @@ public class Main {
 		
 		int i = 0;
 		StringBuilder sb = new StringBuilder();
-		for(i = 0; i < num.length; i++) {
-			if(i+1 != num[i]) {
-				sb.append(i+1);
+		for(i = 0; i < size; i++) {
+			if(i + 1 != num[i]) {
+				sb.append(i + 1);
 				break;
 			}
-			if(i == num.length - 1) {
-				sb.append(num.length + 1);
+			if(i == size - 1) {
+				sb.append(size + 1);
 			}
 		}
 		
