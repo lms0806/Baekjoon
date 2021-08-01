@@ -16,7 +16,6 @@ public class Main {
 			}
 			answer %= 1000000000000l;
 		}
-        answer %= 100000;
-		System.out.print(String.format("%05d", answer));
+		System.out.print(String.format("%05d", answer % 100000));
 	}
 }
