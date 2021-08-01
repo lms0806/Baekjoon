@@ -6,11 +6,8 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = br.readLine();
-		
 		int answer = 0;
-		for(int i = 0; i < str.length(); i++) {
-			int ch = str.charAt(i);
+		for(char ch : br.readLine().toCharArray()) {
 			if(ch < 68) {
 				answer += 3;
 			}
