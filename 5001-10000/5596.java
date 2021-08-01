@@ -6,10 +6,10 @@ import java.util.StringTokenizer;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
 		
 		int num = 0, num1 = 0;
 		
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < 4; i++) {
 			num += Integer.parseInt(st.nextToken());
 		}
@@ -19,13 +19,6 @@ public class Main {
 			num1 += Integer.parseInt(st.nextToken());
 		}
 		
-		StringBuilder sb = new StringBuilder();
-		if(num >= num1) {
-			sb.append(num);
-		}
-		else {
-			sb.append(num1);
-		}
-		System.out.print(sb);
+		System.out.print(num >= num1 ? num : num1);
 	}
 }
