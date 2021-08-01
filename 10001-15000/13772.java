@@ -10,10 +10,8 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
-			String str = br.readLine();
-			
 			int answer = 0;
-			for(char ch : str.toCharArray()) {
+			for(char ch : br.readLine().toCharArray()) {
 				if(ch == 'A' || ch == 'D' || ch == 'O' || ch == 'P' || ch == 'Q' || ch == 'R') {
 					answer++;
 				}
