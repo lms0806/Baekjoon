@@ -8,9 +8,6 @@ public class Main {
 		
 		int num = Integer.parseInt(br.readLine());
 		
-		int answer1 = num * 78 / 100;
-		int answer2 = num * 8 / 10 + num * 2 / 10 * 78 / 100;
-		
-		System.out.println(answer1 + " " + answer2);
+		System.out.print((int)(num * 0.78) + " " + (int)(num * 0.8 + num * 0.156));
 	}
 }
