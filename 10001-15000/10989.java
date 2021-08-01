@@ -10,7 +10,7 @@ public class Main {
 		
 		int[] num = new int[10001];
 		
-		for(int i = 0; i < size; i++) {
+		while(size --> 0) {
 			num[Integer.parseInt(br.readLine())]++;
 		}
 		
