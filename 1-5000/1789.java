@@ -9,14 +9,11 @@ public class Main {
 		long size = Long.parseLong(br.readLine());
 		
 		long count = 1, sum = 0;
-		while(true) {
-			if(size < sum) {
-				break;
-			}
+		while(size >= sum) {
 			sum += count;
 			count++;
 		}
 		
-		System.out.println(count-2);
+		System.out.print(count - 2);
 	}
 }
