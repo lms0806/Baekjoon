@@ -7,27 +7,24 @@ public class Main {
 	public static int[][] arr;
 	public static boolean[] visited;
 	public static int answer = 0;
-	
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int point = Integer.parseInt(br.readLine())+1;
-		int line = Integer.parseInt(br.readLine());
+		int point = Integer.parseInt(br.readLine()) + 1, line = Integer.parseInt(br.readLine());
 		
 		arr = new int[point][point];
 		visited = new boolean[point];
 		
-		while(line --> 0 ) {
+		while(line --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 			
 			arr[a][b] = 1;
 			arr[b][a] = 1;
 		}
 		dfs(1);
 		
-		System.out.print(answer-1);
+		System.out.print(answer - 1);
 	}
 	
 	public static void dfs(int start) {
