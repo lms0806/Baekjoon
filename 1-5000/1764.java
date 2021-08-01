@@ -11,20 +11,18 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
 		HashSet<String> strs = new HashSet<>();
 		ArrayList<String> strss = new ArrayList<>();
 		
-		for(int i = 0; i < n; i++) {
+		while(n --> 0) {
 			strs.add(br.readLine());
 		}
 		
-		StringBuilder sb = new StringBuilder();
 		int answer = 0;
 		String str = "";
-		for(int i = 0; i < m; i++) {
+		while(m --> 0) {
 			str = br.readLine();
 			if(strs.contains(str)) {
 				strss.add(str);
@@ -34,10 +32,11 @@ public class Main {
 		
 		Collections.sort(strss);
 		
+		StringBuilder sb = new StringBuilder();
 		sb.append(answer).append("\n");
-		for(int i = 0; i < strss.size(); i++) {
-			sb.append(strss.get(i)).append("\n");
+		for(String s : strss) {
+			sb.append(s).append("\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
