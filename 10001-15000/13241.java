@@ -8,20 +8,15 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		long a = Integer.parseInt(st.nextToken());
-		long b = Integer.parseInt(st.nextToken());
+		long a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 		
-		long max = 0, min = gcd(a,b);
-		
-		max = a*b/min;
-		
-		System.out.println(max);
+		System.out.print(a * b / gcd(a,b));
 	}
 	
 	public static long gcd(long a, long b) {
 		if(b == 0) {
 			return a;
 		}
-		return gcd(b, a%b);
+		return gcd(b, a % b);
 	}
 }
