@@ -6,13 +6,12 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = "";
 		StringBuilder sb = new StringBuilder();
 		while(true) {
 			int counta = 0, countb = 0;
 			boolean istrue = false;
 			
-			str = br.readLine();
+			String str = br.readLine();
 			
 			if(str.equals("end")) {
 				break;
