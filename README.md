@@ -36,6 +36,7 @@
  - https://www.acmicpc.net/problem/21420 (Монетки)
  - https://www.acmicpc.net/problem/4118 (Fred’s Lotto Tickets)
  - https://www.acmicpc.net/problem/4575 (Refrigerator Magnets)
+ - https://www.acmicpc.net/problem/5013 (Death Knight Hero)
 
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
