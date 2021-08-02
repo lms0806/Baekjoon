@@ -17,18 +17,18 @@ public class Main {
 		}
 		
 		st = new StringTokenizer(br.readLine());
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 		
 		long answer = 0;
 		for(int i = 0; i < size; i++) {
 			answer++;
 			num[i] -= a;
 			if(num[i] > 0) {
-				answer += num[i]%b==0 ? num[i]/b : num[i]/b+1;
+				answer += num[i] / b;
+				answer += num[i] % b == 0 ? 0 : 1;
 			}
 		}
 		
-		System.out.println(answer);
+		System.out.print(answer);
 	}
 }
