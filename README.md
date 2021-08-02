@@ -38,7 +38,7 @@
  - https://www.acmicpc.net/problem/4575 (Refrigerator Magnets)
  - https://www.acmicpc.net/problem/5013 (Death Knight Hero)
  - https://www.acmicpc.net/problem/5103 (DVDs)
- - https://www.acmicpc.net/problem/9492 (Fraud Busters)
+ - https://www.acmicpc.net/problem/9492 (Perfect Shuffle)
 
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
