@@ -8,9 +8,6 @@ public class Main {
 		
 		String s = Integer.toBinaryString(Integer.parseInt(br.readLine()));
 		
-		StringBuilder sb = new StringBuilder(s);
-		sb.reverse();
-		
-		System.out.print(Integer.parseInt(sb.toString(), 2));
+		System.out.print(Integer.parseInt(new StringBuilder(s).reverse().toString(), 2));
 	}
 }
