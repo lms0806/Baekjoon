@@ -17,10 +17,7 @@ public class Main {
 				if(i < s.length - 1 && (s[i].equals("would") || s[i].equals("should")) && s[i + 1].equals("of")){
 					answer++;
 				}
-				else if(s[i].equals("u") || s[i].equals("ur")) {
-					answer++;
-				}
-				else if(s[i].contains("lol") || s[i].equals("haha")) {
+				else if(s[i].equals("u") || s[i].equals("ur") || s[i].contains("lol") || s[i].equals("haha")) {
 					answer++;
 				}
 			}
