@@ -11,7 +11,6 @@ public class Main {
 		
 		int[] num = new int[size];
 		
-		int min = 0;
 		for(int i = 0; i < size; i++) {
 			num[i] = Integer.parseInt(br.readLine());
 		}
@@ -19,12 +18,9 @@ public class Main {
 		Arrays.sort(num);
 		
 		long answer = 0;
-		for(int i = size-1; i >= 0; i--) {
-			num[i] = num[i] * (size-i);
-			if(answer < num[i]) {
-				answer = num[i];
-			}
+		for(int i = size - 1; i >= 0; i--) {
+			answer = Math.max(answer, num[i] * (size - i));
 		}
-		System.out.println(answer);
+		System.out.print(answer);
 	}
 }
