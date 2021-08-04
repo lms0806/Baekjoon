@@ -40,6 +40,7 @@
  - https://www.acmicpc.net/problem/5103 (DVDs)
  - https://www.acmicpc.net/problem/9492 (Perfect Shuffle)
  - https://www.acmicpc.net/problem/11158 (Angry Grammar Nazi)
+ - https://www.acmicpc.net/problem/12606 (Reverse Words (Large))
 
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
