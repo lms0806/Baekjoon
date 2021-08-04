@@ -16,11 +16,6 @@ public class Main {
 			sum += c - '0';
 		}
 		
-		if(ch[0] != '0' || sum % 3 != 0) {
-			System.out.print(-1);
-		}
-		else {
-			System.out.print(new StringBuilder(new String(ch)).reverse());
-		}
+		System.out.print(ch[0] != '0' || sum % 3 != 0 ? -1 : new StringBuilder(new String(ch)).reverse());
 	}
 }
