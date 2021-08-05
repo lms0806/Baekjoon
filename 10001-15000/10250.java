@@ -9,22 +9,12 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		int h, w, n, answer = 0;
-		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			h = Integer.parseInt(st.nextToken());
-			w = Integer.parseInt(st.nextToken());
-			n = Integer.parseInt(st.nextToken());
-			
-			if(n % h == 0) {
-				answer = (h * 100) + (n/h);
-			}
-			else {
-				answer = (n%h)*100 + (n/h+1);
-			}
-			sb.append(answer).append("\n");
+			int h = Integer.parseInt(st.nextToken()), w = Integer.parseInt(st.nextToken()), n = Integer.parseInt(st.nextToken());
+
+			sb.append(n % h == 0 ? (h * 100) + (n / h) : (n % h) * 100 + (n / h + 1)).append("\n");
 		}
 		System.out.print(sb);
 	}
