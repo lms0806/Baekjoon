@@ -17,26 +17,9 @@ public class Main {
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		if(num[0][0] == num[1][0]) {
-			sb.append(num[2][0]);
-		}
-		else if(num[0][0] == num[2][0]) {
-			sb.append(num[1][0]);
-		}
-		else {
-			sb.append(num[0][0]);
-		}
-		sb.append(" ");
 		
-		if(num[0][1] == num[1][1]) {
-			sb.append(num[2][1]);
-		}
-		else if(num[0][1] == num[2][1]) {
-			sb.append(num[1][1]);
-		}
-		else {
-			sb.append(num[0][1]);
-		}
-		System.out.println(sb);
+		sb.append(num[0][0] == num[1][0] ? num[2][0] : num[0][0] == num[2][0] ? num[1][0] : num[0][0]).append(" ");
+		sb.append(num[0][1] == num[1][1] ? num[2][1] : num[0][1] == num[2][1] ? num[1][1] : num[0][1]);
+		System.out.print(sb);
 	}
 }
