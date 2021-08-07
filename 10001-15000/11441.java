@@ -11,11 +11,11 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		int[] num = new int[size];
+		int[] sum = new int[size + 1];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < size; i++) {
-			num[i] = Integer.parseInt(st.nextToken());
+		for(int i = 1; i <= size; i++) {
+			sum[i] = Integer.parseInt(st.nextToken()) + sum[i - 1];
 		}
 		
 		size = Integer.parseInt(br.readLine());
@@ -25,11 +25,7 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken()) - 1, b = Integer.parseInt(st.nextToken());
 			
-			int sum = 0;
-			for(int i = a; i < b; i++) {
-				sum += num[i];
-			}
-			sb.append(sum).append("\n");
+			sb.append(sum[b] - sum[a]).append("\n");
 		}
 		System.out.print(sb);
 	}
