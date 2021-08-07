@@ -7,9 +7,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int[] a = new int[3];
-		int[] b = new int[3];
-		int[] c = new int[3];
+		int[] a = new int[3], b = new int[3], c = new int[3];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < 3; i++) {
@@ -26,9 +24,9 @@ public class Main {
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < 3; i++) {
-			sb.append(c[i]).append(" ");
+		for(int n : c) {
+			sb.append(n).append(" ");
 		}
-        	System.out.print(sb);
+        System.out.print(sb);
 	}
 }
