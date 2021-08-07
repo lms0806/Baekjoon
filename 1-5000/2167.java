@@ -10,34 +10,25 @@ public class Main {
 		
 		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
-		int[][] num = new int[n][m];
+		int[][] num = new int[n + 1][m + 1];
 		
-		for(int i = 0; i < n; i++) {
+		for(int i = 1; i <= n; i++) {
 			st = new StringTokenizer(br.readLine());
-			for(int j = 0; j < m; j++) {
-				num[i][j] = Integer.parseInt(st.nextToken());
+			for(int j = 1; j <= m; j++) {
+				num[i][j] = Integer.parseInt(st.nextToken()) + num[i][j - 1] + num[i - 1][j] - num[i - 1][j - 1];
 			}
 		}
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		int startn, startm, endn, endm;
-        	StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			st = new StringTokenizer(br.readLine());
-			startn = Integer.parseInt(st.nextToken());
-			startm = Integer.parseInt(st.nextToken());
-			endn = Integer.parseInt(st.nextToken());
-			endm = Integer.parseInt(st.nextToken());
+			int startn = Integer.parseInt(st.nextToken()) - 1, startm = Integer.parseInt(st.nextToken()) - 1;
+			int endn = Integer.parseInt(st.nextToken()), endm = Integer.parseInt(st.nextToken());
 			
-			int sum = 0;
-			for(int i = startn - 1; i < endn; i++) {
-				for(int j = startm - 1; j < endm; j++) {
-					sum += num[i][j];
-				}
-			}
-			sb.append(sum).append("\n");
+			sb.append(num[endn][endm] - num[endn][startm] - num[startn][endm] + num[startn][startm]).append("\n");
 		}
-        	System.out.print(sb);
+        System.out.print(sb);
 	}
 }
