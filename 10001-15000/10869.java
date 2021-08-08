@@ -8,15 +8,10 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine().trim());
 
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 		
         	StringBuilder sb = new StringBuilder();
-		sb.append(a+b).append("\n");
-		sb.append(a-b).append("\n");
-		sb.append(a*b).append("\n");
-		sb.append(a/b).append("\n");
-		sb.append(a%b);
+		sb.append(a+b).append("\n").append(a-b).append("\n").append(a*b).append("\n").append(a/b).append("\n").append(a%b);
 		System.out.print(sb);
 	}
 }
