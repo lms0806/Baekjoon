@@ -5,16 +5,7 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		int a = Integer.parseInt(br.readLine());
-		
-		StringBuilder sb = new StringBuilder();
-		if(a % 2 == 1) {
-			sb.append("SK");
-		}
-		else {
-			sb.append("CY");
-		}
-		System.out.print(sb);
+	
+		System.out.print(Integer.parseInt(br.readLine()) % 2 == 1 ? "SK" : "CY");
 	}
 }
