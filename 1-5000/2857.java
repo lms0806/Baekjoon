@@ -19,8 +19,8 @@ public class Main {
 			sb.append("HE GOT AWAY!");
 		}
 		else {
-			for(int i = 0; i < arr.size(); i++) {
-				sb.append(arr.get(i)).append(" ");
+			for(int n : arr) {
+				sb.append(n).append(" ");
 			}
 		}
 		System.out.print(sb);
