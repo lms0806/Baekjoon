@@ -8,28 +8,23 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		int size = Integer.parseInt(br.readLine());
-		int a, b;
 		
-		int min = 1, num = 0;
-        StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder();
+		int min = 1;
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			a = Integer.parseInt(st.nextToken());
-			b = Integer.parseInt(st.nextToken());
-			if(a > b) {
-				num = b;
-			}
-			else {
-				num = a;
-			}
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
+			
+			int num = Math.min(a, b);
+
 			for(int j = 1; j <= num; j++) {
-				if(a%j==0 && b%j==0) {
+				if(a % j == 0 && b % j == 0) {
 					min = j;
 				}
 			}
-			sb.append(a*b/min).append("\n");
+			sb.append(a * b / min).append("\n");
 			min = 1;
 		}
-        System.out.println(sb);
+		System.out.print(sb);
 	}
 }
