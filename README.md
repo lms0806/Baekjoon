@@ -43,6 +43,7 @@
  - https://www.acmicpc.net/problem/12606 (Reverse Words (Large))
  - https://www.acmicpc.net/problem/13658 (Revisão de Contrato)
  - https://www.acmicpc.net/problem/13939 (Imena)
+ - https://www.acmicpc.net/problem/5602 (問題1)
 
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
