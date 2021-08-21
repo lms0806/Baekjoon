@@ -3,22 +3,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int num = Integer.parseInt(br.readLine());
+		int size = Integer.parseInt(br.readLine());
 		
-		int a = 0, b = 1, c = 0;
+		int[] num = new int[size + 1];
 		
-		for(int i = 2; i < num+1; i++) {
-			c = a + b;
-			a = b;
-			b = c;
+		num[0] = 0;
+		num[1] = 1;
+		
+		for(int i = 2; i <= size; i++) {
+			num[i] = num[i - 1] + num[i - 2];
 		}
-		if(num == 1) {
-			c = 1;
-		}
-		
-		System.out.println(c);
+		System.out.print(num[size]);
 	}
 }
