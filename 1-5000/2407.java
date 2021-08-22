@@ -12,11 +12,10 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
 		BigInteger a = BigInteger.ONE, b = BigInteger.ONE;
-		
 		for(int i = 0; i < m; i++) {
 			a = a.multiply(new BigInteger(String.valueOf(n - i)));
 			b = b.multiply(new BigInteger(String.valueOf(i + 1)));
 		}
-		System.out.println(a.divide(b));
+		System.out.print(a.divide(b));
 	}
 }
