@@ -11,10 +11,8 @@ public class Main {
 		String a = st.nextToken(), b = st.nextToken();
 		
 		int num = a.length();
-		
 		for(int i = 0; i < b.length() - a.length() + 1; i++) {
 			int temp = 0;
-			
 			for(int j = 0; j < a.length(); j++) {
 				if(a.charAt(j) != b.charAt(j + i)) {
 					temp++;
@@ -22,7 +20,6 @@ public class Main {
 			}
 			num = Math.min(num, temp);
 		}
-		
 		System.out.print(num);
 	}
 }
