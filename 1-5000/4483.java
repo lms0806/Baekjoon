@@ -32,8 +32,8 @@ public class Main {
 				}
 			}
 			
-			for(int j = 0; j < str.length; j++) {
-				sb.append(str[j]).append(" is ").append(arr.contains(str[j]) ? "present" : "absent").append("\n");
+			for(String s : str) {
+				sb.append(s).append(" is ").append(arr.contains(s) ? "present" : "absent").append("\n");
 			}
 			sb.append("\n");
 		}
