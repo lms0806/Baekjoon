@@ -8,13 +8,13 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		String answer = "";
+		StringBuilder sb = new StringBuilder();
 		while(st.hasMoreTokens()) {
 			String str = st.nextToken();
 			if(!str.equals("tapioka") && !str.equals("bubble")) {
-				answer += str + " ";
+				sb.append(str).append(" ");
 			}
 		}
-		System.out.print(answer.equals("") ? "nothing" : answer);
+		System.out.print(sb.length() == 0 ? "nothing" : sb);
 	}
 }
