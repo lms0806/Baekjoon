@@ -8,14 +8,14 @@ public class Main {
 		
 		int n = Integer.parseInt(br.readLine());
 		
-		char[][] board = new char[n][n], click = new char[n][n], result = new char[n][n];
+		char[][] board = new char[n][n], result = new char[n][n];
 		
 		for(int i = 0; i < n; i++) {
 			board[i] = br.readLine().toCharArray();
 		}
 		
 		for(int i = 0; i < n; i++) {
-			click[i] = br.readLine().toCharArray();
+			result[i] = br.readLine().toCharArray();
 		}
 		
 		int[] dx = {-1,-1,-1,0,0,0,1,1,1}, dy = {-1,0,1,-1,0,1,-1,0,1};
@@ -24,7 +24,7 @@ public class Main {
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < n; j++) {
 				int count = 0;
-				if(click[i][j] == 'x') {
+				if(result[i][j] == 'x') {
 					if(board[i][j] == '*') {
 						b = true;
 					}
