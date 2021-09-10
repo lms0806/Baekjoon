@@ -7,13 +7,11 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		br.readLine();
-		String str = br.readLine();
 		
 		int answer = 0;
-		for(int i = 0; i < str.length(); i++) {
-			answer += str.charAt(i)-64;
+		for(char ch : br.readLine().toCharArray()) {
+			answer += ch - 64;
 		}
-		
 		System.out.print(answer);
 	}
 }
