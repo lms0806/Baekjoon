@@ -15,22 +15,24 @@ public class Main {
 			
 			int answer = 0;
 			for(int j = a; j <= b; j++) {
-				int[] num = new int[10];
-				
-				boolean istrue = true;
-				for(char ch : Integer.toString(j).toCharArray()) {
-					num[ch - '0']++;
-					if(num[ch - '0'] == 2) {
-						istrue = false;
-						break;
-					}
-				}
-				if(istrue) {
+				if(istrue(j)) {
 					answer++;
 				}
 			}
 			sb.append(answer).append("\n");
 		}
 		System.out.print(sb);
+	}
+	
+	public static boolean istrue(int j) {
+		int[] num = new int[10];
+		while(j != 0) {
+			num[j % 10]++;
+			if(num[j % 10] == 2) {
+				return false;
+			}
+			j /= 10;
+		}
+		return true;
 	}
 }
