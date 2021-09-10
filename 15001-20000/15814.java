@@ -12,19 +12,13 @@ public class Main {
 		
 		int size = Integer.parseInt(br.readLine());
 		
-		for(int i = 0; i < size; i++) {
+		while(size --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 			
 			char tmp = ch[a];
 			ch[a] = ch[b];
 			ch[b] = tmp;
-		}
-		
-		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < ch.length; i++) {
-			sb.append(ch[i]);
 		}
 		System.out.print(ch);
 	}
