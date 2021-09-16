@@ -45,6 +45,7 @@
  - https://www.acmicpc.net/problem/13939 (Imena)
  - https://www.acmicpc.net/problem/5602 (問題1)
  - https://www.acmicpc.net/problem/22380 (割り勘)
+ - https://www.acmicpc.net/problem/20818 (Godishalsbandet)
 
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
