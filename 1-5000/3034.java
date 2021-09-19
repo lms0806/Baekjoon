@@ -4,23 +4,17 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) throws IOException{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
-		int c = Integer.parseInt(st.nextToken());
-		
+
+		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
+
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < a; i++) {
+		while(a --> 0) {
 			int num = Integer.parseInt(br.readLine());
-			if((b*b)+(c*c) >= num*num) {
-				sb.append("DA").append("\n");
-			}
-			else {
-				sb.append("NE").append("\n");
-			}
+			
+			sb.append((b * b) + (c * c) >= num * num ? "DA" : "NE").append("\n");
 		}
 		System.out.print(sb);
 	}
