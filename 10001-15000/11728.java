@@ -23,8 +23,8 @@ public class Main {
 		Arrays.sort(sum);
 		
 		StringBuilder sb = new StringBuilder();	
-		for(int i = 0; i < sum.length; i++) {
-			sb.append(sum[i]).append(" ");
+		for(int n : sum) {
+			sb.append(n).append(" ");
 		}
 		System.out.print(sb);
 	}
