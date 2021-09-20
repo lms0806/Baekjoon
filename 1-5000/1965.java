@@ -14,7 +14,6 @@ public class Main {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < n; i++) {
 			num[i] = Integer.parseInt(st.nextToken());
-			dp[i] = 1;
 		}
 		
 		int answer = 0;
@@ -26,6 +25,7 @@ public class Main {
 			}
 			answer = Math.max(answer, dp[i]);
 		}
-		System.out.print(answer);
+		
+		System.out.print(answer + 1);
 	}
 }
