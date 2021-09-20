@@ -12,10 +12,10 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 			
-			sb.append(n - 1).append("\n");
+			sb.append(Integer.parseInt(st.nextToken()) - 1).append("\n");
 			
+			int m = Integer.parseInt(st.nextToken());
 			while(m --> 0) {
 				br.readLine();
 			}
