@@ -8,14 +8,13 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int a = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken()) - 2;
 		long b = Long.parseLong(st.nextToken());
 		
-		long answer = 0;
-		long num = 1;
+		long answer = 0, num = 1;
 		while(b --> -1) {
 			answer += num;
-			num+=(a-2);
+			num += a;
 		}
 		System.out.print(answer);
 	}
