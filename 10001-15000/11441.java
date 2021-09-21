@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Deque;
-import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -23,9 +21,9 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken()) - 1, b = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken()) - 1;
 			
-			sb.append(sum[b] - sum[a]).append("\n");
+			sb.append(sum[Integer.parseInt(st.nextToken())] - sum[a]).append("\n");
 		}
 		System.out.print(sb);
 	}
