@@ -25,18 +25,19 @@ public class Main {
 					aa[a.charAt(i) - 'a']++;
 					aa[b.charAt(i) - 'a']--;
 				}
-				
-				boolean istrue = true;
-				for(int n : aa) {
-					if(n != 0) {
-						istrue = false;
-						break;
-					}
-				}
-				sb.append(istrue ? "" : "NOT ");
+				sb.append(solve(aa));
 			}
 			sb.append("anagrams.\n");
 		}
 		System.out.print(sb);
+	}
+	
+	public static String solve(int[] aa) {
+		for(int n : aa) {
+			if(n != 0) {
+				return "NOT ";
+			}
+		}
+		return "";
 	}
 }
