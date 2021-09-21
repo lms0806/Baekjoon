@@ -9,13 +9,10 @@ public class Main {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
 		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		st.nextToken();
 		
-		int c, d;
-		for(int i = 0; i < a; i++) {
-			st = new StringTokenizer(br.readLine());
-			c = Integer.parseInt(st.nextToken());
-			d = Integer.parseInt(st.nextToken());
+		while(a --> 0) {
+			br.readLine();
 		}
 		
 		System.out.print("비와이");
