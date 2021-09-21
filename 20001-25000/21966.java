@@ -15,16 +15,7 @@ public class Main {
 			sb.append(str);
 		}
 		else {
-			String s = str.substring(12,str.length()-12);
-			
-			boolean b = true;
-			for(char ch : s.toCharArray()) {
-				if(ch == '.') {
-					b = false;
-					break;
-				}
-			}
-			sb.append(b ? str.substring(0,11) + "..." + str.substring(str.length()-11) : str.substring(0,9) + "......" + str.substring(str.length()-10));
+			sb.append(!str.substring(12,str.length()-12).contains(".") ? str.substring(0,11) + "..." + str.substring(str.length()-11) : str.substring(0,9) + "......" + str.substring(str.length()-10));
 		}
 		System.out.print(sb);
 	}
