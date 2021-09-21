@@ -4,32 +4,35 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) throws IOException{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
-		
-		char[][] str = new char[n][m];
-		
-		String s;
-		for(int i = 0; i < str.length; i++) {
-			s = br.readLine();
-			str[i] = s.toCharArray();
+
+		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
+
+		char[][] ch = new char[n][m];
+
+		for (int i = 0; i < n; i++) {
+			ch[i] = br.readLine().toCharArray();
 		}
+
+		String[] s = new String[n];
 		
-		boolean istrue = true;
-		for(int i = 0; i < str.length; i++) {
-			s = br.readLine();
-			for(int j = 0; j < str[i].length * 2; j++) {
-				if(str[i][j/2] != s.charAt(j)) {
-					istrue = false;
-					break;
+		for(int i = 0; i < n; i++) {
+			s[i] = br.readLine();
+		}
+
+		System.out.print(solve(ch, s));
+	}
+	
+	public static String solve(char[][] ch, String[] s) {
+		for (int i = 0; i < ch.length; i++) {
+			for (int j = 0; j < s[i].length(); j++) {
+				if (ch[i][j / 2] != s[i].charAt(j)) {
+					return "Not Eyfa";
 				}
 			}
 		}
-		
-		System.out.print(istrue ? "Eyfa" : "Not Eyfa");
+		return "Eyfa";
 	}
 }
