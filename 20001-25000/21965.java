@@ -6,9 +6,7 @@ import java.util.StringTokenizer;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		boolean b = true;
-		
+
 		int size = Integer.parseInt(br.readLine());
 		int[] num = new int[size];
 		
@@ -17,24 +15,25 @@ public class Main {
 			num[i] = Integer.parseInt(st.nextToken());
 		}
 		
+		System.out.print(solve(num));
+	}
+	
+	public static String solve(int[] num) {
 		int count = 0;
-		for(int i = 1; i < size; i++) {
+		for(int i = 1; i < num.length; i++) {
 			if(num[i - 1] < num[i]) {
 				if(count == -1) {
-					b = false;
-					break;
+					return "NO";
 				}
 				count++;
 			}
 			else if(num[i-1] == num[i]) {
-				b = false;
-				break;
+				return "NO";
 			}
 			else {
 				count = -1;
 			}
 		}
-		
-		System.out.print(b ? "YES" : "NO");
+		return "YES";
 	}
 }
