@@ -8,9 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
-		
+		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 		int c = Integer.parseInt(br.readLine());
 		
 		System.out.print(a + b < (2 * c) ? a + b : a + b - (c * 2));
