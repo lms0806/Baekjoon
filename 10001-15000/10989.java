@@ -16,9 +16,10 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < num.length; i++) {
-			sb.append((i + "\n").repeat(num[i]));
+			if(num[i] != 0) {
+				sb.append((i + "\n").repeat(num[i]));
+			}
 		}
-		
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
