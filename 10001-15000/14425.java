@@ -9,8 +9,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
 		HashMap<String, Integer> arr = new HashMap<>();
 		
