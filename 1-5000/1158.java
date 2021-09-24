@@ -9,8 +9,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int k = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()),k = Integer.parseInt(st.nextToken());
 		
 		ArrayList<Integer> arr = new ArrayList<>();
 		
@@ -27,6 +26,6 @@ public class Main {
 		}
 		sb.append(arr.remove(0)).append(">");
 		
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
