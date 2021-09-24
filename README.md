@@ -46,6 +46,7 @@
  - https://www.acmicpc.net/problem/5602 (問題1)
  - https://www.acmicpc.net/problem/22380 (割り勘)
  - https://www.acmicpc.net/problem/20818 (Godishalsbandet)
+ - https://www.acmicpc.net/problem/22680 (Space Coconut Crab)
 
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
