@@ -17,12 +17,10 @@ public class Main {
 		
 		Arrays.sort(num);
 		
-		String str = br.readLine();
-		
-        StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < str.length(); i++) {
-			sb.append(num[str.charAt(i) - 'A']).append(" ");
+        	StringBuilder sb = new StringBuilder();
+		for(char ch : br.readLine().toCharArray()) {
+			sb.append(num[ch - 'A']).append(" ");
 		}
-        System.out.print(sb);
+        	System.out.print(sb);
 	}
 }
