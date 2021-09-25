@@ -10,11 +10,10 @@ public class Main {
 		int a = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < a; i++) {
+		for(int i = 1; i <= a; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int b = Integer.parseInt(st.nextToken());
-			int c = Integer.parseInt(st.nextToken());
-			sb.append("Case #").append(i+1).append(": ").append(b).append(" + ").append(c).append(" = ").append(b+c).append("\n");
+			int b = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
+			sb.append("Case #").append(i).append(": ").append(b).append(" + ").append(c).append(" = ").append(b+c).append("\n");
 		}
 		System.out.print(sb);
 	}
