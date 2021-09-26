@@ -9,8 +9,8 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
-			sb.append(size-i).append("\n");
+		for(int i = size; i > 0; i--) {
+			sb.append(i).append("\n");
 		}
 		System.out.print(sb);
 	}
