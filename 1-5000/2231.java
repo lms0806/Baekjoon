@@ -5,14 +5,11 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		int n = Integer.parseInt(br.readLine());
-		
-		System.out.print(solve(n));
+
+		System.out.print(solve(Integer.parseInt(br.readLine())));
 	}
 	
 	public static int solve(int n) {
-		
 		for(int i = 1; i < n; i++) {
 			int number = i, num = 0;
 			
