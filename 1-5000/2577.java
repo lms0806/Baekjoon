@@ -8,19 +8,17 @@ public class Main {
 		
 		int[] num = new int[10];
 		
-		int d = Integer.parseInt(br.readLine());
-		d *= Integer.parseInt(br.readLine());
-		d *= Integer.parseInt(br.readLine());
+		int d = Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine());
 		
 		while(d != 0) {
 			int number = d % 10;
 			num[number]++;
-			d/=10;
+			d /= 10;
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < 10; i++) {
-			sb.append(num[i]).append("\n");
+		for(int n : num) {
+			sb.append(n).append("\n");
 		}
 		System.out.print(sb);
 	}
