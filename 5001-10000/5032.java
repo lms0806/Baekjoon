@@ -8,17 +8,15 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int num = Integer.parseInt(st.nextToken());
-		num += Integer.parseInt(st.nextToken());
+		int num = Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken());
 		int size = Integer.parseInt(st.nextToken());
 		
 		int answer = 0, number = 0;
 		while(num >= size) {
-			number = num/size;
+			number = num / size;
 			answer += number;
-			num = number + (num%size);
+			num = number + (num % size);
 		}
-		
-		System.out.println(answer);
+		System.out.print(answer);
 	}
 }
