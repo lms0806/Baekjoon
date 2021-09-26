@@ -13,16 +13,11 @@ public class Main {
 		PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
 		
 		StringBuilder sb = new StringBuilder();
-		while(size-->0) {
+		while(size --> 0) {
 			int num = Integer.parseInt(br.readLine());
+			
 			if(num == 0) {
-				if(queue.isEmpty()) {
-					sb.append("0");
-				}
-				else {
-					sb.append(queue.poll());
-				}
-				sb.append("\n");
+				sb.append(queue.isEmpty() ? "0" : queue.poll()).append("\n");
 			}
 			else {
 				queue.add(num);
