@@ -16,15 +16,12 @@ public class Main {
 			num[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		int check = Integer.parseInt(br.readLine());
-		
-		int count = 0;
-		for(int i = 0; i < n; i++) {
-			if(num[i] == check) {
+		int check = Integer.parseInt(br.readLine()), count = 0;
+		for(int a : num) {
+			if(a == check) {
 				count++;
 			}
 		}
-		
-		System.out.println(count);
+		System.out.print(count);
 	}
 }
