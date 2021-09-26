@@ -11,15 +11,15 @@ public class Main {
 		int[] num = new int[3];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < num.length; i++) {
+		for(int i = 0; i < 3; i++) {
 			num[i] = Integer.parseInt(st.nextToken());
 		}
 		
 		Arrays.sort(num);
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < num.length; i++) {
-			sb.append(num[i]).append(" ");
+		for(int n : num) {
+			sb.append(n).append(" ");
 		}
 		System.out.println(sb);
 	}
