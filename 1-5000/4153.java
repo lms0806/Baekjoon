@@ -4,42 +4,33 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) throws IOException{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		int a = 1, b = 1, c = 1;
-		
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 		StringBuilder sb = new StringBuilder();
-		while(true) {
+		while (true) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			a = Integer.parseInt(st.nextToken());
-			b = Integer.parseInt(st.nextToken());
-			c = Integer.parseInt(st.nextToken());
-			
-			if(a == 0 && b == 0 && c == 0) {
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
+
+			if (a == 0) {
 				break;
 			}
-			
+
 			int tmp = 0;
-			if(a > b && a > c) {
+			if (a > b && a > c) {
 				tmp = c;
 				c = a;
 				a = tmp;
-			}
+			} 
 			else {
-				if(b > c) {
+				if (b > c) {
 					tmp = c;
 					c = b;
 					b = tmp;
 				}
 			}
-			
-			if(c*c == (a*a) + (b*b)) {
-				sb.append("right").append("\n");
-			}
-			else {
-				sb.append("wrong").append("\n");
-			}
+
+			sb.append(c * c == a * a + b * b ? "right" : "wrong").append("\n");
 		}
 		System.out.print(sb);
 	}
