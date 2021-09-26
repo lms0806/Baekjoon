@@ -8,15 +8,8 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		double a, b, c;
+		double a = Double.parseDouble(st.nextToken()), b = Double.parseDouble(st.nextToken()), c = Double.parseDouble(st.nextToken());
 		
-		a = Integer.parseInt(st.nextToken());
-		b = Integer.parseInt(st.nextToken());
-		c = Integer.parseInt(st.nextToken());
-		
-		double num = a * b / c;
-		double num1 = a / b * c;
-		
-		System.out.print((long)Math.max(num, num1));
+		System.out.print((long)Math.max(a * b / c, a / b * c));
 	}
 }
