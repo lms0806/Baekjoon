@@ -8,19 +8,8 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 		
-		StringBuilder sb = new StringBuilder();
-		if(a > b) {
-			sb.append(">");
-		}
-		else if(a < b) {
-			sb.append("<");
-		}
-		else {
-			sb.append("==");
-		}
-		System.out.print(sb);
+		System.out.print(a > b ? ">" : a < b ? "<" : "==");
 	}
 }
