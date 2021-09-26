@@ -12,29 +12,27 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			String a = st.nextToken();
-			String b = st.nextToken();
 			
 			int[] alpha = new int[26];
-			boolean istrue = true;
 			
-			for(int i = 0; i < a.length(); i++) {
-				alpha[a.charAt(i)-97]++;
+			for(char ch : st.nextToken().toCharArray()) {
+				alpha[ch - 97]++;
+			}
+			for(char ch : st.nextToken().toCharArray()) {
+				alpha[ch - 97]--;
 			}
 			
-			for(int i = 0; i < b.length(); i++) {
-				alpha[b.charAt(i)-97]--;
-			}
-			
-			for(int i = 0; i < alpha.length; i++) {
-				if(alpha[i] != 0) {
-					istrue = false;
-					break;
-				}
-			}
-			
-			sb.append(istrue ? "Possible" : "Impossible").append("\n");
+			sb.append(check(alpha) ? "Possible" : "Impossible").append("\n");
 		}
 		System.out.print(sb);
+	}
+	
+	public static boolean check(int[] alpha) {
+		for(int a : alpha) {
+			if(a != 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 }
