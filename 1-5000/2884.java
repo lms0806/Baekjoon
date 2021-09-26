@@ -1,28 +1,22 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		int a = scan.nextInt();
-		int b = scan.nextInt();
-		
-		if(b < 45) {
-			if(a <= 0) {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
+
+		if (b < 45) {
+			if (a <= 0) {
 				a = 24;
-				a--;
-				b+=60;
-				b-=45;
 			}
-			else {
-				a--;
-				b+=60;
-				b-=45;
-			}
+			b += 60;
+			a--;
 		}
-		else {
-			b-=45;
-		}
-		System.out.print(a + " " + b);
+		System.out.print(a + " " + (b - 45));
 	}
 }
