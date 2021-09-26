@@ -12,12 +12,12 @@ public class Main {
 		
 		for(int i = 0; i < size; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			num[i] = Integer.parseInt(st.nextToken())+Integer.parseInt(st.nextToken());
+			num[i] = Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken());
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
-			sb.append(num[i]).append("\n");
+		for(int n : num) {
+			sb.append(n).append("\n");
 		}
 		System.out.print(sb);
 	}
