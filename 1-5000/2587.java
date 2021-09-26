@@ -9,25 +9,14 @@ public class Main {
 		
 		int[] num = new int[5];
 		int sum = 0;
-		
 		for(int i = 0; i < 5; i++) {
 			num[i] = Integer.parseInt(br.readLine());
 			sum += num[i];
 		}
-		sum/=5;
+		sum /= 5;
 		
 		Arrays.sort(num);
 		
-		int number = 0;
-		if(num.length%2 == 0) {
-			number = (num[num.length / 2] + num[num.length / 2 + 1]) / 2;
-		}
-		else {
-			number = num[num.length/2];
-		}
-		
-        	StringBuilder sb = new StringBuilder();
-		sb.append(sum).append("\n").append(number).append("\n");
-        	System.out.print(sb);
+		System.out.print(sum + "\n" + num[num.length / 2]);
 	}
 }
