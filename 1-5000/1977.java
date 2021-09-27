@@ -6,20 +6,17 @@ public class Main {
 	public static void main(String[] args) throws NumberFormatException,IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int m = Integer.parseInt(br.readLine());
-		int n = Integer.parseInt(br.readLine());
+		int m = Integer.parseInt(br.readLine()), n = Integer.parseInt(br.readLine());
 		
 		int sum = 0, num = 0, count = 0, number = 1;
-		while(true) {
-			if(number*number >= m && number*number <= n) {
-				sum += number*number;
+		while(number <= n) {
+			int numbers = number * number;
+			if(numbers >= m && numbers <= n) {
+				sum += numbers;
 				count++;
 				if(count == 1) {
-					num = number*number;
+					num = numbers;
 				}
-			}
-			if(number*number > n) {
-				break;
 			}
 			number++;
 		}
@@ -29,8 +26,7 @@ public class Main {
 			sb.append("-1");
 		}
 		else {
-			sb.append(sum).append("\n");
-			sb.append(num).append("\n");
+			sb.append(sum).append("\n").append(num);
 		}
 		System.out.print(sb);
 	}
