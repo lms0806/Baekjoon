@@ -8,13 +8,6 @@ public class Main {
 		
 		int a = Integer.parseInt(br.readLine());
 		
-		StringBuilder sb = new StringBuilder();
-		if((a%4 == 0 && a%100 != 0) || a%400 == 0) { 
-			sb.append("1");
-		}
-		else {
-			sb.append("0");
-		}
-		System.out.print(sb);
+		System.out.print((a % 4 == 0 && a % 100 != 0) || a % 400 == 0 ? 1 : 0);
 	}
 }
