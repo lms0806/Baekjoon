@@ -13,8 +13,8 @@ public class Main {
 		
 		ArrayList<Integer> arr = new ArrayList<>();
 		
-		for(int i = 0; i < n; i++) {
-			arr.add(i + 1);
+		for(int i = 1; i <= n; i++) {
+			arr.add(i);
 		}
 		
 		int index = 0;
