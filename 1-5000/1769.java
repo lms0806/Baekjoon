@@ -8,8 +8,7 @@ public class Main {
 		
 		String str = br.readLine();
 		
-		int answer = 0;
-		int last = 0;
+		int answer = 0, last = 0;
 		while(str.length() != 1) {
 			for(char ch : str.toCharArray()) {
 				last += ch - '0';
