@@ -24,10 +24,9 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		sb.append(arr[0]).append("\n");
 		for(int i = 1; i < size; i++) {
-			if(arr[i - 1].equals(arr[i])) {
-				continue;
+			if(!arr[i - 1].equals(arr[i])) {
+				sb.append(arr[i]).append("\n");
 			}
-			sb.append(arr[i]).append("\n");
 		}
 		System.out.print(sb);
 	}
