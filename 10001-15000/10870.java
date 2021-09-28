@@ -6,21 +6,20 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int num = Integer.parseInt(br.readLine());
+		System.out.print(solve(Integer.parseInt(br.readLine())));
+	}
+	
+	public static int solve(int num) {
+		if(num == 1) {
+			return 1;
+		}
 		
 		int a = 0, b = 1, c = 0;
-		
-		if(num == 1) {
-			c = 1;
+		while(num --> 1) {
+			c = a + b;
+			a = b;
+			b = c;
 		}
-		else{
-			while(num-->1) {
-				c = a + b;
-				a = b;
-				b = c;
-			}
-		}
-		
-		System.out.print(c);
+		return c;
 	}
 }
