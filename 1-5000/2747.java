@@ -9,7 +9,6 @@ public class Main {
 		int size = Integer.parseInt(br.readLine());
 		
 		int[] num = new int[size + 1];
-		
 		num[0] = 0;
 		num[1] = 1;
 		
