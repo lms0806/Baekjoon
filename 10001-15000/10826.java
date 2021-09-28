@@ -7,23 +7,20 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int size = Integer.parseInt(br.readLine());
+		System.out.print(solve(Integer.parseInt(br.readLine())));
+	}
+	
+	public static String solve(int n) {
+		if(n < 2) {
+			return Integer.toString(n);
+		}
+		BigInteger[] num = new BigInteger[n + 1];
+		num[0] = BigInteger.ZERO;
+		num[1] = BigInteger.ONE;
 		
-		StringBuilder sb = new StringBuilder();
-		if(size < 2) {
-			sb.append(size);
+		for(int i = 2; i <= n; i++) {
+			num[i] = num[i - 1].add(num[i - 2]);
 		}
-		else {
-			BigInteger[] num = new BigInteger[size + 1];
-			
-			num[0] = BigInteger.ZERO;
-			num[1] = BigInteger.ONE;
-			
-			for(int i = 2; i <= size; i++) {
-				num[i] = num[i - 1].add(num[i - 2]);
-			}
-			sb.append(num[size]);
-		}
-		System.out.print(sb);
+		return num[n].toString();
 	}
 }
