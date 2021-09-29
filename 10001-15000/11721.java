@@ -6,14 +6,14 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = br.readLine();
-		
+		int n = 1;
 		StringBuilder sb = new StringBuilder();
-		for(int i = 1; i <= str.length(); i++) {
-			sb.append(str.charAt(i-1));
-            if(i % 10 ==  0) {
-                sb.append("\n");
-            }
+		for(char ch : br.readLine().toCharArray()) {
+			sb.append(ch);
+			if(n % 10 == 0) {
+				sb.append("\n");
+			}
+			n++;
 		}
 		System.out.print(sb);
 	}
