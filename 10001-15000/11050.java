@@ -8,15 +8,13 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int k = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), k = Integer.parseInt(st.nextToken());
 		
 		int a = 1, b = 1;
 		for(int i = 0; i < k; i++) {
 			a *= n - i;
 			b *= k - i;
 		}
-		
-		System.out.print(a/b);
+		System.out.print(a / b);
 	}
 }
