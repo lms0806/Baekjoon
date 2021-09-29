@@ -9,23 +9,23 @@ public class Main {
 		String str;
 		StringBuilder sb = new StringBuilder();
 		while((str = br.readLine()) != null) {
-			int a = 0, b = 0, c = 0, d = 0;
+			int[] num = new int[4];
 
 			for(char ch : str.toCharArray()) {
 				if(ch >= 97 && ch <= 122) {
-					a++;
+					num[0]++;
 				}
 				else if(ch >= 65 && ch <= 90) {
-					b++;
-				}
-				else if(ch >= 48 && ch <= 57) {
-					c++;
+					num[1]++;
 				}
 				else {
-					d++;
+					num[ch >= 48 && ch <= 57 ? 2 : 3]++;
 				}
 			}
-			sb.append(a).append(" ").append(b).append(" ").append(c).append(" ").append(d).append("\n");
+			for(int i = 0; i < 4; i++) {
+				sb.append(num[i]).append(" ");
+			}
+			sb.append("\n");
 		}
 		System.out.print(sb);
 	}
