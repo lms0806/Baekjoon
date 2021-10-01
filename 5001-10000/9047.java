@@ -11,26 +11,23 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
-			String s = br.readLine();
+			int n = Integer.parseInt(br.readLine());
 			
 			int answer = 0;
-			while(!s.equals("6174")) {
-				char[] ch = s.toCharArray();
+			while(n != 6174) {
+				int[] num = new int[4];
 				
-				Arrays.sort(ch);
-				
-				String a = "", b = "";
-				for(char c : ch) {
-					b += c;
-				}
-				for(int i = ch.length - 1; i >= 0; i--) {
-					a += ch[i];
+				for(int i = 0; i < 4; i++) {
+					num[i] = n % 10;
+					n /= 10;
 				}
 				
-				s = Integer.toString((Integer.parseInt(a)) - Integer.parseInt(b));
+				Arrays.sort(num);
 				
-				while(s.length() != 4) {
-					s += "0";
+				n = 0;
+				for(int i = 0; i < 4; i++) {
+					n *= 10;
+					n += num[3 - i] - num[i];
 				}
 				
 				answer++;
