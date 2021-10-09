@@ -29,7 +29,7 @@ public class Main {
 			else if(ch < 87) {
 				answer += 9;
 			}
-			else if(ch < 91) {
+			else {
 				answer += 10;
 			}
 		}
