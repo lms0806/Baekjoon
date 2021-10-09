@@ -34,9 +34,9 @@ public class Main {
 				}
 			}
 			
-			for(int j = 0; j < count; j++) {
-				if(!strs[j].equals("")) {
-					sb.append(strs[j]).append(" ");
+			for(String s : strs) {
+				if(s != null && !s.equals("")) {
+					sb.append(s).append(" ");
 				}
 			}
 			sb.append("\n");
