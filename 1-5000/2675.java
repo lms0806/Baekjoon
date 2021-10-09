@@ -15,9 +15,7 @@ public class Main {
 			int count = Integer.parseInt(st.nextToken());
 
 			for(char ch : st.nextToken().toCharArray()) {
-				for(int k = 0; k < count; k++) {
-					sb.append(ch);
-				}
+				sb.append((ch + "").repeat(count));
 			}
 			sb.append("\n");
 		}
