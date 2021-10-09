@@ -10,22 +10,10 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 1; i <= size; i++) {
-			for(int j = i; j < size; j++) {
-				sb.append(" ");
-			}
-			for(int j = 0; j < i*2-1; j++) {
-				sb.append("*");
-			}
-			sb.append("\n");
+			sb.append(" ".repeat(size - i)).append("*".repeat(i * 2 - 1)).append("\n");
 		}
 		for(int i = size-1; i > 0; i--) {
-			for(int j = i; j < size; j++) {
-				sb.append(" ");
-			}
-			for(int j = 0; j < i*2-1; j++) {
-				sb.append("*");
-			}
-			sb.append("\n");
+			sb.append(" ".repeat(size - i)).append("*".repeat(i * 2 - 1)).append("\n");
 		}
 		System.out.print(sb);
 	}
