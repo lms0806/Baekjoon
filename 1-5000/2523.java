@@ -10,16 +10,10 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 1; i <= size; i++) {
-			for(int j = size-i; j < size; j++) {
-				sb.append("*");
-			}
-			sb.append("\n");
+			sb.append("*".repeat(i)).append("\n");
 		}
 		for(int i = size-1; i > 0; i--) {
-			for(int j = size-i; j < size; j++) {
-				sb.append("*");
-			}
-			sb.append("\n");
+			sb.append("*".repeat(i)).append("\n");
 		}
 		System.out.print(sb);
 	}
