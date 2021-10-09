@@ -10,10 +10,7 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i = 1; i <= size; i++) {
-			for(int j = size; j > i; j--) {
-				sb.append(" ");
-			}
-			sb.append("*".repeat(i)).append("\n");
+			sb.append(" ".repeat(size - i)).append("*".repeat(i)).append("\n");
 		}
 		System.out.print(sb);
 	}
