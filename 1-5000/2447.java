@@ -19,8 +19,8 @@ public class Main {
 		star(0, 0, n);
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < n; i++) {
-			sb.append(arr[i]).append("\n");
+		for(char[] s : arr) {
+			sb.append(s).append("\n");
 		}
 		System.out.print(sb);
 	}
