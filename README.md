@@ -47,6 +47,7 @@
  - https://www.acmicpc.net/problem/22380 (割り勘)
  - https://www.acmicpc.net/problem/20818 (Godishalsbandet)
  - https://www.acmicpc.net/problem/22680 (Space Coconut Crab)
+ - https://www.acmicpc.net/problem/23246 (Sport Climbing Combined)
 
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
