@@ -5,11 +5,12 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
+	static int[] arr;
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		int size = Integer.parseInt(br.readLine());
-		int[] arr = new int[size];
+		arr = new int[size];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < size; i++) {
@@ -23,12 +24,13 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		st = new StringTokenizer(br.readLine());
 		while(size --> 0) {
-			sb.append(binary_search(arr, Integer.parseInt(st.nextToken()), 0, arr.length - 1)).append("\n");
+			sb.append(binary_search(Integer.parseInt(st.nextToken()))).append("\n");
 		}
 		System.out.print(sb);
 	}
 	
-	public static int binary_search(int[] arr, int input, int first, int end) {
+	public static int binary_search(int input) {
+		int first = 0, end = arr.length - 1;
 		while(first <= end) {
 			int mid = (first + end) / 2;
 			
