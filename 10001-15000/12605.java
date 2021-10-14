@@ -6,14 +6,15 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int size = Integer.parseInt(br.readLine());
+		int n = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
-			String[] strs = br.readLine().split(" ");
-			sb.append("Case #").append(i + 1).append(": ");
-			for(int j = strs.length - 1; j >= 0; j--) {
-				sb.append(strs[j]).append(" ");
+		for(int i = 1; i <= n; i++) {
+			String[] str = br.readLine().split(" ");
+			
+			sb.append("Case #").append(i).append(": ");
+			for(int j = str.length - 1; j >= 0; j--) {
+				sb.append(str[j]).append(" ");
 			}
 			sb.append("\n");
 		}
