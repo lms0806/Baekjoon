@@ -9,12 +9,10 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		String a = st.nextToken();
-		String b = st.nextToken();
+		String a = st.nextToken(), b = st.nextToken();
 		
 		StringBuilder sb = new StringBuilder();
-		sb.append(new BigInteger(a).divide(new BigInteger(b))).append("\n");
-		sb.append(new BigInteger(a).remainder(new BigInteger(b))).append("\n");
+		sb.append(new BigInteger(a).divide(new BigInteger(b))).append("\n").append(new BigInteger(a).remainder(new BigInteger(b)));
 		System.out.print(sb);
 	}
 }
