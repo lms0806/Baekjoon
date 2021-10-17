@@ -5,8 +5,7 @@ import java.util.StringTokenizer;
 
 public class Main {
 	static int a,b;
-	static boolean[][] check;
-	static boolean[][] arr;
+	static boolean[][] check, arr;
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
