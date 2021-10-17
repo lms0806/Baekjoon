@@ -3,20 +3,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
+	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		String s = br.readLine();
 		
-		StringBuilder sb = new StringBuilder();
 		if(s.contains("A")) {
-			solve('A', s, sb);
+			solve('A', s);
 		}
 		else if(s.contains("B")) {
-			solve('B', s, sb);
+			solve('B', s);
 		}
 		else if(s.contains("C")) {
-			solve('C', s, sb);
+			solve('C', s);
 		}
 		else {
 			for(int i = 0; i < s.length(); i++) {
@@ -26,14 +26,9 @@ public class Main {
 		System.out.print(sb);
 	}
 	
-	public static void solve(char c, String s, StringBuilder sb) {
+	public static void solve(char c, String s) {
 		for(char ch : s.toCharArray()) {
-			if(ch >= c && ch <= 'F' && ch != 'E') {
-				sb.append(c);
-			}
-			else {
-				sb.append(ch);
-			}
+			sb.append(ch >= c && ch <= 'F' && ch != 'E' ? c : ch);
 		}
 	}
 }
