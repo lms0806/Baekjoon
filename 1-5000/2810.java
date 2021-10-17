@@ -7,21 +7,20 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		br.readLine();
-		String str = br.readLine();
-		
-		int count = 1;
-		if(!str.contains("LL")) {
-			count = str.length();
+		System.out.print(solve(br.readLine()));
+	}
+	
+	public static int solve(String s) {
+		if(!s.contains("LL")) {
+			return s.length();
 		}
-		else {
-			for(int i = 0; i < str.length(); i++) {
-				if(str.charAt(i) == 'L') {
-					i++;
-				}
-				count++;
+		int n = 1;
+		for(int i = 0; i < s.length(); i++) {
+			if(s.charAt(i) == 'L') {
+				i++;
 			}
+			n++;
 		}
-		
-		System.out.print(count);
+		return n;
 	}
 }
