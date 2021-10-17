@@ -17,13 +17,11 @@ public class Main {
 			int x = 0, y = 0;
 			st = new StringTokenizer(br.readLine());
 			for(int i = 0; i < m; i++) {
-				x *= 10;
-				x += Integer.parseInt(st.nextToken());
+				x = x * 10 + Integer.parseInt(st.nextToken());
 			}
 			st = new StringTokenizer(br.readLine());
 			for(int i = 0; i < m; i++) {
-				y *= 10;
-				y += Integer.parseInt(st.nextToken());
+				y = y * 10 + Integer.parseInt(st.nextToken());
 			}
 			
 			int[] num = new int[n + m];
@@ -39,8 +37,7 @@ public class Main {
 			for(int i = 0; i < num.length - m; i++) {
 				int number = 0;
 				for(int j = i; j < i + m; j++) {
-					number *= 10;
-					number += num[j];
+					number = number * 10 + num[j];
 				}
 				if(x <= number && number <= y) {
 					answer++;
