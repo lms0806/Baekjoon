@@ -7,25 +7,11 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		int n = Integer.parseInt(br.readLine());
-		int a = 0, b = 0;
 		
-		for(int i = 0; i < n; i++) {
-			int num = Integer.parseInt(br.readLine());
-			if(num == 1) {
-				a++;
-			}
-			else {
-				b++;
-			}
+		int a = 0;
+		while(n --> 0) {
+			a += br.readLine().charAt(0) == '1' ? 1 :-1;
 		}
-		
-		StringBuilder sb = new StringBuilder();
-		if(a > b) {
-			sb.append("Junhee is cute!");
-		}
-		else {
-			sb.append("Junhee is not cute!");
-		}
-		System.out.print(sb);
+		System.out.print("Junhee is " + (a > 0 ? "" : "not ") + "cute!");
 	}
 }
