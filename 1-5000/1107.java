@@ -22,9 +22,7 @@ public class Main {
 			int len = check(i);
 			
 			if(len > 0) {
-				int count = Math.abs(n - i);
-				
-				answer = Math.min(answer, len + count);
+				answer = Math.min(answer, len + Math.abs(n - i));
 			}
 		}
 		System.out.print(answer);
