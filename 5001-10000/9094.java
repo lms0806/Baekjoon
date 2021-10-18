@@ -12,16 +12,13 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int n = Integer.parseInt(st.nextToken());
-			int m = Integer.parseInt(st.nextToken());
+			int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 			
 			int answer = 0;
 			for(int i = 1; i < n - 1; i++) {
 				int a = i * i;
 				for(int j = i + 1; j < n; j++) {
-					int b = j * j;
-					
-					if((a + b + m) % (i * j) == 0) {
+					if((a + j * j + m) % (i * j) == 0) {
 						answer++;
 					}
 				}
