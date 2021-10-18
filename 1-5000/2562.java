@@ -14,10 +14,10 @@ public class Main {
 			num[i] = Integer.parseInt(br.readLine());
 			if(max < num[i]) {
 				max = num[i];
-				index = i+1;
+				index = i + 1;
 			}
 		}
 		
-		System.out.println(max + "\n" + index);
+		System.out.print(max + "\n" + index);
 	}
 }
