@@ -16,22 +16,7 @@ public class Main {
 				sum += Integer.parseInt(st.nextToken());
 			}
 			
-			if(sum == 1) {
-				sb.append("C");
-			}
-			else if(sum == 2) {
-				sb.append("B");
-			}
-			else if(sum == 3) {
-				sb.append("A");
-			}
-			else if(sum == 4) {
-				sb.append("E");
-			}
-			else {
-				sb.append("D");
-			}
-			sb.append("\n");
+			sb.append(sum == 1 ? 'C' : sum == 2 ? 'B' : sum == 3 ? 'A' : sum == 4 ? 'E' : 'D').append("\n");
 		}
 		System.out.print(sb);
 	}
