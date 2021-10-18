@@ -6,8 +6,7 @@ import java.util.Collections;
 
 public class Main {
 	static int size, count;
-	static boolean[][] check;
-	static boolean[][] arr;
+	static boolean[][] check, arr;
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
@@ -41,8 +40,8 @@ public class Main {
 		
 		StringBuilder sb = new StringBuilder();
 		sb.append(answer).append("\n");
-		for(int i = 0; i < arr.size(); i++) {
-			sb.append(arr.get(i)).append("\n");
+		for(int a : arr) {
+			sb.append(a).append("\n");
 		}
 		System.out.print(sb);
 	}
