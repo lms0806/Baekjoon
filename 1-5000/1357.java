@@ -8,17 +8,12 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int x = rev(Integer.parseInt(st.nextToken()));
-		int y = rev(Integer.parseInt(st.nextToken()));
-		
-		int answer = rev(x+y);
-		
-		System.out.println(answer);
+		int x = rev(Integer.parseInt(st.nextToken())), y = rev(Integer.parseInt(st.nextToken()));
+
+		System.out.println(rev(x + y));
 	}
 	
 	public static int rev(int n) {
-		StringBuilder sb = new StringBuilder(String.valueOf(n));
-		
-		return Integer.parseInt(sb.reverse().toString());
+		return Integer.parseInt(new StringBuilder(String.valueOf(n)).reverse().toString());
 	}
 }
