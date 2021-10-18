@@ -25,7 +25,6 @@ public class Main {
 				}
 			}
 		}
-		answer += stack.size();
-		System.out.print(answer);
+		System.out.print(answer + stack.size());
 	}
 }
