@@ -7,10 +7,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		int a = Integer.parseInt(br.readLine());
-		int b = Integer.parseInt(br.readLine());
-		
-		int result = b-a+b;
-		
-		System.out.println(result);
+
+		System.out.print(Integer.parseInt(br.readLine()) * 2 - a);
 	}
 }
