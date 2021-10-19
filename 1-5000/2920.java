@@ -16,22 +16,18 @@ public class Main {
 
 		int count = 0;
 		for (int i = 0; i < num.length; i++) {
-			if (num[i] == i + 1) {
-				count++;
-			} 
-			else {
+			if (num[i] != i + 1) {
 				break;
-			}
+			} 
+			count++;
 		}
 
 		int count1 = 0;
 		for (int i = 0; i < num.length; i++) {
-			if (num[i] == num.length - i) {
-				count1++;
-			} 
-			else {
+			if (num[i] != num.length - i) {
 				break;
 			}
+			count1++;
 		}
 		System.out.print(count == 8 ? "ascending" : count1 == 8 ? "descending" : "mixed");
 	}
