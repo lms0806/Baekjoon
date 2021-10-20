@@ -8,8 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 
 		int[][] num = new int[n][m];
 		for(int i = 0; i < n; i++) {
@@ -43,6 +42,6 @@ public class Main {
             }
             sb.append("\n");
         }
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
