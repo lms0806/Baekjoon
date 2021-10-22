@@ -8,3 +8,4 @@
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
  - https://www.acmicpc.net/problem/21176 (Smoothie Stand)
+ - https://www.acmicpc.net/problem/23275 (Knot Knowledge)
