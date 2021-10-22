@@ -11,9 +11,8 @@ public class Main {
 		boolean istrue = false;
 		for(char ch : br.readLine().toCharArray()) {
 			if(ch == '<' || ch == ' ') {
-				sb.append(ss.reverse());
+				sb.append(ss.reverse()).append(ch);
 				ss.setLength(0);
-				sb.append(ch);
 				if(ch == '<') {
 					istrue = true;
 				}
@@ -31,9 +30,7 @@ public class Main {
 				}
 			}
 		}
-		if(ss.length() != 0) {
-			sb.append(ss.reverse());
-		}
+		sb.append(ss.reverse());
 		
 		System.out.print(sb);
 	}
