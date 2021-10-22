@@ -24,27 +24,8 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		st = new StringTokenizer(br.readLine());
 		while(size --> 0) {
-			sb.append(binary_search(Integer.parseInt(st.nextToken()))).append("\n");
+			sb.append(Arrays.binarySearch(arr, Integer.parseInt(st.nextToken())) < 0 ? 0 : 1).append("\n");
 		}
 		System.out.print(sb);
-	}
-	
-	public static int binary_search(int input) {
-		int first = 0, end = arr.length - 1;
-		while(first <= end) {
-			int mid = (first + end) / 2;
-			
-			if(input == arr[mid]) {
-				return 1;
-			}
-            
-			if(input < arr[mid]){
-				end = mid - 1;
-			}
-			else {
-				first = mid + 1;
-			}
-		}
-		return 0;
 	}
 }
