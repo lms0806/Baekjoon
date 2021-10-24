@@ -23,6 +23,6 @@ public class Main {
 		for(int i = l; i < n - h; i++) {
 			answer += num[i];
 		}
-		System.out.print((double)(answer / (n - l - h)));
+		System.out.print(answer / (n - l - h));
 	}
 }
