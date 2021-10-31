@@ -11,16 +11,23 @@ public class Main {
 		
 		for(int i = 0; i < 2; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			n[i][0] = Integer.parseInt(st.nextToken());
-			n[i][1] = Integer.parseInt(st.nextToken());
+			n[i][0] = atoi(st.nextToken());
+			n[i][1] = atoi(st.nextToken());
 		}
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
+		int a = atoi(st.nextToken()), b = atoi(st.nextToken());
 		
-		int ans = Math.max(Math.abs(n[0][0] - a), Math.abs(n[0][1] - b));
-		ans -= Math.abs(n[1][0] - a) + Math.abs(n[1][1] - b);
+		int ans = Math.max(abs(n[0][0] - a), abs(n[0][1] - b));
+		ans -= abs(n[1][0] - a) + abs(n[1][1] - b);
 		
 		System.out.print(ans < 0 ? "bessie" : ans == 0 ? "tie" : "daisy");
+	}
+	
+	public static int atoi(String s) {
+		return Integer.parseInt(s);
+	}
+	public static int abs(int n) {
+		return Math.abs(n);
 	}
 }
