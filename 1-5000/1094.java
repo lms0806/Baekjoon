@@ -10,9 +10,7 @@ public class Main {
 		
 		int answer = 0;
 		while(x != 0) {
-			if(x % 2 == 1) {
-				answer++;
-			}
+			answer += (x % 2);
 			x /= 2;
 		}
 		System.out.print(answer);
