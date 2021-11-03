@@ -19,11 +19,11 @@ public class Main {
 				n[i][1] = Long.parseLong(st.nextToken());
 			}
 			
-			long[] arr = new long[6];
+			double[] arr = new double[6];
 			int k = 0;
 			for(int i = 0; i < 3; i++) {
 				for(int j = i + 1; j < 4; j++) {
-					arr[k++] = (n[i][0] - n[j][0]) * (n[i][0] - n[j][0]) + (n[i][1] - n[j][1]) * (n[i][1] - n[j][1]);
+					arr[k++] = Math.sqrt(Math.pow(n[i][0] - n[j][0], 2) + Math.pow(n[i][1] - n[j][1], 2));
 				}
 			}
 			
