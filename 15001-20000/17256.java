@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int[] a = new int[3], b = new int[3], c = new int[3];
+		int[] a = new int[3], c = new int[3];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < 3; i++) {
@@ -16,11 +16,8 @@ public class Main {
 		
 		st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < 3; i++) {
-			b[i] = Integer.parseInt(st.nextToken());
-		}
-		
-		for(int i = 0; i < 3; i++) {
-			c[i] = i == 1 ? b[i] / a[i] : b[i] - a[2 - i];
+			int b = Integer.parseInt(st.nextToken());
+			c[i] = i == 1 ? b / a[i] : b - a[2 - i];
 		}
 		
 		StringBuilder sb = new StringBuilder();
