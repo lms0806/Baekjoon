@@ -1,42 +1,45 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
-	static int a,b;
-	static boolean[][] check;
-	static boolean[][] arr;
-	public static void main(String[] args) throws IOException{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+	static int[] dx = {1, 0, -1, 0, 1, -1, -1, 1};
+	static int[] dy = {0, -1, 0, 1, -1, -1, 1, 1};
+	static int n, m;
+	static int[][] arr;
+	static boolean[][] visited;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		StringBuilder sb = new StringBuilder();
 		while(true) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			a = Integer.parseInt(st.nextToken());
-			b = Integer.parseInt(st.nextToken());
+			m = Integer.parseInt(st.nextToken());
+			n = Integer.parseInt(st.nextToken());
 			
-			if(a == 0 || b == 0) {
+			if(n == 0 && m == 0) {
 				break;
 			}
 			
-			arr = new boolean[b][a];
-			check = new boolean[b][a];
-			for(int i = 0; i < b; i++) {
+			arr = new int[n][m];
+			visited = new boolean[n][m];
+			
+			for(int i = 0; i < n; i++) {
 				st = new StringTokenizer(br.readLine());
-				for(int j = 0; j < a; j++) {
-					if(Integer.parseInt(st.nextToken()) == 1) {
-						arr[i][j] = true;
-					}
+				for(int j = 0; j < m; j++) {
+					arr[i][j] = Integer.parseInt(st.nextToken());
 				}
 			}
 			
 			int answer = 0;
-			for(int i = 0; i < b; i++) {
-				for(int j = 0; j < a; j++) {
-					if(checktrue(i,j)) {
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < m; j++) {
+					if(!visited[i][j] && arr[i][j] == 1) {
+						bfs(i, j);
 						answer++;
-						bfs(i,j);
 					}
 				}
 			}
@@ -45,20 +48,23 @@ public class Main {
 		System.out.print(sb);
 	}
 	
-	public static boolean checktrue(int row, int col) {
-		if(row < 0 || row >= b || col < 0 || col >= a || check[row][col] || !arr[row][col]) {
-			return false;
-		}
-		return true;
-	}
-	
-	public static void bfs(int row, int col) {
-		check[row][col] = true;
+	public static void bfs(int x, int y) {
+		Queue<int[]> queue = new LinkedList<>();
+		queue.add(new int[] {x, y});
+		visited[x][y] = true;
 		
-		for(int i = row - 1; i <= row + 1; i++) {
-			for(int j = col - 1; j <= col + 1; j++) {
-				if(checktrue(i, j)) {
-					bfs(i, j);
+		while(!queue.isEmpty()) {
+			int[] now = queue.poll();
+			
+			for(int i = 0; i < 8; i++) {
+				int nx = now[0] + dx[i];
+				int ny = now[1] + dy[i];
+				
+				if(nx >= 0 && nx < n && ny >= 0 && ny < m) {
+					if(!visited[nx][ny] && arr[nx][ny] == 1) {
+						visited[nx][ny] = true;
+						queue.add(new int[] {nx, ny});
+					}
 				}
 			}
 		}
