@@ -12,9 +12,7 @@ public class Main {
 		for(int i = 0; i < n * 5; i++) {
 			sb.append("@".repeat(n));
 			if(i < n) {
-				for(int j = 0; j < 4; j++) {
-					sb.append("@".repeat(n));
-				}
+				sb.append("@".repeat(n * 4));
 			}
 			sb.append("\n");
 		}
