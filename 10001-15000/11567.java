@@ -10,7 +10,6 @@ public class Main {
 	static int[] dy = {0, -1, 0, 1};
 	static int n, m;
 	static char[][] board;
-	static boolean[][] visited;
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -19,7 +18,6 @@ public class Main {
 		m = Integer.parseInt(st.nextToken());
 		
 		board = new char[n][m];
-		visited = new boolean[n][m];
 		
 		for(int i = 0; i < n; i++) {
 			board[i] = br.readLine().toCharArray();
@@ -37,7 +35,6 @@ public class Main {
 	public static String bfs(int x, int y, int x1, int y1) {
 		Queue<int[]> queue = new LinkedList<>();
 		queue.add(new int[] {x, y});
-		visited[x][y] = true;
 		
 		while(!queue.isEmpty()) {
 			int[] now = queue.poll();
