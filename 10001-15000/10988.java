@@ -6,15 +6,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		String str = br.readLine();
-		
-		boolean istrue = true;
-		for(int i = 0; i < str.length(); i++) {
-			if(str.charAt(i) != str.charAt(str.length() - i - 1)) {
-				istrue = false;
-                break;
-			}
-		}
-		System.out.print(istrue ? 1 : 0);
+		String s = br.readLine();
+		System.out.print(s.equals(new StringBuilder(s).reverse().toString()) ? "1" : 0);
 	}
 }
