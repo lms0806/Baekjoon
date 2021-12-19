@@ -11,26 +11,25 @@ public class Main {
 		Deque<Integer> deque = new ArrayDeque<>();
 		
 		int size = Integer.parseInt(br.readLine());
-		int charat;
-		String str;
 		
 		StringBuilder sb = new StringBuilder();
 		while(size-->0) {
-			str = br.readLine();
-			charat = str.charAt(0);
-			if(charat == 'f') {
+			String str = br.readLine();
+			
+			char ch = str.charAt(0);
+			if(ch == 'f') {
 				sb.append(deque.isEmpty() ? -1 : deque.getFirst()).append("\n");
 			}
-			else if(charat == 'b') {
+			else if(ch == 'b') {
 				sb.append(deque.isEmpty() ? -1 : deque.getLast()).append("\n");
 			}
-			else if(charat == 'e') {
+			else if(ch == 'e') {
 				sb.append(deque.isEmpty() ? 1 : 0).append("\n");
 			}
-			else if(charat == 's') {
+			else if(ch == 's') {
 				sb.append(deque.size()).append("\n");
 			}
-			else if(charat == 'p') {
+			else if(ch == 'p') {
 				if(str.charAt(1) == 'u') {
 					if(str.charAt(5) == 'f') {
 						deque.addFirst(Integer.parseInt(str.substring(11)));
@@ -41,11 +40,12 @@ public class Main {
 				}
 				else {
 					if(str.charAt(4) == 'f') {
-						sb.append(deque.isEmpty() ? -1 : deque.pollFirst()).append("\n");
+						sb.append(deque.isEmpty() ? -1 : deque.pollFirst());
 					}
 					else {
-						sb.append(deque.isEmpty() ? -1 : deque.pollLast()).append("\n");
+						sb.append(deque.isEmpty() ? -1 : deque.pollLast());
 					}
+					sb.append("\n");
 				}
 			}
 		}
