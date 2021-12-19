@@ -6,18 +6,14 @@ public class Main {
 	public static void main(String[] args) throws NumberFormatException,IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int[] num = new int[9];
-		
-		int max = num[0];
-		int index = 0;
-		for(int i = 0; i < num.length; i++) {
-			num[i] = Integer.parseInt(br.readLine());
-			if(max < num[i]) {
-				max = num[i];
-				index = i + 1;
+		int max = 0, idx = 0;
+		for(int i = 0; i < 9; i++) {
+			int num = Integer.parseInt(br.readLine());
+			if(max < num) {
+				max = num;
+				idx = i + 1;
 			}
 		}
-		
-		System.out.print(max + "\n" + index);
+		System.out.print(max + "\n" + idx);
 	}
 }
