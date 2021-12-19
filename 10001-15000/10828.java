@@ -10,10 +10,10 @@ public class Main {
 		
 		Stack<Integer> stack = new Stack<>();
 		
-		int size = Integer.parseInt(br.readLine());
+		int t = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		while(size-->0) {
+		while(t --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			String s = st.nextToken();
 			
