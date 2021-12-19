@@ -11,6 +11,6 @@ public class Main {
 		int a = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
 		int b = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
 		
-		System.out.print(a > b ? a : b);
+		System.out.print(Math.max(a, b));
 	}
 }
