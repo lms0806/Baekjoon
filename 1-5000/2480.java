@@ -8,36 +8,27 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
-		int c = Integer.parseInt(st.nextToken());
-		
-		int result = 0;
+		System.out.print(solve(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
+	}
+	
+	public static int solve(int a, int b, int c) {
 		if(a == b && b == c) {
-			result = 10000 + a * 1000;
+			return 10000 + a * 1000;
 		}
 		else if(a == b) {
-			result = 1000 + a * 100;
+			return 1000 + a * 100;
 		}
 		else if(b == c) {
-			result = 1000 + b * 100;
+			return 1000 + b * 100;
 		}
 		else if(a == c) {
-			result = 1000 + c * 100;
+			return 1000 + c * 100;
 		}
 		else {
 			if(a > b && a > c) {
-				result = a * 100;
+				return a * 100;
 			}
-			else {
-				if(b > c) {
-					result = b * 100;
-				}
-				else {
-					result = c * 100;
-				}
-			}
+			return Math.max(b, c) * 100;
 		}
-		System.out.println(result);
 	}
 }
