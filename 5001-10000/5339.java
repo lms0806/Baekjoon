@@ -8,9 +8,7 @@ public class Main {
 		sb.append("  //|/.\\|\\\\").append("\n");
 		sb.append(" ||  \\ /  ||").append("\n");
 		sb.append("============").append("\n");
-		sb.append("|          |").append("\n");
-		sb.append("|          |").append("\n");
-		sb.append("|          |");
+		sb.append("|          |\n".repeat(3));
 		System.out.print(sb);
 	}
 }
