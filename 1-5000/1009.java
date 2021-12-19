@@ -7,26 +7,20 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int size = Integer.parseInt(br.readLine());
+		int t = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < size; i++) {
+		while(t --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 			
 			int c = 1;
-			for(int j = 0; j < b; j++) {
+			while(b --> 0) {
 				c = (c * a) % 10;
 			}
 			
-			if(c == 0) {
-				c = 10;
-			}
-			
-			sb.append(c).append("\n");
+			sb.append(c == 0 ? 10 : c).append("\n");
 		}
-		
 		System.out.print(sb);
 	}
 }
