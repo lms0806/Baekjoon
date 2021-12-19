@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Main {
-	static ArrayList<Node>[] arr;
+	static ArrayList<int[]>[] arr;
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
@@ -17,9 +17,9 @@ public class Main {
 			arr[i] = new ArrayList<>();
 		}
 		
-		for(int i = 1; i <= n; i++) {
+		while(n --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			arr[st.nextToken().charAt(0) - 'A' + 1].add(new Node(st.nextToken().charAt(0) - 'A' + 1, st.nextToken().charAt(0) - 'A' + 1));
+			arr[st.nextToken().charAt(0) - 'A' + 1].add(new int[] {st.nextToken().charAt(0) - 'A' + 1, st.nextToken().charAt(0) - 'A' + 1});
 		}
 		
 		preorder(1);
@@ -32,8 +32,8 @@ public class Main {
 	}
 	
 	public static void preorder(int start) {
-		for(Node node : arr[start]) {
-			int l = node.left, r = node.right;
+		for(int[] node : arr[start]) {
+			int l = node[0], r = node[1];
 			
 			sb.append((char)(start + 'A' - 1));
 			
@@ -47,8 +47,8 @@ public class Main {
 	}
 	
 	public static void inorder(int start) {
-		for(Node node : arr[start]) {
-			int l = node.left, r = node.right;
+		for(int[] node : arr[start]) {
+			int l = node[0], r = node[1];
 			
 			if(l != -18) {
 				inorder(l);
@@ -61,8 +61,8 @@ public class Main {
 	}
 	
 	public static void postorder(int start) {
-		for(Node node : arr[start]) {
-			int l = node.left, r = node.right;
+		for(int[] node : arr[start]) {
+			int l = node[0], r = node[1];
 			
 			if(l != -18) {
 				postorder(l);
@@ -72,14 +72,5 @@ public class Main {
 			}
 			sb.append((char)(start + 'A' - 1));
 		}
-	}
-}
-
-class Node{
-	int left, right;
-	
-	public Node(int left, int right) {
-		this.left = left;
-		this.right = right;
 	}
 }
