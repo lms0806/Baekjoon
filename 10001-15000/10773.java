@@ -6,31 +6,29 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 	
-		int size = Integer.parseInt(br.readLine());
+		int n = Integer.parseInt(br.readLine());
 		
-		int[] num = new int[size];
+		int[] arr = new int[n];
 		
 		int count = 0;
-		for(int i = 0; i < size; i++) {
-			int number = Integer.parseInt(br.readLine());
-			if(number == 0) {
+		while(n --> 0) {
+			int num = Integer.parseInt(br.readLine());
+			if(num == 0) {
 				if(count != 0) {
 					count--;
 				}
-				num[count] = 0;
+				arr[count] = 0;
 			}
 			else {
-				num[count] = number;
+				arr[count] = num;
 				count++;
 			}
 		}
 		
 		int sum = 0;
-		for(int i = 0; i < size; i++) {
-			if(num[i] != 0) {
-				sum += num[i];
-			}
+		for(int a : arr) {
+			sum += a;
 		}
-		System.out.println(sum);
+		System.out.print(sum);
 	}
 }
