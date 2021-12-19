@@ -15,14 +15,16 @@ public class Main {
 			boolean[] alpha = new boolean[26];
 			
 			alpha[str.charAt(0) - 'a'] = true;
+			
 			boolean istrue = true;
 			for(int i = 1; i < str.length(); i++) {
-				if(alpha[str.charAt(i) - 'a'] && str.charAt(i) != str.charAt(i-1)) {
+				char c = str.charAt(i);
+				if(alpha[c - 'a'] && c != str.charAt(i-1)) {
 					istrue = false;
 					break;
 				}
-				if(!alpha[str.charAt(i)-'a']) {
-					alpha[str.charAt(i)-'a'] = true;
+				if(!alpha[c - 'a']) {
+					alpha[c - 'a'] = true;
 				}
 			}
 			answer += istrue ? 1 : 0;
