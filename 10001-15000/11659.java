@@ -8,7 +8,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int num = Integer.parseInt(st.nextToken())+1;
+		int num = Integer.parseInt(st.nextToken()) + 1;
 		int size = Integer.parseInt(st.nextToken());
 		
 		int[] sum = new int[num];
@@ -21,8 +21,7 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(size --> 0) {
 			st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
+			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 			
 			sb.append(sum[b] - sum[a - 1]).append("\n");
 		}
