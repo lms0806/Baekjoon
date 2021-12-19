@@ -5,9 +5,7 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-		
-		int n = Integer.parseInt(br.readLine());
-		
-		System.out.print("1723".charAt(n-1));
+
+		System.out.print("1723".charAt(Integer.parseInt(br.readLine()) - 1));
 	}
 }
