@@ -25,10 +25,7 @@ public class Main {
 			return 1000 + c * 100;
 		}
 		else {
-			if(a > b && a > c) {
-				return a * 100;
-			}
-			return Math.max(b, c) * 100;
+			return Math.max(a, Math.max(b, c)) * 100;
 		}
 	}
 }
