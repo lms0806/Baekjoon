@@ -9,8 +9,7 @@ public class Main {
 		int[] num = new int[42];
 		
 		for(int i = 0; i < 10; i++) {
-			int number = Integer.parseInt(br.readLine()) % 42;
-			num[number]++;
+			num[Integer.parseInt(br.readLine()) % 42]++;
 		}
 		
 		int count = 0;
