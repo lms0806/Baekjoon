@@ -21,13 +21,6 @@ public class Main {
 			number++;
 		}
 		
-		StringBuilder sb = new StringBuilder();
-		if(num == 0) {
-			sb.append("-1");
-		}
-		else {
-			sb.append(sum).append("\n").append(num);
-		}
-		System.out.print(sb);
+		System.out.print(num == 0 ? -1 : sum + "\n" + num);
 	}
 }
