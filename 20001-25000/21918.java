@@ -8,16 +8,16 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int size = Integer.parseInt(st.nextToken()), num = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
-		int[] bulb = new int[size+1];
+		int[] bulb = new int[n + 1];
 		
 		st = new StringTokenizer(br.readLine());
-		for(int i = 1; i < size; i++) {
+		for(int i = 1; i < n; i++) {
 			bulb[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		while(num --> 0) {
+		while(m --> 0) {
 			st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
 			
