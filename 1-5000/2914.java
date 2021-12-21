@@ -8,11 +8,6 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken())-1;
-		
-		int sum = a * b + 1;
-		
-		System.out.print(sum);
+		System.out.print(Integer.parseInt(st.nextToken()) * (Integer.parseInt(st.nextToken()) - 1) + 1);
 	}
 }
