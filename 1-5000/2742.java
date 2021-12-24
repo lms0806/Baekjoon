@@ -6,11 +6,11 @@ public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int size = Integer.parseInt(br.readLine());
+		int size = Integer.parseInt(br.readLine()) + 1;
 		
 		StringBuilder sb = new StringBuilder();
-		for(int i = size; i > 0; i--) {
-			sb.append(i).append("\n");
+		while(size --> 1) {
+			sb.append(size).append("\n");
 		}
 		System.out.print(sb);
 	}
