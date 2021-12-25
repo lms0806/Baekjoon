@@ -48,15 +48,15 @@ public class Main {
 		
 		count++;
 		while(!queue.isEmpty()) {
-			int[] data = queue.poll();
+			int[] now = queue.poll();
 			
 			for(int i = 0; i < 4; i++) {
-				int nextx = data[0] + dx[i], nexty = data[1] + dy[i];
+				int nx = now[0] + dx[i], ny = now[1] + dy[i];
 				
-				if(nextx >= 0 && nextx < n && nexty >=0 && nexty < m) {
-					if(!visited[nextx][nexty] && arr[nextx][nexty] == 1) {
-						visited[nextx][nexty] = true;
-						queue.offer(new int[] {nextx, nexty});
+				if(nx >= 0 && nx < n && ny >=0 && ny < m) {
+					if(!visited[nx][ny] && arr[nx][ny] == 1) {
+						visited[nx][ny] = true;
+						queue.offer(new int[] {nx, ny});
 						count++;
 					}
 				}
