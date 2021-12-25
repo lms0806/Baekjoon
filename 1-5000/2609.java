@@ -8,17 +8,11 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken()), b = Integer.parseInt(st.nextToken());
 
 		int min = gcd(a,b);
-		int max = a * b / min;
 		
-		StringBuilder sb = new StringBuilder();
-		
-		sb.append(min).append("\n").append(max);
-		
-		System.out.print(sb);
+		System.out.print(min + "\n" + (a * b / min));
 	}
 	
 	public static int gcd(int a, int b) {
