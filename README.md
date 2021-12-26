@@ -5,6 +5,9 @@
 -
 [![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=lms0806)](https://solved.ac/lms0806)
 
+# 문제 검수
+- https://www.acmicpc.net/problemset?sort=no_asc&author=lms0806&author_type=19
+
 # 전체 첫솔
  - https://www.acmicpc.net/problem/5489 (Numbers)
  - https://www.acmicpc.net/problem/21176 (Smoothie Stand)
