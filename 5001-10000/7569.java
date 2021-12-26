@@ -11,7 +11,6 @@ public class Main {
 	static int[] dy = {0, 0, -1, 1, 0, 0};
 	static int n, m, h;
 	static int[][][] arr;
-	static boolean[][][] visited;
 	static Queue<int[]> queue = new LinkedList<>();
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,7 +21,6 @@ public class Main {
 		h = Integer.parseInt(st.nextToken());
 		
 		arr = new int[h][n][m];
-		visited = new boolean[h][n][m];
 		
 		for(int i = 0; i < h; i++) {
 			for(int j = 0; j < n; j++) {
