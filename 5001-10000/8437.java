@@ -7,13 +7,8 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		BigInteger a = new BigInteger(br.readLine());
-		BigInteger b = new BigInteger(br.readLine());
-		BigInteger div = BigInteger.TWO;
+		BigInteger a = new BigInteger(br.readLine()), b = new BigInteger(br.readLine());
 		
-		BigInteger answer1 = a.add(b).divide(div);
-		BigInteger answer2 = a.subtract(b).divide(div);
-		
-		System.out.println(answer1 + "\n" + answer2);
+		System.out.println(a.add(b).divide(BigInteger.TWO) + "\n" + a.subtract(b).divide(BigInteger.TWO));
 	}
 }
