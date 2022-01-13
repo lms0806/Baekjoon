@@ -10,6 +10,6 @@ public class Main {
 	}
 	
 	public static String solve(int a, int b) {
-		return b >= 30 ? "Red" : a <= 50 && b <= 10 ? "White" : "Yellow";
+		return a <= 50 && b <= 10 ? "White" : b > 30 ? "Red" : "Yellow";
 	}
 }
