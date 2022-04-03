@@ -10,10 +10,9 @@ public class Main {
 		
 		int count = 0;
 		while(a != b) {
-			if(a == 360) {
+			if(++a == 360) {
 				a = 0;
 			}
-			a++;
 			count++;
 		}
 		
