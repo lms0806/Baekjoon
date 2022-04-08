@@ -12,9 +12,8 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		while(t --> 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			double p = Double.parseDouble(st.nextToken()), c = Double.parseDouble(st.nextToken());
-			
-			sb.append(String.format("%.5f", 100 * p / (c + 100))).append("\n");
+
+			sb.append(100 * Double.parseDouble(st.nextToken()) / (Double.parseDouble(st.nextToken()) + 100)).append("\n");
 		}
 		System.out.print(sb);
 	}
