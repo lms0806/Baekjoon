@@ -7,40 +7,35 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		
-		int[] a = new int[2];
-		int[] b = new int[2];
+		int[][] a = new int[2][2];
 		
-		StringTokenizer st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < 2; i++) {
-			a[i] = Integer.parseInt(st.nextToken());
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			for(int j = 0; j < 2; j++) {
+				a[i][j] = Integer.parseInt(st.nextToken());
+			}
 		}
 		
-		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < 2; i++) {
-			b[i] = Integer.parseInt(st.nextToken());
-		}
-		
-		StringBuilder sb = new StringBuilder(0);
+		System.out.print(solve(a));
+	}
+	
+	public static String solve(int[][] a) {
 		while(true) {
-			a[1] -= b[0];
-			b[1] -= a[0];
+			a[0][1] -= a[1][0];
+			a[1][1] -= a[0][0];
 			
-			if(b[1] <= 0 && a[1] > 0) {
-				sb.append("PLAYER A");
-				break;
+			if(a[1][1] <= 0 && a[0][1] > 0) {
+				return "PLAYER A";
 			}
-			else if(a[1] <= 0 && b[1] > 0) {
-				sb.append("PLAYER B");
-				break;
+			else if(a[0][1] <= 0 && a[1][1] > 0) {
+				return "PLAYER B";
 			}
-			else if(a[1] > 0 && a[1] > 0) {
+			else if(a[0][1] > 0 && a[0][1] > 0) {
 				continue;
 			}
 			else {
-				sb.append("DRAW");
-				break;
+				return "DRAW";
 			}
 		}
-		System.out.print(sb);
 	}
 }
