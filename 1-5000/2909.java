@@ -12,7 +12,7 @@ public class Main {
 		int size = (int)Math.pow(10, k);
 		
 		
-		int n = (c % size) / (int)Math.pow(10, k - 1);
+		int n = (c % size) / (int)Math.pow(10, Math.max(k - 1, 0));
 		
 		c /= size;
 		if(n > 4) {
