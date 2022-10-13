@@ -8,7 +8,6 @@ import java.util.StringTokenizer;
 
 public class Main {
 	static int[][] num = new int[3][3];
-	static boolean[] visited;
 	static ArrayList<int[]> arr = new ArrayList<>();
 	static HashSet<String> set = new HashSet<>();
 	public static void main(String[] args) throws IOException {
@@ -23,8 +22,6 @@ public class Main {
 				}
 			}
 		}
-		
-		visited = new boolean[arr.size()];
 		
 		dfs(0);
 		
