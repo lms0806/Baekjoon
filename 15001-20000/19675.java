@@ -54,16 +54,10 @@ public class Main {
 			}
 			return;
 		}
-		for(int i = 0; i < arr.size(); i++) {
-			if(!visited[i]) {
-				visited[i] = true;
-				for(int j = 1; j <= 9; j++) {
-					num[arr.get(i)[0]][arr.get(i)[1]] = j;
-					dfs(depth + 1);
-					num[arr.get(i)[0]][arr.get(i)[1]] = 0;
-				}
-				visited[i] = false;
-			}
+		for(int j = 1; j <= 9; j++) {
+			num[arr.get(depth)[0]][arr.get(depth)[1]] = j;
+			dfs(depth + 1);
+			num[arr.get(depth)[0]][arr.get(depth)[1]] = 0;
 		}
 	}
 }
