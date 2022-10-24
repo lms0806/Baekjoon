@@ -12,3 +12,4 @@
  - https://www.acmicpc.net/problem/5489 (Numbers)
  - https://www.acmicpc.net/problem/21176 (Smoothie Stand)
  - https://www.acmicpc.net/problem/23275 (Knot Knowledge)
+ - https://www.acmicpc.net/problem/25893 (Majestic 10)
