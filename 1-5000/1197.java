@@ -59,10 +59,6 @@ public class Main {
 				}
 				pq.add(a);
 			}
-			
-			for(int i = 0; i < arr[now.to].size(); i++) {
-				
-			}
 		}
 		return cost;
 	}
