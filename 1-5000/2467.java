@@ -34,6 +34,9 @@ public class Main {
 			if(num < 0) {
 				s++;
 			}
+			else if(num == 0) {
+				break;
+			}
 			else {
 				e--;
 			}
