@@ -21,19 +21,15 @@ public class Main {
     }
 
     public static String solve(int[] a){
-        int[] b = new int[a.length], c = new int[a.length];
         for(int i = 0; i < a.length; i++){
             if(i > 1){
                 if(a[i] - a[i - 1] != a[i - 1] - a[i - 2]){
                     return "NO";
                 }
             }
-
-            b[i] = a[i] * 2;
-            c[i] = -a[i];
         }
 
-        return "YES\n" + print(b) + "\n" + print(c);
+        return "YES\n" + print(a) + "\n" + print(new int[a.length]);
     }
 
     public static StringBuilder print(int[] nums){
