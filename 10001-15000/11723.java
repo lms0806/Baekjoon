@@ -8,44 +8,46 @@ public class Main {
 		
 		boolean[] set = new boolean[20];
 		
-		int num = Integer.parseInt(br.readLine());
+		int t = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb  = new StringBuilder();
-		while(num-->0) {
+		while(t --> 0) {
 			String str = br.readLine();
 			char ch = str.charAt(0);
 			
 			if(ch == 'a') {
 				if(str.charAt(1) == 'd') {
-					if(!set[Integer.parseInt(str.substring(4, str.length()))-1]) {
-						set[Integer.parseInt(str.substring(4, str.length()))-1] = true;
+                    int idx = Integer.parseInt(str.substring(4, str.length())) - 1;
+                    
+					if(!set[idx]) {
+						set[idx] = true;
 					}
 				}
 				else {
 					for(int i = 0; i < 20; i++) {
-						if(!set[i]) {
-							set[i] = true;
-						}
+						set[i] = true;
 					}
 				}
 			}
 			else if(ch == 'e'){
 				for(int i = 0; i < 20; i++) {
-					if(set[i]) {
-						set[i] = false;
-					}
+					set[i] = false;
 				}
 			}
 			else if(ch == 'r') {
-				if(set[Integer.parseInt(str.substring(7, str.length()))-1]) {
-					set[Integer.parseInt(str.substring(7, str.length()))-1] = false;
+                int idx = Integer.parseInt(str.substring(7, str.length())) - 1;
+                
+				if(set[idx]) {
+					set[idx] = false;
 				}
 			}
 			else if(ch == 'c') {
 				sb.append(set[Integer.parseInt(str.substring(6, str.length()))-1] ? 1 : 0).append("\n");
 			}
 			else if(ch == 't') {
-				set[Integer.parseInt(str.substring(7, str.length()))-1] = !set[Integer.parseInt(str.substring(7, str.length()))-1];
+				int idx = Integer.parseInt(str.substring(7, str.length())) - 1;
+				
+				set[idx] = !set[idx];
 			}
 		}
 		System.out.print(sb);
