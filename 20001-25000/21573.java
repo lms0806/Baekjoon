@@ -1,0 +1,27 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int r = Integer.parseInt(st.nextToken()), c = Integer.parseInt(st.nextToken());
+		
+		String s = br.readLine();
+		
+		if(s.equals("freeze")) {
+			r = Math.min(r, c);
+		}
+		else if(s.equals("heat")) {
+			r = Math.max(r, c);
+		}
+		else if(s.equals("auto")) {
+			r = c;
+		}
+		
+		System.out.print(r);
+	}
+}
