@@ -1,0 +1,28 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		System.out.print(solve(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
+	}
+	
+	public static int solve(int oa, int aa, int ka) {
+		for(int i = 1; i <= oa / aa; i++) {
+			for(int j = 1 ; j <= oa / ka; j++) {
+				if(aa * i + ka * j > oa) {
+					break;
+				}
+				
+				if(aa * i + ka * j == oa) {
+					return 1;
+				}
+			}
+		}
+		return 0;
+	}
+}
