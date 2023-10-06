@@ -6,23 +6,21 @@ import java.util.StringTokenizer;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		
+		int n = Integer.parseInt(br.readLine());
+		
+		int count = 0;
+		long answer = 0;
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		
-		int k = Integer.parseInt(st.nextToken()), n = Integer.parseInt(st.nextToken());
-		
-		int answer = 0;
-		boolean flag = false;
-		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < n; i++) {
-			int num = Integer.parseInt(st.nextToken());
-			
-			if(num >= k) {
-				flag = true;
+		while(n --> 0) {
+			if(Integer.parseInt(st.nextToken()) == 1) {
+				answer += count;
 			}
-			
-			answer += num >= k ? k - 1 : num;
+			else {
+				count++;
+			}
 		}
 		
-		System.out.print(flag ? answer + 1 : -1);
+		System.out.print(answer);
 	}
 }
