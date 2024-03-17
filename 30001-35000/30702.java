@@ -59,11 +59,12 @@ public class Main {
 				
 				if(nx >= 0 && nx < n && ny >= 0 && ny < m) {
 					if(!visited[idx][nx][ny] && board[idx][x][y] == board[idx][nx][ny]) {
+						visited[idx][nx][ny] = true;
+						
 						if(!visited[1][nx][ny]) {
 							return false;
 						}
 						
-						visited[idx][nx][ny] = true;
 						queue.add(new int[] {nx, ny});
 					}
 				}
