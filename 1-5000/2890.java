@@ -48,17 +48,3 @@ public class Main {
 		System.out.print(sb);
 	}
 }
-
-class Node implements Comparable<Node>{
-	int team, num;
-	
-	public Node(int team, int num) {
-		this.team = team;
-		this.num = num;
-	}
-
-	@Override
-	public int compareTo(Node o) {
-		return o.num - this.num;
-	}
-}
