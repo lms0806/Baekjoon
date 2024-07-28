@@ -9,6 +9,6 @@ public class Main {
 		
 		BigInteger n = new BigInteger(br.readLine());
 		
-		System.out.print(n.add(n).subtract(BigInteger.TWO));
+		System.out.print(n.compareTo(BigInteger.TWO) <= 0 ? n : n.add(n).subtract(BigInteger.TWO));
 	}
 }
