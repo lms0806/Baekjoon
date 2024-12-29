@@ -10,24 +10,22 @@ class Main {
 		
 		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
-		int[] arr = new int[n];
+		int[] arr = new int[n + 1];
+		long[] sum = new long[n + 1];
 		
 		st = new StringTokenizer(br.readLine());
-		for(int i = 0; i < n; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
+		for(int i = 1; i <= n; i++) {
+			sum[i] = arr[i] = Integer.parseInt(st.nextToken());
+			sum[i] += sum[i - 1];
 		}
 		
-		System.out.print(solve(arr, m));
-	}
-	
-	public static int solve(int[] arr, int m) {
-		for(int i = arr.length - 1; i >= 0; i--) {
-			m -= arr[i];
-			
-			if(m < 0) {
-				return i + 1;
+		int answer = -1;
+		for(int i = 1; i <= n; i++) {
+			if(sum[n] - sum[i - 1] >= m) {
+				answer = i;
 			}
 		}
-		return -1;
+		
+		System.out.print(answer);
 	}
 }
