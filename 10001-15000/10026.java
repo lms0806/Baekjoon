@@ -5,65 +5,57 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Main {
-	static int[] dx = { 0, 1, 0, -1 };
-	static int[] dy = { 1, 0, -1, 0 };
 	static int n;
+	static char[][] board;
 	static boolean[][] visited;
-	static char[][] ch;
+	static int[] dx = {0, 1, 0, -1};
+	static int[] dy = {1, 0, -1, 0};
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		n = Integer.parseInt(br.readLine());
 
-		ch = new char[n][n];
+		board = new char[n][n];
 		
 		for (int i = 0; i < n; i++) {
-			ch[i] = br.readLine().toCharArray();
+			board[i] = br.readLine().toCharArray();
 		}
-
+		System.out.print(solve(true) + " " + solve(false));
+	}
+	
+	public static int solve(boolean check) {
+		int answer = 0;
 		visited = new boolean[n][n];
-		int answer1 = 0;
 		for(int x = 0; x < n; x++) {
 			for(int y = 0; y < n; y++) {
 				if(!visited[x][y]) {
-					bfs(x, y, ch[x][y]);
-					answer1++;
+					bfs(x, y, board[x][y]);
+					answer++;
 				}
-				if(ch[x][y] == 'G') {
-					ch[x][y] = 'R';
-				}
-			}
-		}
-		
-		visited = new boolean[n][n];
-		int answer2 = 0;
-		for(int x = 0; x < n; x++) {
-			for(int y = 0; y < n; y++) {
-				if(!visited[x][y]) {
-					bfs(x, y, ch[x][y]);
-					answer2++;
+				
+				if(check && board[x][y] == 'G') {
+					board[x][y] = 'R';
 				}
 			}
 		}
-		System.out.print(answer1 + " " + answer2);
+		return answer;
 	}
 
 	public static void bfs(int x, int y, char target) {
 		Queue<int[]> queue = new LinkedList<>();
-		queue.offer(new int[] { x, y });
+		queue.add(new int[] {x, y});
 		visited[x][y] = true;
 
 		while (!queue.isEmpty()) {
-			int[] data = queue.poll();
-			int curx = data[0], cury = data[1];
+			int[] now = queue.poll();
 
 			for (int i = 0; i < 4; i++) {
-				int nextx = curx + dx[i], nexty = cury + dy[i];
+				int nx = now[0] + dx[i], ny = now[1] + dy[i];
 
-				if (nextx >= 0 && nexty >= 0 && nextx < n && nexty < n) {
-					if(ch[nextx][nexty] == target && !visited[nextx][nexty]) {
-						visited[nextx][nexty] = true;
-						queue.offer(new int[] {nextx, nexty});
+				if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
+					if(!visited[nx][ny] && board[nx][ny] == target) {
+						visited[nx][ny] = true;
+						queue.offer(new int[] {nx, ny});
 					}
 				}
 			}
