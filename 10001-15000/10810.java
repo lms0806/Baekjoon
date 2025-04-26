@@ -9,25 +9,20 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
 		
-		int[] num = new int[n];
+		int[] arr = new int[n];
 		
-		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < m; i++) {
+		while(m --> 0) {
 			st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
-			int c = Integer.parseInt(st.nextToken());
 			
-			Arrays.fill(num, a-1, b, c);
+			Arrays.fill(arr, Integer.parseInt(st.nextToken()) - 1, Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
 		}
-		
-		for(int i = 0; i < n; i++) {
-			sb.append(num[i]).append(" ");
+
+		StringBuilder sb = new StringBuilder();
+		for(int a : arr) {
+			sb.append(a).append(" ");
 		}
-		
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
