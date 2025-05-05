@@ -31,10 +31,4 @@ public class Main {
 		}
 		System.out.print(sb);
 	}
-	
-	public static String solve(long n) {
-		int a = 0, b = 0;
-		
-		return a + " " + b;
-	}
 }
